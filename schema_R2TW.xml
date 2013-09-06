@@ -85,7 +85,12 @@
 		<field name='faction_key' type='string' />
 		<field name='political_party_key' type='string' />
 	</table>
-	
+	<table name='pdlc_tables' table_version='1' guid='a4298d77-6438-4033-9736-fad436277ca9'>
+		<field name='ID' type='string' pk='true' />
+		<field name='Steam ID' type='int' />
+		<field name='Description' type='optstring' />
+		<field name='Release Order' type='int' />
+	</table>
 	<table table_name='technologies_tables' table_version='4' guid='5f434686-d655-4522-b404-98c12f9206e9'>
 		<field name='Technology ID' type='string' pk='true' />
 		<field fkey='building_levels_tables.level_name' name='Building ID' type='string' />
