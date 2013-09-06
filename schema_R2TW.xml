@@ -91,6 +91,12 @@
 		<field name='Description' type='optstring' />
 		<field name='Release Order' type='int' />
 	</table>
+	<table name='population_classes_tables' table_version='1' guid='64ea05eb-3751-4b55-825b-9cbdfd639a59'>
+		<field name='population_class' type='string' pk='true' />
+		<field name='riots' type='boolean' />
+		<field name='demands' type='boolean' />
+		<field name='spawn_rebel_general' type='boolean' />
+	</table>
 	<table name='seasons_tables' table_version='1' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
 		<field name='season' type='string' pk='true' />
 		<field name='onscreen' type='string' />
