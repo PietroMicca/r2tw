@@ -91,6 +91,11 @@
 		<field name='Description' type='optstring' />
 		<field name='Release Order' type='int' />
 	</table>
+	<table name='seasons_tables' table_version='1' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
+		<field name='season' type='string' pk='true' />
+		<field name='onscreen' type='string' />
+		<field name='order' type='int' />
+	</table>
 	<table name='slots_tables' table_version='1' guid='453dd2ab-c78b-4457-b5c1-45d7096dc1f5'>
 		<field name='slot' type='string' pk='true' />
 		<field name='Farm' type='boolean' />
