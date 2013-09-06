@@ -126,6 +126,11 @@
 		<field name='audio_tracks' type='int' />
 		<field name='script_ref' type='int' />
 	</table>
+	<table name='warscape_rigid_tables' table_version='1' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
+		<field name='key' type='string' pk='true' />
+		<field name='texture_directory' type='string' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string' />
+	</table>
 	<table name='wind_levels_tables' table_version='1' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
 		<field name='key' type='string' pk='true' />
 		<field fkey='sea_surfaces_tables.key' name='sea_surface' type='string' />
@@ -134,4 +139,3 @@
 		<field name='sort_order' type='int' />
   </table>
 </schema>
-
