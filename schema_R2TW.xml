@@ -85,6 +85,7 @@
 		<field name='faction_key' type='string' />
 		<field name='political_party_key' type='string' />
 	</table>
+	
 	<table table_name='technologies_tables' table_version='4' guid='5f434686-d655-4522-b404-98c12f9206e9'>
 		<field name='Technology ID' type='string' pk='true' />
 		<field fkey='building_levels_tables.level_name' name='Building ID' type='string' />
@@ -126,6 +127,15 @@
 		<field name='audio_tracks' type='int' />
 		<field name='script_ref' type='int' />
 	</table>
+	<table name='warscape_animated_tables'>
+		<field name='key' type='string' pk='true' />
+		<field name='texture_filename_base' type='string' />
+		<field name='category' type='string' />
+	</table>
+	<table name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
+		<field name='LOD_id' type='string' pk='true' />
+		<field name='range' type='float' />
+	</table>
 	<table name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
 		<field name='key' type='string' />
 		<field name='filename' type='string' />
@@ -139,7 +149,7 @@
 	</table>
 	<table name='wind_levels_tables' table_version='1' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
 		<field name='key' type='string' pk='true' />
-		<field fkey='sea_surfaces_tables.key' name='sea_surface' type='string' />
+		<field name='sea_surface' type='string' />
 		<field name='magnitudeX' type='float' />
 		<field name='magnitudeY' type='float' />
 		<field name='sort_order' type='int' />
