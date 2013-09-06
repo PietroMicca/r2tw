@@ -1,17 +1,17 @@
 <schema>
-	<table name='_kv_fatigue_tables' table_version='1' guid='d9667e80-0d54-4c20-a70e-9848aad9f0f4'>
+	<table table_name='_kv_fatigue_tables' table_version='1' guid='d9667e80-0d54-4c20-a70e-9848aad9f0f4'>
 		<field name='key' type='string' pk='true' />
 		<field name='value' type='float' />
 	</table>
-	<table name='_kv_morale_tables' table_version='1' guid='1f623413-b154-4bf7-b10e-63b2b02b6b8c'>
+	<table table_name='_kv_morale_tables' table_version='1' guid='1f623413-b154-4bf7-b10e-63b2b02b6b8c'>
 		<field name='key' type='string' pk='true' />
 		<field name='value' type='float' />
 	</table>
-	<table name='_kv_naval_morale_tables' table_version='1' guid='7f018295-7a50-43ce-b91b-b87962d9c4e7'>
+	<table table_name='_kv_naval_morale_tables' table_version='1' guid='7f018295-7a50-43ce-b91b-b87962d9c4e7'>
 		<field name='key' type='string' pk='true' />
 		<field name='value' type='float' />
 	</table>
-	<table name='_kv_rules_tables' table_version='1' guid='571dc724-a163-491a-bf8e-d418a4d9ad99'>
+	<table table_name='_kv_rules_tables' table_version='1' guid='571dc724-a163-491a-bf8e-d418a4d9ad99'>
 		<field name='key' type='string' pk='true' />
 		<field name='value' type='float' />
 	</table>
@@ -19,16 +19,16 @@
 		<field name='ability' type='string' pk='true' />
 		<field name='is_active' type='boolean' />
 	</table>
-	<table name='achievements_tables' table_version='1' guid='c10dd85f-b6da-4534-a4d7-ef17ee556471'>
+	<table table_name='achievements_tables' table_version='1' guid='c10dd85f-b6da-4534-a4d7-ef17ee556471'>
 		<field name='Achievements' type='string' pk='true' />
 	</table>
-	<table name='advice_threads_tables' table_version='1' guid='179142d6-0dc6-4635-84dd-d9a9a1e13443'>
+	<table table_name='advice_threads_tables' table_version='1' guid='179142d6-0dc6-4635-84dd-d9a9a1e13443'>
 		<field name='thread' type='string' pk='true' />
 	</table>
-	<table name='agent_attributes_tables' table_version='1' guid='65ffce42-f57b-483c-ad36-dde049b6cf32'>
+	<table table_name='agent_attributes_tables' table_version='1' guid='65ffce42-f57b-483c-ad36-dde049b6cf32'>
 		<field name='key' type='string' pk='true' />
 	</table>
-	<table name='battle_cities_tables' table_version='1' guid='eafcf84d-2691-408a-94ec-799289196a20'>
+	<table table_name='battle_cities_tables' table_version='1' guid='eafcf84d-2691-408a-94ec-799289196a20'>
 		<field name='city' type='string' pk='true' />
 		<field name='minimum_building_scale' type='float' />
 		<field name='maximum_building_scale' type='float' />
@@ -39,7 +39,7 @@
 		<field name='number_of_town_buildings' type='int' />
 		<field name='number_of_city_buildings' type='int' />
 	</table>
-	<table name='battle_city_buildings_tables' table_version='1' guid='2fa91341-3875-4494-ad46-1706fc601878'>
+	<table table_name='battle_city_buildings_tables' table_version='1' guid='2fa91341-3875-4494-ad46-1706fc601878'>
 		<field fkey='warscape_rigid_tables.key' name='building' type='string' pk='true' />
 		<field fkey='battle_cities_tables.city' name='city' type='string' />
 		<field name='amount_in_town' type='int' />
@@ -85,33 +85,33 @@
 		<field name='faction_key' type='string' />
 		<field name='political_party_key' type='string' />
 	</table>
-	<table name='pdlc_tables' table_version='1' guid='a4298d77-6438-4033-9736-fad436277ca9'>
+	<table table_name='pdlc_tables' table_version='1' guid='a4298d77-6438-4033-9736-fad436277ca9'>
 		<field name='ID' type='string' pk='true' />
 		<field name='Steam ID' type='int' />
 		<field name='Description' type='optstring' />
 		<field name='Release Order' type='int' />
 	</table>
-	<table name='population_classes_tables' table_version='1' guid='64ea05eb-3751-4b55-825b-9cbdfd639a59'>
+	<table table_name='population_classes_tables' table_version='1' guid='64ea05eb-3751-4b55-825b-9cbdfd639a59'>
 		<field name='population_class' type='string' pk='true' />
 		<field name='riots' type='boolean' />
 		<field name='demands' type='boolean' />
 		<field name='spawn_rebel_general' type='boolean' />
 	</table>
-	<table name='quotes_people_tables' table_version='1' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
+	<table table_name='quotes_people_tables' table_version='1' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
 		<field name='quote_person_key' type='string' pk='true' />
 		<field name='quote_person_onscreen' type='string' />
 	</table>
-	<table name='quotes_tables' table_version='1' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
+	<table table_name='quotes_tables' table_version='1' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
 		<field name='quote_onscreen' type='string' />
 		<field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string' />
 		<field name='key' type='string' pk='true' />
 	</table>
-	<table name='seasons_tables' table_version='1' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
+	<table table_name='seasons_tables' table_version='1' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
 		<field name='season' type='string' pk='true' />
 		<field name='onscreen' type='string' />
 		<field name='order' type='int' />
 	</table>
-	<table name='slots_tables' table_version='1' guid='453dd2ab-c78b-4457-b5c1-45d7096dc1f5'>
+	<table table_name='slots_tables' table_version='1' guid='453dd2ab-c78b-4457-b5c1-45d7096dc1f5'>
 		<field name='slot' type='string' pk='true' />
 		<field name='Farm' type='boolean' />
 		<field name='Town' type='boolean' />
@@ -160,27 +160,27 @@
 		<field name='audio_tracks' type='int' />
 		<field name='script_ref' type='int' />
 	</table>
-	<table name='warscape_animated_tables'>
+	<table table_name='warscape_animated_tables'>
 		<field name='key' type='string' pk='true' />
 		<field name='texture_filename_base' type='string' />
 		<field name='category' type='string' />
 	</table>
-	<table name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
+	<table table_name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
 		<field name='LOD_id' type='string' pk='true' />
 		<field name='range' type='float' />
 	</table>
-	<table name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
+	<table table_name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
 		<field name='key' type='string' />
 		<field name='filename' type='string' />
 		<field name='range' type='string' />
 		<field fkey='warscape_rigid_tables.key' name='rigid' type='string' />
 	</table>
-	<table name='warscape_rigid_tables' table_version='1' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
+	<table table_name='warscape_rigid_tables' table_version='1' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
 		<field name='key' type='string' pk='true' />
 		<field name='texture_directory' type='string' />
 		<field fkey='warscape_categories_tables.key' name='category' type='string' />
 	</table>
-	<table name='wind_levels_tables' table_version='1' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
+	<table table_name='wind_levels_tables' table_version='1' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
 		<field name='key' type='string' pk='true' />
 		<field name='sea_surface' type='string' />
 		<field name='magnitudeX' type='float' />
