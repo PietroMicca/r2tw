@@ -126,6 +126,12 @@
 		<field name='audio_tracks' type='int' />
 		<field name='script_ref' type='int' />
 	</table>
+	<table name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
+		<field name='key' type='string' />
+		<field name='filename' type='string' />
+		<field name='range' type='string' />
+		<field fkey='warscape_rigid_tables.key' name='rigid' type='string' />
+	</table>
 	<table name='warscape_rigid_tables' table_version='1' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
 		<field name='key' type='string' pk='true' />
 		<field name='texture_directory' type='string' />
