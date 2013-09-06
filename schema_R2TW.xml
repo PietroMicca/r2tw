@@ -126,5 +126,12 @@
 		<field name='audio_tracks' type='int' />
 		<field name='script_ref' type='int' />
 	</table>
+	<table name='wind_levels_tables' table_version='1' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
+		<field name='key' type='string' pk='true' />
+		<field fkey='sea_surfaces_tables.key' name='sea_surface' type='string' />
+		<field name='magnitudeX' type='float' />
+		<field name='magnitudeY' type='float' />
+		<field name='sort_order' type='int' />
+  </table>
 </schema>
 
