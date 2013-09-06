@@ -97,11 +97,11 @@
 		<field name='demands' type='boolean' />
 		<field name='spawn_rebel_general' type='boolean' />
 	</table>
-	<table name='quotes_people_tables'>
+	<table name='quotes_people_tables' table_version='1' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
 		<field name='quote_person_key' type='string' pk='true' />
 		<field name='quote_person_onscreen' type='string' />
 	</table>
-	<table name='quotes_tables'>
+	<table name='quotes_tables' table_version='1' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
 		<field name='quote_onscreen' type='string' />
 		<field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string' />
 		<field name='key' type='string' pk='true' />
