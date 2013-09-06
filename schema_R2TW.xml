@@ -91,6 +91,14 @@
 		<field name='Description' type='optstring' />
 		<field name='Release Order' type='int' />
 	</table>
+	<table name='slots_tables' table_version='1' guid='453dd2ab-c78b-4457-b5c1-45d7096dc1f5'>
+		<field name='slot' type='string' pk='true' />
+		<field name='Farm' type='boolean' />
+		<field name='Town' type='boolean' />
+		<field name='Port' type='boolean' />
+		<field name='Resource' type='boolean' />
+		<field name='supports_building_level_conversion' type='boolean' version_start='1' />
+	</table>
 	<table table_name='technologies_tables' table_version='4' guid='5f434686-d655-4522-b404-98c12f9206e9'>
 		<field name='Technology ID' type='string' pk='true' />
 		<field fkey='building_levels_tables.level_name' name='Building ID' type='string' />
