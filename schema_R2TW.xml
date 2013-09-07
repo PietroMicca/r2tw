@@ -2580,30 +2580,28 @@
 		<field name='ui_icon_path' type='string_ascii' />
 	</table>
 	<table table_name='resources_tables' table_version='2' guid='717d6b40-5fe1-4b88-a9e7-9c1927b37c7a'>
-		<field name='key' type='string' pk='true' />
-		<field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring' />
-		<field fkey='slots_tables.slot' name='Slot Type' type='string' />
+		<field name='key' type='string_ascii' pk='true' />
+		<field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring_ascii' />
+		<field fkey='slots_tables.slot' name='Slot Type' type='string_ascii' />
 		<field name='trade_value' type='int' />
-		<field name='Icon Path' type='string' />
+		<field name='Icon Path' type='string_ascii' />
 		<field name='strategic_value' type='int' version_start='1' />
 	</table>
-  <table table_name='sea_climate_details_tables'
-         table_version='0'
-         guid='00ac9be3-3e24-4ae5-bd79-68ff1c2b3f27'>
-    <field fkey='climates_tables.climate_type' name='key' type='string' pk='true' />
-    <field name='Sea Deep Colour R' type='float' />
-    <field name='Sea Deep Colour G' type='float' />
-    <field name='Sea Deep Colour B' type='float' />
-    <field name='Sea Shallow Colour R' type='float' />
-    <field name='Sea Shallow Colour G' type='float' />
-    <field name='Sea Shallow Colour B' type='float' />
-    <field name='Sun Colour R' type='float' />
-    <field name='Sun Colour G' type='float' />
-    <field name='Sun Colour B' type='float' />
-    <field name='Sky Colour R' type='float' />
-    <field name='Sky Colour G' type='float' />
-    <field name='Sky Colour B' type='float' />
-  </table>
+	<table table_name='sea_climate_details_tables' table_version='0' guid='00ac9be3-3e24-4ae5-bd79-68ff1c2b3f27'>
+		<field fkey='climates_tables.climate_type' name='key' type='string' pk='true' />
+		<field name='Sea Deep Colour R' type='float' />
+		<field name='Sea Deep Colour G' type='float' />
+		<field name='Sea Deep Colour B' type='float' />
+		<field name='Sea Shallow Colour R' type='float' />
+		<field name='Sea Shallow Colour G' type='float' />
+		<field name='Sea Shallow Colour B' type='float' />
+		<field name='Sun Colour R' type='float' />
+		<field name='Sun Colour G' type='float' />
+		<field name='Sun Colour B' type='float' />
+		<field name='Sky Colour R' type='float' />
+		<field name='Sky Colour G' type='float' />
+		<field name='Sky Colour B' type='float' />
+	</table>
 	<table table_name='sea_surfaces_tables' table_version='0' guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='sea_wind_speed' type='float' />
@@ -3205,30 +3203,30 @@
 		<field name='condition' type='string_ascii' pk='true' />
 	</table>
 	<table table_name='videos_tables' table_version='2' guid='dfa3e6a2-dedc-4827-8892-ab3024362b70'>
-		<field name='video_name' type='string' pk='true' />
-		<field fkey='video_types_tables.video_type' name='video_type' type='string' />
+		<field name='video_name' type='string_ascii' pk='true' />
+		<field fkey='video_types_tables.video_type' name='video_type' type='string_ascii' />
 		<field name='audio_tracks' type='int' />
+		<field name='script_ref' type='int' />
 	</table>	
 	<table table_name='voice_events_tables' table_version='0' guid='86876495-3a94-477e-a99d-e392511dd231'>
-		<field name='name' type='string' pk='true' />
 	</table>
 	<table table_name='voice_types_tables' table_version='0' guid='c7690a6d-c58a-11df-8001-001fd02417f0'>
 		<field name='key' type='string' pk='true' />
 	</table>
 	<table table_name='warscape_animated_lod_tables' table_version='1' guid='fe463f7d-2ed0-4e9e-9dff-6b77c391fb13'>
-		<field name='key' type='string' pk='true' />
-		<field name='filename' type='string' />
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='filename' type='string_ascii' />
 		<field name='range' type='float' />
-		<field fkey='warscape_animated_tables.key' name='animated' type='string' />
+		<field fkey='warscape_animated_tables.key' name='animated' type='string_ascii' />
 	</table>
 	<table table_name='warscape_animated_tables' table_version='2' guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
 		<field name='key' type='string' pk='true' />
-		<field name='texture_filename_base' type='string' />
-		<field fkey='warscape_categories_tables.key' name='category' type='string' />
+		<field name='texture_filename_base' type='string_ascii' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string_ascii' />
 	</table>
 	<table table_name='warscape_equipment_items_tables' table_version='2' guid='3f5ed434-e126-4348-adfb-01e2f439c9c2'>
-		<field name='equipment_item' type='string' />
-		<field fkey='warscape_equipment_collections_tables.collection_key' name='equipment_key' type='string' />
+		<field name='equipment_item' type='string_ascii' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='equipment_key' type='string_ascii' />
 	</table>
 	<table table_name='warscape_equipment_themes_tables' table_version='1' guid='e8ed7b33-f181-4bd9-b124-2a4877050dfa'>
 		<field name='theme' type='string' />
@@ -3244,15 +3242,15 @@
 		<field name='range' type='float' />
 	</table>
 	<table table_name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
-		<field name='key' type='string' />
-		<field name='filename' type='string' />
-		<field name='range' type='string' />
-		<field fkey='warscape_rigid_tables.key' name='rigid' type='string' />
+		<field name='key' type='string_ascii' />
+		<field name='filename' type='string_ascii' />
+		<field name='range' type='string_ascii' />
+		<field fkey='warscape_rigid_tables.key' name='rigid' type='string_ascii' />
 	</table>
 	<table table_name='warscape_rigid_tables' table_version='2' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
-		<field name='key' type='string' pk='true' />
-		<field name='texture_directory' type='string' />
-		<field fkey='warscape_categories_tables.key' name='category' type='string' />
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='texture_directory' type='string_ascii' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string_ascii' />
 	</table>
 	<table table_name='warscape_trees_tables' table_version='0' guid='f25a3e52-e071-44e5-ac82-c5b3acdcdf11'>
 		<field fkey='trees_tables.Tree ID' name='Tree' type='string' pk='true' />
@@ -3260,9 +3258,9 @@
 		<field name='Model Path' type='string' />
 	</table>
 	<table table_name='warscape_underlay_textures_tables' table_version='2' guid='1811b995-74cc-413b-8719-8e3e6c96af8e'>
-		<field name='underlay_key' type='string' pk='true' />
-		<field name='filename' type='string' />
-		<field name='filepath' type='string' />
+		<field name='underlay_key' type='string_ascii' pk='true' />
+		<field name='filename' type='string_ascii' />
+		<field name='filepath' type='string_ascii' />
 		<field name='levels' type='int' />
 	</table>
 	<table table_name='wind_levels_tables' table_version='0' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
