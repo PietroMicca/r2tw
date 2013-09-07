@@ -507,351 +507,267 @@
 		<field name='value' type='int' />
 		<field name='weather_type' type='string_ascii' />
 	</table>
-  <table table_name='battle_weather_types_tables'
-         table_version='0'
-         guid='411de610-cf34-4e0e-920a-55b5f36b05c3'>
-    <field name='key' type='string_ascii' />
-    <field name='level' type='int' />
-    <field name='precipitation_type' type='int' />
-    <field name='num_particles' type='int' />
-    <field name='particle_size' type='float' />
-    <field name='particle_speed' type='float' />
-    <field name='list_order' type='int' />
-    <field name='naval_appropriate' type='boolean' />
-  </table>
-  <table table_name='battlefield_building_categories_tables'
-         table_version='3'
-         guid='bdfbc6cc-c217-4ae0-9f54-d465152bb92c'>
-    <field name='category' type='string' pk='true' />
-    <field name='onscreen_name' type='string' />
-    <field fkey='particle_effects_tables.key' name='default_destruction_effect' type='string' />
-  </table>
-  <table table_name='battlefield_building_transformations_tables'
-         table_version='0'
-         guid='dd4cdb49-73ae-4ff1-b2aa-795a25cfcdb7'>
-    <field name='transformation' type='string_ascii' />
-  </table>
-  <table table_name='battlefield_buildings_tables'
-         table_version='14'
-         guid='9d72a4dc-2d50-44c9-93ee-95227afa1413'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='battlefield_building_categories_tables.category' name='category' type='string' />
-    <field fkey='models_building_tables.key' name='model' type='string' />
-    <field fkey='battlefield_building_audio_materials_tables.audio_material' name='audio_material' type='string' />
-    <field name='hit_points' type='int' />
-    <field fkey='gun_types_tables.gun_type' name='gun_type' type='optstring' />
-    <field name='terrain' type='optstring' />
-    <field name='capacity_in_men' type='int' version_start='1' />
-    <field name='ignition_threshold' type='int' version_start='2' />
-    <field fkey='unit_stats_land_tables.key' name='spawned_unit' type='optstring' version_start='6' />
-    <field name='radar_icon' type='optstring' version_start='6' />
-    <field name='visible_in_public_ted' type='boolean' version_start='6' />
-    <field name='fortwall_penetration_chance' type='int' version_start='6' />
-  </table>
-  <table table_name='battlefield_deployable_siege_items_tables'
-         table_version='4'
-         guid='92e2168a-c67b-4790-b600-ce7227c9734c'>
-    <field name='key' type='string' />
-    <field name='siege_point_cost' type='int' />
-    <field name='turns_to_build' type='int' />
-    <field name='string' type='string' />
-    <field name='icon_name' type='string' />
-    <field name='info_pic' type='string' />
-  </table>
-  <table table_name='battlefield_snow_props_tables'
-         table_version='0'
-         guid='2a984608-7d2b-4a3b-aace-fd45d53f24fc'>
-    <field fkey='battlefield_buildings_tables.key' name='prop' type='string' pk='true' />
-    <field fkey='seasons_tables.season' name='enable_for_snow' type='boolean' />
-  </table>
-  <table table_name='battles_tables'
-         table_version='6'
-         guid='9b45392b-cae2-4e11-bedc-d1c95d9fa792'>
-    <field name='Map ID' type='string' pk='true' />
-    <field fkey='battle_types_tables.type' name='Battle Type' type='string' />
-    <field name='Naval' type='boolean' />
-    <field name='specification' type='string' />
-    <field name='Screenshot Path' type='optstring' />
-    <field name='Map Path' type='boolean' />
-    <field name='team_size_1' type='int' />
-    <field name='team_size_2' type='int' />
-    <field name='release' type='boolean' />
-    <field name='Multi-player' type='boolean' />
-    <field name='Single Player' type='boolean' />
-    <field name='unknown12' type='optstring' version_start='1' />
-    <field name='year' type='int' version_start='1' />
-    <field name='defender_funds_ratio' type='float' version_start='2' />
-    <field name='has_key_buildings' type='boolean' version_start='3' />
-    <field name='matchmaking' type='boolean' version_start='4' />
-  </table>
-  <table table_name='battles_to_battle_sky_types_junctions_tables'
-         table_version='0'
-         guid='9d880a72-3467-4eb7-adfc-d9d9b2f845f9'>
-    <field fkey='battles_tables.key' name='battle_key' type='string' />
-    <field fkey='battle_sky_types_tables.key' name='battle_sky_type_key' type='string' />
-  </table>
-  <table table_name='bribe_actions_tables'
-         table_version='0'
-         guid='ad0abd00-86f8-44d3-8e56-6c393e74d6a8'>
-    <field name='action' type='string_ascii' />
-    <field name='onscreen' type='string_ascii' />
-  </table>
-  <table table_name='building_chain_to_slots_tables'
-         table_version='0'
-         guid='53128ac6-72e5-4f3d-bd7e-8f52b5d70d38'>
-    <field fkey='building_chains_tables.key' name='chain' type='string_ascii' />
-    <field fkey='slots_tables.slot' name='slot' type='string_ascii' />
-  </table>
-  <table table_name='building_chains_tables'
-         table_version='2'
-         guid='e7aa09bd-ea02-488b-a9d7-daf8b2b4cfc6'>
-    <field name='key' type='string' pk='true' />
-    <field name='tech_category_tab' type='optstring' />
-    <field name='tech_category_position' type='optstring' />
-    <field name='chain_category' type='optstring' />
-    <field name='in_encyclopedia' type='boolean' version_start='1' />
-  </table>
-  <table table_name='building_culture_gov_type_variants_tables'
-         table_version='1'
-         guid='5d9a4d0a-4d82-40cd-b230-fae23ee62e63'>
-    <field fkey='building_levels_tables.level_name' name='Building' type='string' pk='true' />
-    <field name='Culture' type='string' pk='true' />
-    <field fkey='government_types_tables.government_type' name='Government Type' type='string' pk='true' />
-    <field name='Artpiece' type='optstring' />
-    <field name='Artpiece Animated' type='boolean' />
-    <field fkey='building_description_texts_tables.Building IDRef' name='Description' type='string' />
-    <field name='IconIcon' type='optstring' />
-  </table>
-  <table table_name='building_culture_variants_tables'
-         table_version='3'
-         guid='c0844b68-b905-4394-a6e1-6f330d3cc9d0'>
-    <field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
-    <field fkey='cultures_tables.key' name='culture' type='string' pk='true' />
-    <field fkey='battlefield_buildings_tables.key' name='battlefield_building' type='optstring' />
-    <field fkey='warscape_rigid_tables.key' name='artpiece' type='optstring' />
-    <field fkey='warscape_animated_tables.key' name='artpiece_animated' type='optstring' />
-    <field fkey='building_description_texts_tables.key' name='description' type='optstring' />
-    <field name='icon' type='optstring' />
-  </table>
-  <table table_name='building_effects_junction_tables'
-         table_version='3'
-         guid='86cf874d-854e-41ce-848b-ff14f362cf23'>
-    <field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
-    <field fkey='effects_tables.effect' name='effect' type='string' pk='true' />
-    <field name='value' type='float' />
-  </table>
-  <table table_name='building_faction_variants_tables'
-         table_version='0'
-         guid='c9d97a90-566c-414e-b7e7-6f8ef4fc7f81'>
-    <field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
-    <field fkey='factions_tables.key' name='faction' type='string' pk='true' />
-    <field fkey='warscape_rigid_tables.key' name='artpiece' type='optstring' />
-    <field fkey='building_description_texts_tables.key' name='description' type='optstring' />
-    <field name='icon' type='optstring' />
-  </table>
-  <table table_name='building_factionwide_effects_junctions_tables'
-         table_version='0'
-         guid='622247ce-2fc6-406e-80f3-0358f7fa296c'>
-    <field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
-    <field fkey='effects_tables.effect' name='effect' type='string' pk='true' />
-    <field name='effect_value' type='float' />
-  </table>
-  <table table_name='building_level_armed_citizenry_junctions_tables'
-         table_version='1'
-         guid='81712456-019d-4223-8726-ceb6a422fbec'>
-    <field fkey='building_levels_tables.level_name' name='building_level' type='string_ascii' />
-    <field name='id' type='int' />
-    <field name='unknown3' type='float' />
-    <field name='unknown' type='string_ascii' />
-  </table>
-  <table table_name='building_level_required_technology_junctions_tables'
-         table_version='0'
-         guid='ea63016e-cb35-4f60-9d7a-d4f33d073f9f'>
-    <field fkey='building_levels_tables.level_name' name='building_level_key' type='string_ascii' />
-    <field fkey='technologies_tables.key' name='technology_key' type='string_ascii' />
-  </table>
-  <table table_name='building_levels_tables'
-         table_version='6'
-         guid='42622828-b59f-4fd2-a5a1-a5f37a50150c'>
-    <field name='level_name' type='string_ascii' pk='true' />
-    <field fkey='building_chains_tables.key' name='Building Chain' type='string_ascii' />
-    <field name='level' type='int' />
-    <field name='condition' type='string_ascii' />
-    <field name='Create Time' type='int' />
-    <field name='create_cost' type='int' />
-    <field name='Upkeep Cost' type='int' />
-    <field name='Demolition Cost' type='int' />
-    <field name='ZOC' type='int' />
-    <field name='Lower Happiness' type='int' />
-    <field name='Upper Happiness' type='int' />
-    <field name='Repression' type='int' />
-    <field name='GDP' type='int' />
-    <field name='Town Wealth Growth' type='int' />
-    <field name='Population Change' type='int' />
-    <field name='Max Population Change' type='int' />
-    <field name='Commodity' type='string_ascii' />
-    <field name='unknown18' type='boolean' />
-    <field name='unknown19' type='boolean' />
-    <field name='unknown20' type='int' />
-    <field name='Unique' type='boolean' />
-    <field name='military_prestige' type='int' />
-    <field name='naval_prestige' type='int' />
-    <field name='economic_prestige' type='int' />
-    <field name='enlightenment_prestige' type='int' />
-    <field name='unknown26' type='int' />
-    <field name='unknown27' type='optstring_ascii' />
-    <field name='unknown28' type='string_ascii' />
-    <field name='unknown29' type='int' />
-    <field name='unknown30' type='boolean' />
-    <field name='unknown31' type='optstring_ascii' />
-    <field name='unknown32' type='string_ascii' />
-    <field name='unknown33' type='boolean' />
-  </table>
-  <table table_name='building_to_unit_abilities_junctions_tables'
-         table_version='0'
-         guid='471e02cb-c39d-47f9-9170-7a54204a034a'>
-    <field fkey='unit_abilities_tables.key' name='ability' type='string' />
-    <field fkey='battlefield_buildings_tables.key' name='building_name' type='string' />
-  </table>
-  <table table_name='building_units_allowed_tables'
-         table_version='3'
-         guid='98965008-9caa-42bf-8a8c-94b4e3d0b7ce'>
-    <field fkey='building_levels_tables.level_name' name='Building' type='string_ascii' pk='true' />
-    <field fkey='units_tables.key' name='unit' type='string_ascii' pk='true' />
-    <field name='XP' type='int' />
-    <field name='Condition' type='boolean' />
-    <field name='unknown5' type='int' />
-    <field name='unknown6' type='int' />
-    <field name='unknown7' type='boolean' />
-    <field name='unknown8' type='boolean' />
-  </table>
-  <table table_name='building_upgrades_junction_tables'
-         table_version='0'
-         guid='0d3cea4f-b25b-4152-9eac-fed3260eb7b2'>
-    <field fkey='building_levels_tables.level_name' name='from' type='string_ascii' />
-    <field fkey='building_levels_tables.level_name' name='to' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_distribution_profiles_tables'
-         table_version='0'
-         guid='40db2329-6650-46a1-9d39-f7dfa678712f'>
-    <field name='key' type='string' pk='true' />
-  </table>
-  <table table_name='cai_agent_distribution_types_tables'
-         table_version='0'
-         guid='f775e119-6dd6-4129-916c-738206771b4a'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_record_to_cai_agent_type_junctions_tables'
-         table_version='0'
-         guid='e7a4fb44-1c6c-48b8-b05a-31918b487618'>
-    <field fkey='agents_tables.key' name='agent_record_key' type='string_ascii' />
-    <field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_recruitment_profiles_tables'
-         table_version='0'
-         guid='a1fcb853-71d6-4626-aab9-2499c8776308'>
-    <field name='key' type='string' pk='true' />
-  </table>
-  <table table_name='cai_agent_recruitment_types_tables'
-         table_version='0'
-         guid='4c1e9fc3-8492-46e6-99a5-38817fe2f816'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_type_distribution_profile_junctions_tables'
-         table_version='0'
-         guid='b0e5239a-0d4f-4f0e-9756-ae0401035ccd'>
-    <field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
-    <field fkey='cai_agent_distribution_profiles_tables.key' name='distribution_profile_key' type='string_ascii' />
-    <field fkey='cai_agent_distribution_types_tables.key' name='distribution_type_key' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_type_recruitment_profile_junctions_tables'
-         table_version='0'
-         guid='f01920f8-9bc4-42d9-abd9-6cf4f5448ed9'>
-    <field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
-    <field fkey='cai_agent_recruitment_profiles_tables.key' name='recruitment_profile_key' type='string_ascii' />
-    <field fkey='cai_agent_recruitment_types_tables.key' name='recruitment_type_key' type='string_ascii' />
-  </table>
-  <table table_name='cai_agent_types_tables'
-         table_version='0'
-         guid='41cf5506-2f58-4f5e-abf2-3af18e103cba'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_base_building_context_values_tables'
-         table_version='1'
-         guid='a49a3d34-21d2-4212-82a4-76d238e28f4a'>
-    <field fkey='building_levels_tables.level_name' name='building_key' type='string_ascii' />
-    <field name='economic_value' type='float' />
-    <field name='education_value' type='float' />
-    <field name='happiness_value' type='float' />
-    <field name='military_value' type='float' />
-    <field name='prestige_value' type='float' />
-    <field name='existing_buildings_apply_discount_over_limit' type='float' />
-    <field name='existing_buildings_discount_per_building' type='float' />
-    <field name='existing_buildings_maximum_discount' type='float' />
-  </table>
-  <table table_name='cai_military_aggressiveness_policies_tables'
-         table_version='0'
-         guid='558e9152-2e79-4a02-8cc7-7812406ede94'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_military_behaviour_policies_tables'
-         table_version='0'
-         guid='dea4036a-016f-4dfa-ab98-2abdd16e15e6'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_personalities_budget_allocation_policy_junctions_tables'
-         table_version='0'
-         guid='6c7191b3-2a98-4964-99e5-18e3873e9bfe'>
-    <field fkey='cai_personalities_budget_allocations_tables.key' name='budget_allocation_key' type='string_ascii' />
-    <field fkey='cai_personalities_budget_context_types_tables.key' name='budget_context_key' type='string_ascii' />
-    <field fkey='cai_personalities_budget_policies_tables.key' name='budget_policy_key' type='string_ascii' />
-    <field name='priority' type='int' />
-  </table>
-  <table table_name='cai_personalities_budget_allocations_tables'
-         table_version='2'
-         guid='fd840330-078b-4114-80c0-640b58fcae78'>
-    <field name='agents_funding_cap' type='int' />
-    <field name='agents_funds_allocation_percentage' type='int' />
-    <field name='agents_percentage_of_pool_to_save_on_fail' type='int' />
-    <field name='agents_turns_of_inactivity_until_cap' type='int' />
-    <field name='army_funding_cap' type='int' />
-    <field name='army_funds_allocation_percentage' type='int' />
-    <field name='army_percentage_of_pool_to_save_on_fail' type='int' />
-    <field name='army_turns_of_inactivity_until_cap' type='int' />
-    <field name='construction_funding_cap' type='int' />
-    <field name='construction_funds_allocation_percentage' type='int' />
-    <field name='construction_percentage_of_pool_to_save_on_fail' type='int' />
-    <field name='construction_turns_of_inactivity_until_cap' type='int' />
-    <field name='diplomacy_funding_cap' type='int' />
-    <field name='diplomacy_funds_allocation_percentage' type='int' />
-    <field name='diplomacy_percentage_of_pool_to_save_on_fail' type='int' />
-    <field name='diplomacy_turns_of_inactivity_until_cap' type='int' />
-    <field name='key' type='string' />
-    <field name='navy_funding_cap' type='int' />
-    <field name='navy_funds_allocation_percentage' type='int' />
-    <field name='navy_percentage_of_pool_to_save_on_fail' type='int' />
-    <field name='navy_turns_of_inactivity_until_cap' type='int' />
-  </table>
-  <table table_name='cai_personalities_budget_policies_tables'
-         table_version='0'
-         guid='3c8811d1-7a22-44be-ac11-2dfd8cddcd55'>
-    <field fkey='cai_personalities_budget_allocations_tables.key' name='default_budget_allocation_key' type='string_ascii' />
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='cai_personalities_construction_preference_policies_tables'
-         table_version='0'
-         guid='9e9642fe-75e2-4596-aac1-9e2b4ba56086'>
-    <field name='key' type='string' pk='true' />
-  </table>
-  <table table_name='cai_personalities_construction_preference_policy_building_junctions_tables'
-         table_version='2'
-         guid='e72b99cd-0059-4769-86c7-64f3f8126e40'>
-    <field name='bias_level' type='int' />
-    <field fkey='building_levels_tables.level_name' name='building_key' type='string' />
-    <field fkey='cai_personalities_construction_preference_policies_tables.key' name='policy_key' type='string' />
-    <field name='absolute_adjustment' type='float' />
-    <field name='building_discount_limit_adjustment' type='int' version_start='2' />
-  </table>
+	<table table_name='battle_weather_types_tables' table_version='0' guid='411de610-cf34-4e0e-920a-55b5f36b05c3'>
+		<field name='key' type='string_ascii' />
+		<field name='level' type='int' />
+		<field name='precipitation_type' type='int' />
+		<field name='num_particles' type='int' />
+		<field name='particle_size' type='float' />
+		<field name='particle_speed' type='float' />
+		<field name='list_order' type='int' />
+		<field name='naval_appropriate' type='boolean' />
+	</table>
+	<table table_name='battlefield_building_categories_tables' table_version='3' guid='bdfbc6cc-c217-4ae0-9f54-d465152bb92c'>
+		<field name='category' type='string' pk='true' />
+		<field name='onscreen_name' type='string' />
+		<field fkey='particle_effects_tables.key' name='default_destruction_effect' type='string' />
+	</table>
+	<table table_name='battlefield_building_transformations_tables' table_version='0' guid='dd4cdb49-73ae-4ff1-b2aa-795a25cfcdb7'>
+		<field name='transformation' type='string_ascii' />
+	</table>
+	<table table_name='battlefield_buildings_tables' table_version='14' guid='9d72a4dc-2d50-44c9-93ee-95227afa1413'>
+		<field name='key' type='string' pk='true' />
+		<field fkey='battlefield_building_categories_tables.category' name='category' type='string' />
+		<field fkey='models_building_tables.key' name='model' type='string' />
+		<field fkey='battlefield_building_audio_materials_tables.audio_material' name='audio_material' type='string' />
+		<field name='hit_points' type='int' />
+		<field fkey='gun_types_tables.gun_type' name='gun_type' type='optstring' />
+		<field name='terrain' type='optstring' />
+		<field name='capacity_in_men' type='int' version_start='1' />
+		<field name='ignition_threshold' type='int' version_start='2' />
+		<field fkey='unit_stats_land_tables.key' name='spawned_unit' type='optstring' version_start='6' />
+		<field name='radar_icon' type='optstring' version_start='6' />
+		<field name='visible_in_public_ted' type='boolean' version_start='6' />
+		<field name='fortwall_penetration_chance' type='int' version_start='6' />
+	</table>
+	<table table_name='battlefield_snow_props_tables' table_version='0' guid='2a984608-7d2b-4a3b-aace-fd45d53f24fc'>
+		<field fkey='battlefield_buildings_tables.key' name='prop' type='string' pk='true' />
+		<field fkey='seasons_tables.season' name='enable_for_snow' type='boolean' />
+	</table>
+	<table table_name='battles_tables' table_version='6' guid='9b45392b-cae2-4e11-bedc-d1c95d9fa792'>
+		<field name='Map ID' type='string' pk='true' />
+		<field fkey='battle_types_tables.type' name='Battle Type' type='string' />
+		<field name='Naval' type='boolean' />
+		<field name='specification' type='string' />
+		<field name='Screenshot Path' type='optstring' />
+		<field name='Map Path' type='boolean' />
+		<field name='team_size_1' type='int' />
+		<field name='team_size_2' type='int' />
+		<field name='release' type='boolean' />
+		<field name='Multi-player' type='boolean' />
+		<field name='Single Player' type='boolean' />
+		<field name='unknown12' type='optstring' version_start='1' />
+		<field name='year' type='int' version_start='1' />
+		<field name='defender_funds_ratio' type='float' version_start='2' />
+		<field name='has_key_buildings' type='boolean' version_start='3' />
+		<field name='matchmaking' type='boolean' version_start='4' />
+	</table>
+	<table table_name='battles_to_battle_sky_types_junctions_tables' table_version='0' guid='9d880a72-3467-4eb7-adfc-d9d9b2f845f9'>
+		<field fkey='battles_tables.key' name='battle_key' type='string' />
+		<field fkey='battle_sky_types_tables.key' name='battle_sky_type_key' type='string' />
+	</table>
+	<table table_name='bribe_actions_tables' table_version='0' guid='ad0abd00-86f8-44d3-8e56-6c393e74d6a8'>
+		<field name='action' type='string_ascii' />
+		<field name='onscreen' type='string_ascii' />
+	</table>
+	<table table_name='building_chain_to_slots_tables' table_version='0' guid='53128ac6-72e5-4f3d-bd7e-8f52b5d70d38'>
+		<field fkey='building_chains_tables.key' name='chain' type='string_ascii' />
+		<field fkey='slots_tables.slot' name='slot' type='string_ascii' />
+	</table>
+	<table table_name='building_chains_tables' table_version='2' guid='e7aa09bd-ea02-488b-a9d7-daf8b2b4cfc6'>
+		<field name='key' type='string' pk='true' />
+		<field name='tech_category_tab' type='optstring' />
+		<field name='tech_category_position' type='optstring' />
+		<field name='chain_category' type='optstring' />
+		<field name='in_encyclopedia' type='boolean' version_start='1' />
+	</table>
+	<table table_name='building_culture_gov_type_variants_tables' table_version='1' guid='5d9a4d0a-4d82-40cd-b230-fae23ee62e63'>
+		<field fkey='building_levels_tables.level_name' name='Building' type='string_ascii' pk='true' />
+		<field name='Culture' type='string_ascii' pk='true' />
+		<field fkey='government_types_tables.government_type' name='Government Type' type='string_ascii' pk='true' />
+		<field name='Artpiece' type='optstring_ascii' />
+		<field name='Artpiece Animated' type='boolean' />
+		<field fkey='building_description_texts_tables.Building IDRef' name='Description' type='string_ascii' />
+		<field name='IconIcon' type='optstring_ascii' />
+	</table>
+	<table table_name='building_culture_variants_tables' table_version='3' guid='c0844b68-b905-4394-a6e1-6f330d3cc9d0'>
+		<field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
+		<field fkey='cultures_tables.key' name='culture' type='string' pk='true' />
+		<field fkey='battlefield_buildings_tables.key' name='battlefield_building' type='optstring' />
+		<field fkey='warscape_rigid_tables.key' name='artpiece' type='optstring' />
+		<field fkey='warscape_animated_tables.key' name='artpiece_animated' type='optstring' />
+		<field fkey='building_description_texts_tables.key' name='description' type='optstring' />
+		<field name='icon' type='optstring' />
+	</table>
+	<table table_name='building_effects_junction_tables' table_version='3' guid='86cf874d-854e-41ce-848b-ff14f362cf23'>
+		<field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
+		<field fkey='effects_tables.effect' name='effect' type='string' pk='true' />
+		<field name='value' type='float' />
+	</table>
+	<table table_name='building_faction_variants_tables' table_version='0' guid='c9d97a90-566c-414e-b7e7-6f8ef4fc7f81'>
+		<field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
+		<field fkey='factions_tables.key' name='faction' type='string' pk='true' />
+		<field fkey='warscape_rigid_tables.key' name='artpiece' type='optstring' />
+		<field fkey='building_description_texts_tables.key' name='description' type='optstring' />
+		<field name='icon' type='optstring' />
+	</table>
+	<table table_name='building_factionwide_effects_junctions_tables' table_version='0' guid='622247ce-2fc6-406e-80f3-0358f7fa296c'>
+		<field fkey='building_levels_tables.level_name' name='building' type='string' pk='true' />
+		<field fkey='effects_tables.effect' name='effect' type='string' pk='true' />
+		<field name='effect_value' type='float' />
+	</table>
+	<table table_name='building_level_armed_citizenry_junctions_tables' table_version='1' guid='81712456-019d-4223-8726-ceb6a422fbec'>
+		<field fkey='building_levels_tables.level_name' name='building_level' type='string_ascii' />
+		<field name='id' type='int' />
+		<field name='unknown3' type='float' />
+		<field name='unknown' type='string_ascii' />
+	</table>
+	<table table_name='building_level_required_technology_junctions_tables' table_version='0' guid='ea63016e-cb35-4f60-9d7a-d4f33d073f9f'>
+		<field fkey='building_levels_tables.level_name' name='building_level_key' type='string_ascii' />
+		<field fkey='technologies_tables.key' name='technology_key' type='string_ascii' />
+	</table>
+	<table table_name='building_levels_tables' table_version='6' guid='42622828-b59f-4fd2-a5a1-a5f37a50150c'>
+		<field name='level_name' type='string_ascii' pk='true' />
+		<field fkey='building_chains_tables.key' name='Building Chain' type='string_ascii' />
+		<field name='level' type='int' />
+		<field name='condition' type='string_ascii' />
+		<field name='Create Time' type='int' />
+		<field name='create_cost' type='int' />
+		<field name='Upkeep Cost' type='int' />
+		<field name='Demolition Cost' type='int' />
+		<field name='ZOC' type='int' />
+		<field name='Lower Happiness' type='int' />
+		<field name='Upper Happiness' type='int' />
+		<field name='Repression' type='int' />
+		<field name='GDP' type='int' />
+		<field name='Town Wealth Growth' type='int' />
+		<field name='Population Change' type='int' />
+		<field name='Max Population Change' type='int' />
+		<field name='Commodity' type='string_ascii' />
+		<field name='unknown18' type='boolean' />
+		<field name='unknown19' type='boolean' />
+		<field name='unknown20' type='int' />
+		<field name='Unique' type='boolean' />
+		<field name='military_prestige' type='int' />
+		<field name='naval_prestige' type='int' />
+		<field name='economic_prestige' type='int' />
+		<field name='enlightenment_prestige' type='int' />
+		<field name='unknown26' type='int' />
+		<field name='unknown27' type='optstring_ascii' />
+		<field name='unknown28' type='string_ascii' />
+		<field name='unknown29' type='int' />
+		<field name='unknown30' type='boolean' />
+		<field name='unknown31' type='optstring_ascii' />
+		<field name='unknown32' type='string_ascii' />
+		<field name='unknown33' type='boolean' />
+	</table>
+	<table table_name='building_to_unit_abilities_junctions_tables' table_version='0' guid='471e02cb-c39d-47f9-9170-7a54204a034a'>
+		<field fkey='unit_abilities_tables.key' name='ability' type='string_ascii' />
+		<field fkey='battlefield_buildings_tables.key' name='building_name' type='string_ascii' />
+	</table>
+	<table table_name='building_units_allowed_tables' table_version='3' guid='98965008-9caa-42bf-8a8c-94b4e3d0b7ce'>
+		<field fkey='building_levels_tables.level_name' name='Building' type='string_ascii' pk='true' />
+		<field fkey='units_tables.key' name='unit' type='string_ascii' pk='true' />
+		<field name='XP' type='int' />
+		<field name='Condition' type='boolean' />
+		<field name='key' type='int' />
+		<field name='unknown6' type='int' />
+		<field name='unknown7' type='boolean' />
+		<field name='unknown8' type='boolean' />
+	</table>
+	<table table_name='building_upgrades_junction_tables' table_version='0' guid='0d3cea4f-b25b-4152-9eac-fed3260eb7b2'>
+		<field fkey='building_levels_tables.level_name' name='from' type='string_ascii' />
+		<field fkey='building_levels_tables.level_name' name='to' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_distribution_profiles_tables' table_version='0' guid='40db2329-6650-46a1-9d39-f7dfa678712f'>
+		<field name='key' type='string' pk='true' />
+	</table>
+	<table table_name='cai_agent_distribution_types_tables' table_version='0' guid='f775e119-6dd6-4129-916c-738206771b4a'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_record_to_cai_agent_type_junctions_tables' table_version='0' guid='e7a4fb44-1c6c-48b8-b05a-31918b487618'>
+		<field fkey='agents_tables.key' name='agent_record_key' type='string_ascii' />
+		<field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_recruitment_profiles_tables' table_version='0' guid='a1fcb853-71d6-4626-aab9-2499c8776308'>
+		<field name='key' type='string' pk='true' />
+	</table>
+	<table table_name='cai_agent_recruitment_types_tables' table_version='0' guid='4c1e9fc3-8492-46e6-99a5-38817fe2f816'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_type_distribution_profile_junctions_tables' table_version='0' guid='b0e5239a-0d4f-4f0e-9756-ae0401035ccd'>
+		<field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
+		<field fkey='cai_agent_distribution_profiles_tables.key' name='distribution_profile_key' type='string_ascii' />
+		<field fkey='cai_agent_distribution_types_tables.key' name='distribution_type_key' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_type_recruitment_profile_junctions_tables' table_version='0' guid='f01920f8-9bc4-42d9-abd9-6cf4f5448ed9'>
+		<field fkey='cai_agent_types_tables.key' name='agent_type_key' type='string_ascii' />
+		<field fkey='cai_agent_recruitment_profiles_tables.key' name='recruitment_profile_key' type='string_ascii' />
+		<field fkey='cai_agent_recruitment_types_tables.key' name='recruitment_type_key' type='string_ascii' />
+	</table>
+	<table table_name='cai_agent_types_tables' table_version='0' guid='41cf5506-2f58-4f5e-abf2-3af18e103cba'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_base_building_context_values_tables' table_version='1' guid='a49a3d34-21d2-4212-82a4-76d238e28f4a'>
+		<field fkey='building_levels_tables.level_name' name='building_key' type='string_ascii' />
+		<field name='economic_value' type='float' />
+		<field name='education_value' type='float' />
+		<field name='happiness_value' type='float' />
+		<field name='military_value' type='float' />
+		<field name='prestige_value' type='float' />
+		<field name='existing_buildings_apply_discount_over_limit' type='float' />
+		<field name='existing_buildings_discount_per_building' type='float' />
+		<field name='existing_buildings_maximum_discount' type='float' />
+	</table>
+	<table table_name='cai_military_aggressiveness_policies_tables' table_version='0' guid='558e9152-2e79-4a02-8cc7-7812406ede94'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_military_behaviour_policies_tables' table_version='0' guid='dea4036a-016f-4dfa-ab98-2abdd16e15e6'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_personalities_budget_allocation_policy_junctions_tables' table_version='0' guid='6c7191b3-2a98-4964-99e5-18e3873e9bfe'>
+		<field fkey='cai_personalities_budget_allocations_tables.key' name='budget_allocation_key' type='string_ascii' />
+		<field fkey='cai_personalities_budget_context_types_tables.key' name='budget_context_key' type='string_ascii' />
+		<field fkey='cai_personalities_budget_policies_tables.key' name='budget_policy_key' type='string_ascii' />
+		<field name='priority' type='int' />
+	</table>
+	<table table_name='cai_personalities_budget_allocations_tables' table_version='2' guid='fd840330-078b-4114-80c0-640b58fcae78'>
+		<field name='agents_funding_cap' type='int' />
+		<field name='agents_funds_allocation_percentage' type='int' />
+		<field name='agents_percentage_of_pool_to_save_on_fail' type='int' />
+		<field name='agents_turns_of_inactivity_until_cap' type='int' />
+		<field name='army_funding_cap' type='int' />
+		<field name='army_funds_allocation_percentage' type='int' />
+		<field name='army_percentage_of_pool_to_save_on_fail' type='int' />
+		<field name='army_turns_of_inactivity_until_cap' type='int' />
+		<field name='construction_funding_cap' type='int' />
+		<field name='construction_funds_allocation_percentage' type='int' />
+		<field name='construction_percentage_of_pool_to_save_on_fail' type='int' />
+		<field name='construction_turns_of_inactivity_until_cap' type='int' />
+		<field name='diplomacy_funding_cap' type='int' />
+		<field name='diplomacy_funds_allocation_percentage' type='int' />
+		<field name='diplomacy_percentage_of_pool_to_save_on_fail' type='int' />
+		<field name='diplomacy_turns_of_inactivity_until_cap' type='int' />
+		<field name='key' type='string' />
+		<field name='navy_funding_cap' type='int' />
+		<field name='navy_funds_allocation_percentage' type='int' />
+		<field name='navy_percentage_of_pool_to_save_on_fail' type='int' />
+		<field name='navy_turns_of_inactivity_until_cap' type='int' />
+	</table>
+	<table table_name='cai_personalities_budget_policies_tables' table_version='0' guid='3c8811d1-7a22-44be-ac11-2dfd8cddcd55'>
+		<field fkey='cai_personalities_budget_allocations_tables.key' name='default_budget_allocation_key' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='cai_personalities_construction_preference_policies_tables' table_version='0' guid='9e9642fe-75e2-4596-aac1-9e2b4ba56086'>
+		<field name='key' type='string' pk='true' />
+	</table>
+	<table table_name='cai_personalities_construction_preference_policy_building_junctions_tables' table_version='2' guid='e72b99cd-0059-4769-86c7-64f3f8126e40'>
+		<field name='bias_level' type='int' />
+		<field fkey='building_levels_tables.level_name' name='building_key' type='string_ascii' />
+		<field fkey='cai_personalities_construction_preference_policies_tables.key' name='policy_key' type='string_ascii' />
+		<field name='absolute_adjustment' type='float' />
+		<field name='building_discount_limit_adjustment' type='int' version_start='2' />
+	</table>
   <table table_name='cai_personalities_faction_junctions_tables'
          table_version='0'
          guid='c36fe5f1-c6c2-4960-b35b-15530502eb04'>
@@ -3303,84 +3219,68 @@
     <field name='unit' type='string_ascii' />
     <field fkey='groupings_military_tables.military_group' name='military_group' type='string_ascii' />
   </table>
-  <table table_name='unrest_cause_to_demands_tables'
-         table_version='0'
-         guid='58c1adf9-ce73-40ca-aba1-ec55e15be6ca'>
-    <field fkey='TExc_unrest_causes_tables.cause' name='cause' type='string_ascii' />
-    <field name='level_of_unrest' type='string_ascii' />
-    <field fkey='TExc_unrest_demands_tables.demand' name='demand' type='string_ascii' />
-    <field fkey='message_event_strings_tables.event' name='message' type='string_ascii' />
-  </table>
-  <table table_name='videos_tables'
-         table_version='2'
-         guid='dfa3e6a2-dedc-4827-8892-ab3024362b70'>
-    <field name='video_name' type='string' pk='true' />
-    <field fkey='video_types_tables.video_type' name='video_type' type='string' />
-    <field name='audio_tracks' type='int' />
-  </table>
-  <table table_name='voice_events_tables'
-         table_version='0'
-         guid='86876495-3a94-477e-a99d-e392511dd231'>
-    <field name='name' type='string' pk='true' />
-  </table>
-  <table table_name='voice_types_tables'
-         table_version='0'
-         guid='c7690a6d-c58a-11df-8001-001fd02417f0'>
-    <field name='key' type='string' pk='true' />
-  </table>
-  <table table_name='warscape_animated_lod_tables'
-         table_version='1'
-         guid='fe463f7d-2ed0-4e9e-9dff-6b77c391fb13'>
-    <field name='key' type='string' pk='true' />
-    <field name='filename' type='string' />
-    <field name='range' type='float' />
-    <field fkey='warscape_animated_tables.key' name='animated' type='string' />
-  </table>
-  <table table_name='warscape_animated_tables'
-         table_version='2'
-         guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
-    <field name='key' type='string' pk='true' />
-    <field name='texture_filename_base' type='string' />
-    <field fkey='warscape_categories_tables.key' name='category' type='string' />
-  </table>
-  <table table_name='warscape_equipment_items_tables'
-         table_version='2'
-         guid='3f5ed434-e126-4348-adfb-01e2f439c9c2'>
-    <field name='equipment_item' type='string' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='equipment_key' type='string' />
-  </table>
-  <table table_name='warscape_equipment_themes_tables'
-         table_version='1'
-         guid='e8ed7b33-f181-4bd9-b124-2a4877050dfa'>
-    <field name='theme' type='string' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='primary_weapon' type='optstring' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='secondary_weapon' type='optstring' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='defensive' type='optstring' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='ambient' type='optstring' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='personal' type='optstring' />
-    <field fkey='warscape_equipment_collections_tables.collection_key' name='banners' type='optstring' version_start='1' />
-  </table>
-  <table table_name='warscape_rigid_lod_range_tables'
-         table_version='1'
-         guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
-    <field name='LOD_id' type='string_ascii' />
-    <field name='range' type='float' />
-  </table>
-  <table table_name='warscape_rigid_lod_tables'
-         table_version='1'
-         guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
-    <field name='key' type='string' />
-    <field name='filename' type='string' />
-    <field name='range' type='string' />
-    <field fkey='warscape_rigid_tables.key' name='rigid' type='string' />
-  </table>
-  <table table_name='warscape_rigid_tables'
-         table_version='2'
-         guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
-    <field name='key' type='string' pk='true' />
-    <field name='texture_directory' type='string' />
-    <field fkey='warscape_categories_tables.key' name='category' type='string' />
-  </table>
+	<table table_name='unrest_cause_to_demands_tables' table_version='0' guid='58c1adf9-ce73-40ca-aba1-ec55e15be6ca'>
+		<field fkey='TExc_unrest_causes_tables.cause' name='cause' type='string_ascii' />
+		<field name='level_of_unrest' type='string_ascii' />
+		<field fkey='TExc_unrest_demands_tables.demand' name='demand' type='string_ascii' />
+		<field fkey='message_event_strings_tables.event' name='message' type='string_ascii' />
+	</table>
+	<table table_name='variants_tables' table_version='0' guid='a239ed07-5abe-4b42-b53b-62464441bfc3'>
+		<field name='variant_name' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='victory_conditions_tables' table_version='0' guid='7cfad747-f458-45ff-90b0-a6d5269553be'>
+		<field name='condition' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='videos_tables' table_version='2' guid='dfa3e6a2-dedc-4827-8892-ab3024362b70'>
+		<field name='video_name' type='string' pk='true' />
+		<field fkey='video_types_tables.video_type' name='video_type' type='string' />
+		<field name='audio_tracks' type='int' />
+	</table>	
+	<table table_name='voice_events_tables' table_version='0' guid='86876495-3a94-477e-a99d-e392511dd231'>
+		<field name='name' type='string' pk='true' />
+	</table>
+	<table table_name='voice_types_tables' table_version='0' guid='c7690a6d-c58a-11df-8001-001fd02417f0'>
+		<field name='key' type='string' pk='true' />
+	</table>
+	<table table_name='warscape_animated_lod_tables' table_version='1' guid='fe463f7d-2ed0-4e9e-9dff-6b77c391fb13'>
+		<field name='key' type='string' pk='true' />
+		<field name='filename' type='string' />
+		<field name='range' type='float' />
+		<field fkey='warscape_animated_tables.key' name='animated' type='string' />
+	</table>
+	<table table_name='warscape_animated_tables' table_version='2' guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
+		<field name='key' type='string' pk='true' />
+		<field name='texture_filename_base' type='string' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string' />
+	</table>
+	<table table_name='warscape_equipment_items_tables' table_version='2' guid='3f5ed434-e126-4348-adfb-01e2f439c9c2'>
+		<field name='equipment_item' type='string' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='equipment_key' type='string' />
+	</table>
+	<table table_name='warscape_equipment_themes_tables' table_version='1' guid='e8ed7b33-f181-4bd9-b124-2a4877050dfa'>
+		<field name='theme' type='string' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='primary_weapon' type='optstring' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='secondary_weapon' type='optstring' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='defensive' type='optstring' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='ambient' type='optstring' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='personal' type='optstring' />
+		<field fkey='warscape_equipment_collections_tables.collection_key' name='banners' type='optstring' version_start='1' />
+	</table>
+	<table table_name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
+		<field name='LOD_id' type='string_ascii' />
+		<field name='range' type='float' />
+	</table>
+	<table table_name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
+		<field name='key' type='string' />
+		<field name='filename' type='string' />
+		<field name='range' type='string' />
+		<field fkey='warscape_rigid_tables.key' name='rigid' type='string' />
+	</table>
+	<table table_name='warscape_rigid_tables' table_version='2' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
+		<field name='key' type='string' pk='true' />
+		<field name='texture_directory' type='string' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string' />
+	</table>
 	<table table_name='warscape_trees_tables' table_version='0' guid='f25a3e52-e071-44e5-ac82-c5b3acdcdf11'>
 		<field fkey='trees_tables.Tree ID' name='Tree' type='string' pk='true' />
 		<field fkey='seasons_tables.season' name='Season' type='string' pk='true' />
