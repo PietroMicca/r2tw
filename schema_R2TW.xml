@@ -210,7 +210,18 @@
 	<table table_name='warscape_rigid_tables' table_version='2' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='texture_directory' type='string_ascii' />
-		<field fkey='warscape_categories_tables.key' name='category' type='string_ascii' />
+		<field name='category' type='string_ascii' />
+	</table>
+	<table table_name='warscape_trees_tables' table_version='0' guid='empty1'>
+		<field fkey='trees_tables.Tree ID' name='Tree' type='string_ascii' pk='true' />
+		<field fkey='seasons_tables.season' name='Season' type='string_ascii' pk='true' />
+		<field name='Model Path' type='string_ascii' />
+	</table>
+	<table table_name='warscape_underlay_textures_tables' table_version='2' guid='1811b995-74cc-413b-8719-8e3e6c96af8e'>
+		<field name='underlay_key' type='string_ascii' pk='true' />
+		<field name='filename' type='string_ascii' />
+		<field name='filepath' type='string_ascii' />
+		<field name='levels' type='int' />
 	</table>
 	<table table_name='wind_levels_tables' table_version='0' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
 		<field name='key' type='string_ascii' pk='true' />
