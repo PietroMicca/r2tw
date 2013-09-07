@@ -2477,120 +2477,99 @@
          guid='59ad03d7-f0eb-457e-a7ba-de8991b1b162'>
     <field name='key' type='string_ascii' />
   </table>
-  <table table_name='projectiles_tables'
-         table_version='20'
-         guid='b3483a86-fde8-4896-97e3-7b6023953274'>
-    <field name='key' type='string_ascii' />
-    <field name='Category' type='string_ascii' />
-    <field name='shot_type' type='string_ascii' />
-    <field name='explosion_type' type='optstring_ascii' />
-    <field name='unknown' type='string_ascii' />
-    <field name='Number Of Pellets' type='int' />
-    <field name='trajectory_sight' type='string_ascii' />
-    <field name='effective_range' type='int' />
-    <field name='minimum_range' type='int' />
-    <field name='max_elevation' type='int' />
-    <field name='muzzle_velocity' type='float' />
-    <field name='marksmanship_bonus' type='float' />
-    <field name='unknown' type='float' />
-    <field name='damage' type='int' />
-    <field name='ap_damage' type='int' />
-    <field name='penetration' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='boolean' />
-    <field name='unknown' type='boolean' />
-    <field name='collision_radius' type='float' />
-    <field name='base_reload_time' type='float' />
-    <field name='unknown' type='int' />
-    <field name='calibration_distance' type='float' />
-    <field name='calibration_area' type='float' />
-    <field name='unknown' type='float' />
-    <field name='unknown' type='float' />
-    <field name='unknown' type='float' />
-    <field name='projectile_display' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='projectile_audio' type='string_ascii' />
-    <field name='shockwave_radius' type='float' />
-    <field name='unknown' type='boolean' />
-    <field name='contact_stat_effect' type='optstring_ascii' />
-    <field name='unknown' type='boolean' />
-  </table>
-  <table table_name='public_order_factors_tables'
-         table_version='1'
-         guid='1541d392-6214-4096-8de2-83786a65e498'>
-    <field name='factor' type='string_ascii' />
-    <field name='Icon Path' type='string_ascii' />
-    <field name='Icon Path3' type='optstring_ascii' />
-    <field fkey='campaigns_tables.campaign_name' name='optional_campaign_key' type='optstring_ascii' />
-  </table>
-  <table table_name='quotes_people_tables'
-         table_version='0'
-         guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
-    <field name='quote_person_key' type='string_ascii' />
-    <field name='quote_person_onscreen' type='string_ascii' />
-  </table>
-  <table table_name='quotes_tables'
-         table_version='0'
-         guid='9c28b358-5d36-4f3d-8252-717d1762e638'>
-    <field name='quote_onscreen' type='string_ascii' />
-    <field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string_ascii' />
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='random_localisation_strings_tables'
-         table_version='0'
-         guid='eb743f4a-79e1-4bba-845b-f50e9c0c45ba'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='region_economics_factors_tables'
-         table_version='0'
-         guid='0f160f73-77ec-46e2-8a42-7b05e83fe74c'>
-    <field name='factor' type='string_ascii' />
-    <field name='positive_pip_path' type='string_ascii' />
-  </table>
-  <table table_name='region_groups_tables'
-         table_version='1'
-         guid='c323addd-6939-4a61-8ef3-abbd38c9b023'>
-    <field name='camera_heading' type='float' />
-    <field name='camera_position_x' type='float' />
-    <field name='camera_position_y' type='float' />
-    <field name='camera_zoom' type='float' />
-    <field name='group_key' type='string' />
-    <field name='round' type='int' />
-  </table>
-  <table table_name='region_unit_resources_tables'
-         table_version='0'
-         guid='528c4b6c-3e7e-4f93-af38-fc2964c7ba11'>
-    <field name='key' type='string_ascii' />
-    <field name='string' type='string_ascii' />
-  </table>
-  <table table_name='regions_continents_tables'
-         table_version='0'
-         guid='347c69b2-4980-4fdf-a3c7-83c3e7c2b835'>
-    <field name='continent' type='string_ascii' />
-  </table>
-  <table table_name='regions_tables'
-         table_version='3'
-         guid='8b9c7697-3577-443d-b098-ac10accd6afd'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='regions_continents_tables.continent' name='continent' type='string' />
-    <field name='r' type='int' />
-    <field name='g' type='int' />
-    <field name='b' type='int' />
-    <field name='battle_name' type='string' version_start='1' />
-  </table>
-  <table table_name='regions_to_region_groups_junctions_tables'
-         table_version='0'
-         guid='ab9c5ab7-ca20-41ec-9c7d-bc9a16b3ca24'>
-    <field fkey='regions_tables.key' name='region' type='string_ascii' />
-    <field fkey='region_groups_tables.group_key' name='region_group' type='string_ascii' />
-  </table>
-  <table table_name='religion_conversion_mods_tables'
-         table_version='0'
-         guid='1cb98861-3ffc-4527-85cc-86790678c190'>
-    <field fkey='religions_tables.religion_key' name='rel_from' type='string_ascii' />
-    <field fkey='religions_tables.religion_key' name='rel_to' type='string_ascii' />
-    <field name='modifier' type='float' />
-  </table>
+	 <table table_name='projectiles_tables' table_version='20' guid='b3483a86-fde8-4896-97e3-7b6023953274'>
+		<field name='key' type='string_ascii' />
+		<field name='Category' type='string_ascii' />
+		<field name='shot_type' type='string_ascii' />
+		<field name='explosion_type' type='optstring_ascii' />
+		<field name='unknown' type='string_ascii' />
+		<field name='Number Of Pellets' type='int' />
+		<field name='trajectory_sight' type='string_ascii' />
+		<field name='effective_range' type='int' />
+		<field name='minimum_range' type='int' />
+		<field name='max_elevation' type='int' />
+		<field name='muzzle_velocity' type='float' />
+		<field name='marksmanship_bonus' type='float' />
+		<field name='unknown' type='float' />
+		<field name='damage' type='int' />
+		<field name='ap_damage' type='int' />
+		<field name='penetration' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='boolean' />
+		<field name='collision_radius' type='float' />
+		<field name='base_reload_time' type='float' />
+		<field name='unknown' type='int' />
+		<field name='calibration_distance' type='float' />
+		<field name='calibration_area' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
+		<field name='projectile_display' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='projectile_audio' type='string_ascii' />
+		<field name='shockwave_radius' type='float' />
+		<field name='unknown' type='boolean' />
+		<field name='contact_stat_effect' type='optstring_ascii' />
+		<field name='unknown' type='boolean' />
+	 </table>
+    <table name='provinces_tables'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='public_order_factors_tables' table_version='1' guid='1541d392-6214-4096-8de2-83786a65e498'>
+		<field name='factor' type='string_ascii' />
+		<field name='Icon Path' type='string_ascii' />
+		<field name='Icon Path3' type='optstring_ascii' />
+		<field fkey='campaigns_tables.campaign_name' name='optional_campaign_key' type='optstring_ascii' />
+	</table>
+	<table table_name='quotes_people_tables' table_version='0' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
+		<field name='quote_person_key' type='string_ascii' />
+		<field name='quote_person_onscreen' type='string_ascii' />
+	</table>
+	<table table_name='quotes_tables' table_version='0' guid='9c28b358-5d36-4f3d-8252-717d1762e638'>
+		<field name='quote_onscreen' type='string_ascii' />
+		<field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='random_localisation_strings_tables' table_version='0' guid='eb743f4a-79e1-4bba-845b-f50e9c0c45ba'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='region_economics_factors_tables' table_version='0' guid='0f160f73-77ec-46e2-8a42-7b05e83fe74c'>
+		<field name='factor' type='string_ascii' />
+		<field name='positive_pip_path' type='string_ascii' />
+	</table>
+	<table table_name='region_groups_tables' table_version='1' guid='c323addd-6939-4a61-8ef3-abbd38c9b023'>
+		<field name='camera_heading' type='float' />
+		<field name='camera_position_x' type='float' />
+		<field name='camera_position_y' type='float' />
+		<field name='camera_zoom' type='float' />
+		<field name='group_key' type='string' />
+		<field name='round' type='int' />
+	</table>
+	<table table_name='region_unit_resources_tables' table_version='0' guid='528c4b6c-3e7e-4f93-af38-fc2964c7ba11'>
+		<field name='key' type='string_ascii' />
+		<field name='string' type='string_ascii' />
+	</table>
+	<table table_name='regions_continents_tables' table_version='0' guid='347c69b2-4980-4fdf-a3c7-83c3e7c2b835'>
+		<field name='continent' type='string_ascii' />
+	</table>
+	<table table_name='regions_tables' table_version='3' guid='8b9c7697-3577-443d-b098-ac10accd6afd'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='r' type='int' />
+		<field name='g' type='int' />
+		<field name='b' type='int' />
+		<field name='in_encyclopedia' type='boolean' />
+		<field name='is_sea' type='boolean' />
+	</table>
+	<table table_name='regions_to_region_groups_junctions_tables' table_version='0' guid='ab9c5ab7-ca20-41ec-9c7d-bc9a16b3ca24'>
+		<field fkey='regions_tables.key' name='region' type='string_ascii' />
+		<field fkey='region_groups_tables.group_key' name='region_group' type='string_ascii' />
+	</table>
+	<table table_name='religion_conversion_mods_tables' table_version='0' guid='1cb98861-3ffc-4527-85cc-86790678c190'>
+		<field fkey='religions_tables.religion_key' name='rel_from' type='string_ascii' />
+		<field fkey='religions_tables.religion_key' name='rel_to' type='string_ascii' />
+		<field name='modifier' type='float' />
+	</table>
   <table table_name='religions_tables'
          table_version='0'
          guid='941459a5-62e5-4fd0-9bc0-a1cab3d9a1e9'>
@@ -2625,7 +2604,7 @@
     <field name='Sky Colour G' type='float' />
     <field name='Sky Colour B' type='float' />
   </table>
-	<table table_name='sea_surfaces_tables' table_version='2' guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
+	<table table_name='sea_surfaces_tables' table_version='0' guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='sea_wind_speed' type='float' />
 		<field name='sea_phillips_constant' type='float' />
