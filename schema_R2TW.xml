@@ -15,5 +15,18 @@
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='value' type='float' />
 	</table>
+	<table table_name='abilities_tables' table_version='1' guid='34425a36-32c8-4608-aaf0-42e2b4529581'>
+		<field name='ability' type='string_ascii' pk='true' />
+		<field name='is_active' type='boolean' />
+	</table>
+	<table name='quotes_people_tables' table_version='1' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
+		<field name='quote_person_key' type='string_ascii' pk='true' />
+		<field name='quote_person_onscreen' type='string_ascii' />
+	</table>
+	<table name='quotes_tables' table_version='1' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
+		<field name='quote_onscreen' type='string_ascii' />
+		<field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string_ascii' />
+		<field name='key' type='string_ascii' pk='true' />
+	</table>
 	
-</schema>	
+</schema>
