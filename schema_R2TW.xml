@@ -19,14 +19,140 @@
 		<field name='ability' type='string_ascii' pk='true' />
 		<field name='is_active' type='boolean' />
 	</table>
-	<table name='quotes_people_tables' table_version='1' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
+	<table table_name='abilities_tables' table_version='1' guid='34425a36-32c8-4608-aaf0-42e2b4529581'>
+		<field name='ability' type='string_ascii' pk='true' />
+		<field name='is_active' type='boolean' />
+	</table>
+	<table table_name='achievements_tables' table_version='2' guid='ff9f0014-c140-40eb-8b0d-87870eaa8312'>
+		<field name='Achievements' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='advice_threads_tables' table_version='0' guid='179142d6-0dc6-4635-84dd-d9a9a1e13443'>
+		<field name='thread' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='agent_attributes_tables' table_version='1' guid='65ffce42-f57b-483c-ad36-dde049b6cf32'>
+		<field name='key' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='battle_cities_tables' table_version='0' guid='eafcf84d-2691-408a-94ec-799289196a20'>
+		<field name='city' type='string_ascii' pk='true' />
+		<field name='minimum_building_scale' type='float' />
+		<field name='maximum_building_scale' type='float' />
+		<field name='town_min_distance' type='float' />
+		<field name='city_min_distance' type='float' />
+		<field name='town_radius' type='float' />
+		<field name='city_radius' type='float' />
+		<field name='number_of_town_buildings' type='int' />
+		<field name='number_of_city_buildings' type='int' />
+	</table>
+	<table table_name='battle_city_buildings_tables' table_version='0' guid='2fa91341-3875-4494-ad46-1706fc601878'>
+		<field fkey='warscape_rigid_tables.key' name='building' type='string_ascii' pk='true' />
+		<field fkey='battle_cities_tables.city' name='city' type='string_ascii' />
+		<field name='amount_in_town' type='int' />
+		<field name='amount_in_city' type='int' />
+	</table>
+	<table table_name='battle_entities_tables' table_version='5' guid='342349e1-b8f2-4b7f-9383-6c5177921686'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field fkey='battle_entities_types_enum_tables.key' name='type' type='string_ascii' />
+		<field name='walk_speed' type='float' />
+		<field name='run_speed' type='float' />
+		<field name='acceleration' type='float' />
+		<field name='deceleration' type='float' />
+		<field name='charge_speed' type='float' />
+		<field name='crawl_speed' type='float' />
+		<field name='charge_distance_commence_run' type='float' />
+		<field name='charge_distance_adopt_charge_pose' type='float' />
+		<field name='charge_distance_pick_target' type='float' />
+		<field name='radius' type='float' />
+		<field fkey='battle_entities_shape_enum_tables.key' name='shape' type='string_ascii' />
+		<field name='radii_ratio' type='float' />
+		<field name='mass' type='float' />
+		<field name='height' type='float' />
+		<field name='fire_arc_close' type='float' />
+		<field name='fire_arc_loose' type='float' />
+		<field name='turn_speed' type='float' />
+		<field name='hit_points' type='int' />
+		<field name='allow static turn anim' type='boolean' />
+		<field name='allow turn to move anim' type='boolean' />
+		<field name='tracking threshold' type='float' />
+		<field name='min turning speed' type='float' />
+		<field name='display model offset z' type='float' />
+	</table>
+	<table table_name='battle_types_tables' table_version='2' guid='8b90e4c6-1498-41d4-a87a-fd183c3f5129'>
+		<field name='Type' type='string_ascii' />
+		<field name='Sort Order' type='int' />
+		<field name='Defender Funds Ratio' type='float' />
+		<field name='Max Teamsize' type='int' />
+	</table>
+	<table table_name='battle_types_to_victory_conditions_tables' table_version='2' guid='373e5215-c1e3-44cc-be62-24e452821d63'>
+		<field fkey='battle_types_tables.Type' name='Battle Type' type='string_ascii' pk='true' />
+		<field fkey='victory_conditions_tables.Condition' name='Attacker Victory Condition' type='string_ascii' />
+		<field fkey='victory_conditions_tables.Condition' name='Defender Victory Condition' type='string_ascii' />
+	</table>
+	<table table_name='building_effects_junction_tables' table_version='3' guid='86cf874d-854e-41ce-848b-ff14f362cf23'>
+		<field name='building' type='string_ascii' />
+		<field name='effect' type='string_ascii' />
+		<field name='effect_scope' type='string_ascii' />
+		<field name='value' type='float' />
+		<field name='value_damaged' type='float' />
+		<field name='value_ruined' type='float' />
+	</table>
+	<table table_name='faction_civil_war_setups_tables' table_version='0' guid='2fb0658d-ad1d-4194-9b39-07c23f0832c5'>
+		<field name='primary_faction' type='string_ascii' />
+		<field name='secondary_faction' type='string_ascii' />
+	</table>
+	<table table_name='faction_groups_tables' table_version='0' guid='5afa7aa8-8c9f-48a5-8741-f22aa9b91ceb'>
+		<field name='effect_bundle' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='ui_icon' type='string_ascii' />
+	</table>
+	<table table_name='faction_political_parties_junctions_tables' table_version='0' guid='89c6acbc-aae3-4e59-888d-5b8bbdd5e14b'>
+		<field name='faction_key' type='string_ascii' />
+		<field name='political_party_key' type='string_ascii' />
+	</table>
+	<table table_name='pdlc_tables' table_version='0' guid='a4298d77-6438-4033-9736-fad436277ca9'>
+		<field name='ID' type='string_ascii' pk='true' />
+		<field name='Steam ID' type='int' />
+		<field name='Description' type='optstring_ascii' />
+		<field name='Release Order' type='int' />
+	</table>
+	<table table_name='quotes_people_tables' table_version='0' guid='c054cd34-91b4-4b84-bd56-2565c50b3415'>
 		<field name='quote_person_key' type='string_ascii' pk='true' />
 		<field name='quote_person_onscreen' type='string_ascii' />
 	</table>
-	<table name='quotes_tables' table_version='1' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
+	<table table_name='quotes_tables' table_version='0' guid='2ec102f5-b16f-44b6-80b8-9f654628a0bf'>
 		<field name='quote_onscreen' type='string_ascii' />
 		<field fkey='quotes_people_tables.quote_person_key' name='quote_person' type='string_ascii' />
 		<field name='key' type='string_ascii' pk='true' />
 	</table>
-	
+	<table table_name='seasons_tables' table_version='0' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
+		<field name='season' type='string_ascii' pk='true' />
+		<field name='onscreen' type='string_ascii' />
+		<field name='order' type='int' />
+	</table>
+	<table table_name='warscape_animated_tables' table_version='2' guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='texture_filename_base' type='string_ascii' />
+		<field name='category' type='string_ascii' />
+	</table>
+	<table table_name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
+		<field name='LOD_id' type='string_ascii' pk='true' />
+		<field name='range' type='float' />
+	</table>
+	<table table_name='warscape_rigid_lod_tables' table_version='1' guid='047ab47b-49fe-45a5-af4d-b751960cda08'>
+		<field name='key' type='string_ascii' />
+		<field name='filename' type='string_ascii' />
+		<field name='range' type='string_ascii' />
+		<field fkey='warscape_rigid_tables.key' name='rigid' type='string_ascii' />
+	</table>
+	<table table_name='warscape_rigid_tables' table_version='2' guid='e32c9025-51ea-4c21-be0e-783d859561f9'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='texture_directory' type='string_ascii' />
+		<field fkey='warscape_categories_tables.key' name='category' type='string_ascii' />
+	</table>
+	<table table_name='wind_levels_tables' table_version='0' guid='41fff954-e39c-4ae6-805d-4e892750a89a'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='sea_surface' type='string_ascii' />
+		<field name='magnitudeX' type='float' />
+		<field name='magnitudeY' type='float' />
+		<field name='sort_order' type='int' />
+   </table>
 </schema>
