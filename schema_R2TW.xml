@@ -201,85 +201,69 @@
 		<field name='tertiary_colour_g' type='int' />
 		<field name='tertiary_colour_r' type='int' />
 	</table>
-  <table table_name='agent_uniforms_tables'
-         table_version='6'
-         guid='726b80e6-8d92-451c-aa09-012c5cf38b2d'>
-    <field name='Uniform' type='string_ascii' />
-    <field name='Filename' type='string_ascii' />
-    <field name='Battle_Filename' type='optstring_ascii' />
-    <field name='Campaign_Filename' type='optstring_ascii' />
-    <field name='Armor_Audio_Type' type='string_ascii' />
-    <field name='Weapon_Audio_Type' type='string_ascii' />
-    <field name='Shield_Audio_Type' type='string_ascii' />
-    <field name='Politician_Filename' type='optstring_ascii' />
-  </table>
-  <table table_name='agent_voice_events_junctions_tables'
-         table_version='0'
-         guid='eebf52f1-7819-4573-af03-344ebccd537c'>
-    <field fkey='agents_tables.key' name='agent_key' type='string' pk='true' />
-    <field fkey='sound_events_tables.name' name='sound_event_key' type='string' pk='true' />
-    <field fkey='voice_events_tables.name' name='voice_event_key' type='string' pk='true' />
-  </table>
-  <table table_name='agents_tables'
-         table_version='8'
-         guid='872a5029-ab65-4728-b7d3-1fda3b1248e6'>
-    <field name='Agent' type='string_ascii' />
-    <field name='unknown' type='int' />
-    <field name='unknown' type='int' />
-    <field name='Playable' type='boolean' />
-    <field name='Portrait_Override' type='optstring_ascii' />
-    <field name='Primary_Attribute' type='string_ascii' />
-    <field name='unknown' type='int' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='int' />
-    <field name='In_Encyclopedia' type='boolean' />
-  </table>
-  <table table_name='aide_de_camp_speeches_tables'
-         table_version='6'
-         guid='813032be-dda5-4f7c-afca-7333961750a5'>
-    <field name='key' type='string_ascii' />
-    <field name='picture_in_picture' type='boolean' />
-    <field name='unknown' type='float' />
-    <field name='offset_range' type='float' />
-    <field name='circumvent_cooldown' type='boolean' />
-    <field name='cinematic_event' type='optstring_ascii' />
-  </table>
-  <table table_name='ancillaries_tables'
-         table_version='7'
-         guid='b5af75b6-5809-402a-9f61-f227d1214214'>
-    <field name='Key' type='string_ascii' />
-    <field name='Ancillary' type='string_ascii' />
-    <field name='unknown' type='string_ascii' />
-    <field name='Transferable' type='boolean' />
-    <field name='Unique_to_World' type='boolean' />
-    <field name='Unique_to_Faction' type='boolean' />
-    <field name='unknown' type='int' />
-    <field name='Start_Date' type='int' />
-    <field name='End_Date' type='int' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='boolean' />
-  </table>
-  <table table_name='ancillary_included_subcultures_tables'
-         table_version='0'
-         guid='0258ae96-8094-4945-aefc-465f50e5627b'>
-    <field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
-    <field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string_ascii' pk='true' />
-  </table>
-  <table table_name='ancillary_info_tables'
-         table_version='0'
-         guid='b0114d8c-50e6-447a-8595-038fb1baaf57'>
-    <field name='ancillary' type='string_ascii' />
-  </table>
-  <table table_name='ancillary_to_attribute_effects_tables'
-         table_version='0'
-         guid='180fd76b-f551-40ef-94cf-015437b73617'>
-    <field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string' pk='true' />
-    <field fkey='agent_attributes_tables.key' name='attribute' type='string' pk='true' />
-    <field name='effect_value' type='int' />
-  </table>
+	<table table_name='agent_uniforms_tables' table_version='6' guid='726b80e6-8d92-451c-aa09-012c5cf38b2d'>
+		<field name='Uniform' type='string_ascii' />
+		<field name='Filename' type='string_ascii' />
+		<field name='Battle_Filename' type='optstring_ascii' />
+		<field name='Campaign_Filename' type='optstring_ascii' />
+		<field name='Armor_Audio_Type' type='string_ascii' />
+		<field name='Weapon_Audio_Type' type='string_ascii' />
+		<field name='Shield_Audio_Type' type='string_ascii' />
+		<field name='Politician_Filename' type='optstring_ascii' />
+	</table>
+	<table table_name='agent_voice_events_junctions_tables' table_version='0' guid='eebf52f1-7819-4573-af03-344ebccd537c'>
+		<field fkey='agents_tables.key' name='agent_key' type='string' pk='true' />
+		<field fkey='sound_events_tables.name' name='sound_event_key' type='string' pk='true' />
+		<field fkey='voice_events_tables.name' name='voice_event_key' type='string' pk='true' />
+	</table>
+	<table table_name='agents_tables' table_version='8' guid='872a5029-ab65-4728-b7d3-1fda3b1248e6'>
+		<field name='Agent' type='string_ascii' />
+		<field name='move_points' type='int' />
+		<field name='line_of_sight' type='int' />
+		<field name='Playable' type='boolean' />
+		<field name='Portrait_Override' type='optstring_ascii' />
+		<field name='Primary_Attribute' type='string_ascii' />
+		<field name='unknown' type='int' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='cost' type='int' />
+		<field name='In_Encyclopedia' type='boolean' />
+	</table>
+	<table table_name='aide_de_camp_speeches_tables' table_version='6' guid='813032be-dda5-4f7c-afca-7333961750a5'>
+		<field name='key' type='string_ascii' />
+		<field name='picture_in_picture' type='boolean' />
+		<field name='offset_angle' type='float' />
+		<field name='offset_range' type='float' />
+		<field name='circumvent_cooldown' type='boolean' />
+		<field name='cinematic_event' type='optstring_ascii' />
+	</table>
+	<table table_name='ancillaries_tables' table_version='7' guid='b5af75b6-5809-402a-9f61-f227d1214214'>
+		<field name='Key' type='string_ascii' />
+		<field name='Ancillary' type='string_ascii' />
+		<field name='applies_to' type='string_ascii' />
+		<field name='Transferable' type='boolean' />
+		<field name='Unique_to_World' type='boolean' />
+		<field name='Unique_to_Faction' type='boolean' />
+		<field name='precedence' type='int' />
+		<field name='Start_Date' type='int' />
+		<field name='End_Date' type='int' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='boolean' />
+	</table>
+	<table table_name='ancillary_included_subcultures_tables' table_version='0' guid='0258ae96-8094-4945-aefc-465f50e5627b'>
+		<field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
+		<field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='ancillary_info_tables' table_version='0' guid='b0114d8c-50e6-447a-8595-038fb1baaf57'>
+		<field name='ancillary' type='string_ascii' />
+	</table>
+	<table table_name='ancillary_to_attribute_effects_tables' table_version='0' guid='180fd76b-f551-40ef-94cf-015437b73617'>
+		<field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
+		<field fkey='agent_attributes_tables.key' name='attribute' type='string_ascii' pk='true' />
+		<field name='effect_value' type='int' />
+	</table>
   <table table_name='ancillary_to_effects_tables'
          table_version='0'
          guid='7bcb03a6-22b5-4b03-9bab-a4947705181a'>
