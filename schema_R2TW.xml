@@ -264,97 +264,73 @@
 		<field fkey='agent_attributes_tables.key' name='attribute' type='string_ascii' pk='true' />
 		<field name='effect_value' type='int' />
 	</table>
-  <table table_name='ancillary_to_effects_tables'
-         table_version='0'
-         guid='7bcb03a6-22b5-4b03-9bab-a4947705181a'>
-    <field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
-    <field fkey='effects_tables.effect' name='effect' type='string_ascii' pk='true' />
-    <field name='Campaign_Scope' type='string_ascii' />
-    <field name='value' type='float' />
-  </table>
-  <table table_name='ancillary_to_excluded_ancillaries_tables'
-         table_version='0'
-         guid='58f61f12-e865-4f64-8741-a18deb95b411'>
-    <field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string' pk='true' />
-    <field fkey='ancillary_info_tables.ancillary' name='excluded_ancillary' type='string' pk='true' />
-  </table>
-  <table table_name='ancillary_to_included_agents_tables'
-         table_version='0'
-         guid='345b2c85-70da-4980-8d51-c11971418f3a'>
-    <field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
-    <field fkey='agents_tables.key' name='agent' type='string_ascii' pk='true' />
-  </table>
-  <table table_name='ancillary_types_tables'
-         table_version='0'
-         guid='7ae3a704-d04c-439f-bc95-51916f038613'>
-    <field name='type' type='string_ascii' pk='true' />
-    <field name='ui_icon' type='string_ascii' />
-  </table>
-  <table table_name='anim_reference_poses_tables'
-         table_version='0'
-         guid='aa55f6d8-b25f-4bf3-a474-08a905c05803'>
-    <field name='key' type='string_ascii' pk='true' />
-    <field name='path' type='string_ascii' />
-    <field name='root_node' type='string_ascii' />
-  </table>
-  <table table_name='animals_tables'
-         table_version='0'
-         guid='def21da0-3203-48ce-84e8-2b84703cdfce'>
-    <field name='Key' type='string_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='int' />
-    <field name='unknown' type='string_ascii' />
-    <field name='unknown' type='string_ascii' />
-    <field name='unknown' type='int' />
-    <field name='unknown' type='int' />
-  </table>
-  <table table_name='armed_citizenry_unit_groups_tables'
-         table_version='0'
-         guid='64c9cc4f-447a-42d0-bdfc-04ea483ecd59'>
-    <field name='unit_group' type='string_ascii' />
-  </table>
-  <table table_name='armed_citizenry_units_to_unit_groups_junctions_tables'
-         table_version='0'
-         guid='fb8185e3-00c9-48cc-8209-19992cd2a3c0'>
-    <field name='id' type='int' />
-    <field name='unknown' type='int' />
-    <field name='priority' type='int' />
-    <field name='unit' type='string_ascii' />
-    <field name='unit_group' type='string_ascii' />
-  </table>
-  <table table_name='audio_campaign_building_enums_tables'
-         table_version='0'
-         guid='45d93a58-912c-44d9-be61-329110b2d496'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='audio_projectiles_tables'
-         table_version='1'
-         guid='89112f85-ff69-4855-9d8d-a6ff963d8d77'>
-    <field name='key' type='string_ascii' />
-    <field name='audio_projectile_type' type='string_ascii' />
-    <field name='max_attenuation_fire' type='float' />
-    <field name='max_attenuation_impart' type='float' />
-    <field name='max_attenuation_inflight' type='float' />
-    <field name='play_incoming_sound' type='boolean' />
-    <field name='requires_distance' type='boolean' />
-    <field name='requires_speed' type='boolean' />
-    <field name='unknown' type='float' />
-  </table>
-  <table table_name='battle_autoresolver_balances_tables'
-         table_version='0'
-         guid='83a8b510-8b2e-4b39-ac76-1d534f9830fb'>
-    <field name='melee_potential_multiplier' type='float' />
-    <field name='missile_potential_multiplier' type='float' />
-    <field fkey='unit_class_tables.key' name='source_unit_class' type='string' />
-    <field fkey='unit_class_tables.key' name='target_unit_class' type='string' />
-  </table>
-  <table table_name='battle_bridge_subculture_jcts_tables'
-         table_version='0'
-         guid='1f50dee4-0472-4965-9352-4a45cc07bda6'>
-    <field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string' pk='true' />
-    <field fkey='battlefield_buildings_tables.key' name='simple_bridge' type='string' />
-    <field fkey='battlefield_buildings_tables.key' name='refined_bridge' type='string' />
-  </table>
+	<table table_name='ancillary_to_effects_tables' table_version='0' guid='7bcb03a6-22b5-4b03-9bab-a4947705181a'>
+		<field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
+		<field fkey='effects_tables.effect' name='effect' type='string_ascii' pk='true' />
+		<field name='Campaign_Scope' type='string_ascii' />
+		<field name='value' type='float' />
+	</table>
+	<table table_name='ancillary_to_excluded_ancillaries_tables' table_version='0' guid='58f61f12-e865-4f64-8741-a18deb95b411'>
+		<field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string' pk='true' />
+		<field fkey='ancillary_info_tables.ancillary' name='excluded_ancillary' type='string' pk='true' />
+	</table>
+	<table table_name='ancillary_to_included_agents_tables' table_version='0' guid='345b2c85-70da-4980-8d51-c11971418f3a'>
+		<field fkey='ancillary_info_tables.ancillary' name='ancillary' type='string_ascii' pk='true' />
+		<field fkey='agents_tables.key' name='agent' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='ancillary_types_tables' table_version='0' guid='7ae3a704-d04c-439f-bc95-51916f038613'>
+		<field name='type' type='string_ascii' pk='true' />
+		<field name='ui_icon' type='string_ascii' />
+	</table>
+	<table table_name='anim_reference_poses_tables' table_version='0' guid='aa55f6d8-b25f-4bf3-a474-08a905c05803'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='path' type='string_ascii' />
+		<field name='root_node' type='string_ascii' />
+	</table>
+	<table table_name='animals_tables' table_version='0' guid='def21da0-3203-48ce-84e8-2b84703cdfce'>
+		<field name='animation' type='string_ascii' />
+		<field name='armour' type='optstring_ascii' />
+		<field name='charge_bonus' type='int' />
+		<field name='entity' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='melee_attack' type='int' />
+		<field name='melee_defence' type='int' />
+	</table>
+	<table table_name='armed_citizenry_unit_groups_tables' table_version='0' guid='64c9cc4f-447a-42d0-bdfc-04ea483ecd59'>
+		<field name='unit_group' type='string_ascii' />
+	</table>
+	<table table_name='armed_citizenry_units_to_unit_groups_junctions_tables' table_version='0' guid='fb8185e3-00c9-48cc-8209-19992cd2a3c0'>
+		<field name='id' type='int' />
+		<field name='unknown' type='int' />
+		<field name='priority' type='int' />
+		<field name='unit' type='string_ascii' />
+		<field name='unit_group' type='string_ascii' />
+	</table>
+	<table table_name='audio_campaign_building_enums_tables' table_version='0' guid='45d93a58-912c-44d9-be61-329110b2d496'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='audio_projectiles_tables' table_version='1' guid='89112f85-ff69-4855-9d8d-a6ff963d8d77'>
+		<field name='key' type='string_ascii' />
+		<field name='audio_projectile_type' type='string_ascii' />
+		<field name='max_attenuation_fire' type='float' />
+		<field name='max_attenuation_impart' type='float' />
+		<field name='max_attenuation_inflight' type='float' />
+		<field name='play_incoming_sound' type='boolean' />
+		<field name='requires_distance' type='boolean' />
+		<field name='requires_speed' type='boolean' />
+		<field name='inflight_min_speed' type='float' />
+	</table>
+	<table table_name='battle_autoresolver_balances_tables' table_version='0' guid='83a8b510-8b2e-4b39-ac76-1d534f9830fb'>
+		<field name='melee_potential_multiplier' type='float' />
+		<field name='missile_potential_multiplier' type='float' />
+		<field fkey='unit_class_tables.key' name='source_unit_class' type='string' />
+		<field fkey='unit_class_tables.key' name='target_unit_class' type='string' />
+	</table>
+	<table table_name='battle_bridge_subculture_jcts_tables' table_version='0' guid='1f50dee4-0472-4965-9352-4a45cc07bda6'>
+		<field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string_ascii' pk='true' />
+		<field fkey='battlefield_buildings_tables.key' name='simple_bridge' type='string_ascii' />
+		<field fkey='battlefield_buildings_tables.key' name='refined_bridge' type='string_ascii' />
+	</table>
   <table table_name='battle_cameras_tables'
          table_version='1'
          guid='936538d6-18e7-4216-8a70-aaea9c90f0ca'>
