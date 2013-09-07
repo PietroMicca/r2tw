@@ -331,154 +331,128 @@
 		<field fkey='battlefield_buildings_tables.key' name='simple_bridge' type='string_ascii' />
 		<field fkey='battlefield_buildings_tables.key' name='refined_bridge' type='string_ascii' />
 	</table>
-  <table table_name='battle_cameras_tables'
-         table_version='1'
-         guid='936538d6-18e7-4216-8a70-aaea9c90f0ca'>
-    <field name='key' type='string_ascii' />
-    <field name='max_height_large' type='float' />
-    <field name='max_height_small' type='float' />
-    <field name='min_fort_max_height' type='float' />
-    <field name='min_height' type='float' />
-    <field name='move_speed_max_multiplier' type='float' />
-    <field name='move_speed_min_multiplier' type='float' />
-    <field name='turn_speed_multiplier' type='float' />
-    <field name='move_fast_multiplier' type='float' />
-  </table>
-  <table table_name='battle_cinematic_event_categories_tables'
-         table_version='0'
-         guid='3d9598c3-58c8-49ef-a366-49b8e1c2d951'>
-    <field name='key' type='string_ascii' />
-  </table>
-  <table table_name='battle_cinematic_events_tables'
-         table_version='3'
-         guid='1f195108-9920-477b-b14b-413137588d07'>
-    <field name='filename' type='string_ascii' />
-    <field name='key' type='string_ascii' />
-    <field name='level' type='string_ascii' />
-    <field name='priority' type='int' />
-    <field name='window_in' type='int' />
-    <field name='window_out' type='int' />
-    <field name='repeat_wait_ms' type='int' />
-    <field name='event_category' type='string_ascii' />
-    <field name='time_after_event' type='int' />
-  </table>
-  <table table_name='battle_cities_tables'
-         table_version='0'
-         guid='eafcf84d-2691-408a-94ec-799289196a20'>
-    <field name='city' type='string_ascii' />
-    <field name='minimum_building_scale' type='float' />
-    <field name='maximum_building_scale' type='float' />
-    <field name='town_min_distance' type='float' />
-    <field name='city_min_distance' type='float' />
-    <field name='town_radius' type='float' />
-    <field name='city_radius' type='float' />
-    <field name='number_of_town_buildings' type='int' />
-    <field name='number_of_city_buildings' type='int' />
-  </table>
-  <table table_name='battle_city_buildings_tables'
-         table_version='0'
-         guid='2fa91341-3875-4494-ad46-1706fc601878'>
-    <field fkey='warscape_rigid_tables.key' name='building' type='string_ascii' />
-    <field fkey='battle_cities_tables.city' name='city' type='string_ascii' />
-    <field name='amount_in_town' type='int' />
-    <field name='amount_in_city' type='int' />
-  </table>
-  <table table_name='battle_city_subculture_jct_tables'
-         table_version='0'
-         guid='8e2d9876-0fcd-47d7-8970-6101d80f67a3'>
-    <field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string' pk='true' />
-    <field fkey='battle_cities_tables.city' name='city' type='string' />
-  </table>
-  <table table_name='battle_climate_weather_descriptions_tables'
-         table_version='1'
-         guid='9501be88-90d5-4578-b0bb-2771e312c19d'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='climates_tables.climate_type' name='climate_type' type='string' />
-    <field fkey='seasons_tables.season' name='season' type='string' />
-    <field fkey='battle_weather_types_tables.key' name='weather_type' type='string' />
-    <field name='probability' type='int' />
-    <field name='ambient_fog_probability' type='int' />
-    <field name='volumetric_fog_probability' type='int' />
-    <field name='heat_fatigue' type='int' />
-    <field name='cold_fatigue' type='int' />
-    <field name='haze_index' type='int' />
-    <field name='fog_index' type='int' />
-  </table>
-  <table table_name='battle_difficulty_modifiers_tables'
-         table_version='1'
-         guid='10b9a0bd-03a0-4ce0-af6a-1ec38467c7e1'>
-    <field name='difficulty_level' type='string_ascii' />
-    <field name='human' type='boolean' />
-    <field name='stat' type='string_ascii' />
-    <field name='stat_accuracy' type='optstring_ascii' />
-  </table>
-  <table table_name='battle_entities_tables'
-         table_version='5'
-         guid='342349e1-b8f2-4b7f-9383-6c5177921686'>
-    <field name='key' type='string_ascii' pk='true' />
-    <field fkey='battle_entities_types_enum_tables.key' name='type' type='string_ascii' />
-    <field name='walk_speed' type='float' />
-    <field name='run_speed' type='float' />
-    <field name='acceleration' type='float' />
-    <field name='deceleration' type='float' />
-    <field name='charge_speed' type='float' />
-    <field name='crawl_speed' type='float' />
-    <field name='charge_distance_commence_run' type='float' />
-    <field name='charge_distance_adopt_charge_pose' type='float' />
-    <field name='charge_distance_pick_target' type='float' />
-    <field name='radius' type='float' />
-    <field fkey='battle_entities_shape_enum_tables.key' name='shape' type='string_ascii' />
-    <field name='radii_ratio' type='float' />
-    <field name='mass' type='float' />
-    <field name='height' type='float' />
-    <field name='fire_arc_close' type='float' />
-    <field name='fire_arc_loose' type='float' />
-    <field name='turn_speed' type='float' />
-    <field name='hit_points' type='int' />
-    <field name='allow static turn anim' type='boolean' />
-    <field name='allow turn to move anim' type='boolean' />
-    <field name='tracking threshold' type='float' />
-    <field name='min turning speed' type='float' />
-    <field name='display model offset z' type='float' />
-  </table>
-  <table table_name='battle_entity_effects_tables'
-         table_version='0'
-         guid='bfcd942d-5cd7-46d0-88c1-6dd6e3e22ab7'>
-    <field name='deep_water' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='mud' type='optstring_ascii' />
-    <field name='name' type='string_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='sand' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='shallow_water' type='optstring_ascii' />
-    <field name='snow' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-  </table>
-  <table table_name='battle_misc_effects_tables'
-         table_version='0'
-         guid='06743837-8e03-4a9d-a0c6-b60678cc2a46'>
-    <field name='effect' type='optstring_ascii' />
-    <field name='name' type='string_ascii' />
-  </table>
-  <table table_name='battle_personalities_tables'
-         table_version='3'
-         guid='344764b7-42cc-4736-8efb-60f45ac825b7'>
-    <field name='key' type='string_ascii' />
-    <field name='soldier_model' type='string_ascii' />
-    <field name='man_animations_table' type='string_ascii' />
-    <field name='type' type='string_ascii' />
-    <field name='unknown' type='boolean' />
-    <field name='variant' type='string_ascii' />
-  </table>
-  <table table_name='battle_sequences_tables'
-         table_version='0'
-         guid='9611bc9e-dd5d-4673-89a4-cd6aebadd036'>
-    <field fkey='battles_tables.localised_name' name='battle' type='string' pk='true' />
-    <field name='unlock_order' type='int' />
-  </table>
+	<table table_name='battle_cameras_tables' table_version='1' guid='936538d6-18e7-4216-8a70-aaea9c90f0ca'>
+		<field name='key' type='string_ascii' />
+		<field name='max_height_large' type='float' />
+		<field name='max_height_small' type='float' />
+		<field name='min_fort_max_height' type='float' />
+		<field name='min_height' type='float' />
+		<field name='move_speed_max_multiplier' type='float' />
+		<field name='move_speed_min_multiplier' type='float' />
+		<field name='turn_speed_multiplier' type='float' />
+		<field name='move_fast_multiplier' type='float' />
+	</table>
+	<table table_name='battle_cinematic_event_categories_tables' table_version='0' guid='3d9598c3-58c8-49ef-a366-49b8e1c2d951'>
+		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='battle_cinematic_events_tables' table_version='3' guid='1f195108-9920-477b-b14b-413137588d07'>
+		<field name='filename' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='level' type='string_ascii' />
+		<field name='priority' type='int' />
+		<field name='window_in' type='int' />
+		<field name='window_out' type='int' />
+		<field name='repeat_wait_ms' type='int' />
+		<field name='event_category' type='string_ascii' />
+		<field name='time_after_event' type='int' />
+	</table>
+	<table table_name='battle_cities_tables' table_version='0' guid='eafcf84d-2691-408a-94ec-799289196a20'>
+		<field name='city' type='string_ascii' />
+		<field name='minimum_building_scale' type='float' />
+		<field name='maximum_building_scale' type='float' />
+		<field name='town_min_distance' type='float' />
+		<field name='city_min_distance' type='float' />
+		<field name='town_radius' type='float' />
+		<field name='city_radius' type='float' />
+		<field name='number_of_town_buildings' type='int' />
+		<field name='number_of_city_buildings' type='int' />
+	</table>
+	<table table_name='battle_city_buildings_tables' table_version='0' guid='2fa91341-3875-4494-ad46-1706fc601878'>
+		<field fkey='warscape_rigid_tables.key' name='building' type='string_ascii' />
+		<field fkey='battle_cities_tables.city' name='city' type='string_ascii' />
+		<field name='amount_in_town' type='int' />
+		<field name='amount_in_city' type='int' />
+	</table>
+	<table table_name='battle_city_subculture_jct_tables' table_version='0' guid='8e2d9876-0fcd-47d7-8970-6101d80f67a3'>
+		<field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string_ascii' pk='true' />
+		<field fkey='battle_cities_tables.city' name='city' type='string_ascii' />
+	</table>
+	<table table_name='battle_climate_weather_descriptions_tables' table_version='1' guid='9501be88-90d5-4578-b0bb-2771e312c19d'>
+		<field name='key' type='string' pk='true' />
+		<field fkey='climates_tables.climate_type' name='climate_type' type='string' />
+		<field fkey='seasons_tables.season' name='season' type='string' />
+		<field fkey='battle_weather_types_tables.key' name='weather_type' type='string' />
+		<field name='probability' type='int' />
+		<field name='ambient_fog_probability' type='int' />
+		<field name='volumetric_fog_probability' type='int' />
+		<field name='heat_fatigue' type='int' />
+		<field name='cold_fatigue' type='int' />
+		<field name='haze_index' type='int' />
+		<field name='fog_index' type='int' />
+	</table>
+	<table table_name='battle_difficulty_modifiers_tables' table_version='1' guid='10b9a0bd-03a0-4ce0-af6a-1ec38467c7e1'>
+		<field name='difficulty_level' type='string_ascii' />
+		<field name='human' type='boolean' />
+		<field name='stat' type='string_ascii' />
+		<field name='stat_accuracy' type='optstring_ascii' />
+	</table>
+	<table table_name='battle_entities_tables' table_version='5' guid='342349e1-b8f2-4b7f-9383-6c5177921686'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field fkey='battle_entities_types_enum_tables.key' name='type' type='string_ascii' />
+		<field name='walk_speed' type='float' />
+		<field name='run_speed' type='float' />
+		<field name='acceleration' type='float' />
+		<field name='deceleration' type='float' />
+		<field name='charge_speed' type='float' />
+		<field name='crawl_speed' type='float' />
+		<field name='charge_distance_commence_run' type='float' />
+		<field name='charge_distance_adopt_charge_pose' type='float' />
+		<field name='charge_distance_pick_target' type='float' />
+		<field name='radius' type='float' />
+		<field fkey='battle_entities_shape_enum_tables.key' name='shape' type='string_ascii' />
+		<field name='radii_ratio' type='float' />
+		<field name='mass' type='float' />
+		<field name='height' type='float' />
+		<field name='fire_arc_close' type='float' />
+		<field name='fire_arc_loose' type='float' />
+		<field name='turn_speed' type='float' />
+		<field name='hit_points' type='int' />
+		<field name='allow static turn anim' type='boolean' />
+		<field name='allow turn to move anim' type='boolean' />
+		<field name='tracking threshold' type='float' />
+		<field name='min turning speed' type='float' />
+		<field name='display model offset z' type='float' />
+	</table>
+	<table table_name='battle_entity_effects_tables' table_version='0' guid='bfcd942d-5cd7-46d0-88c1-6dd6e3e22ab7'>
+		<field name='deep_water' type='optstring_ascii' />
+		<field name='forest' type='optstring_ascii' />
+		<field name='grass' type='optstring_ascii' />
+		<field name='mud' type='optstring_ascii' />
+		<field name='name' type='string_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='sand' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+		<field name='shallow_water' type='optstring_ascii' />
+		<field name='snow' type='optstring_ascii' />
+		<field name='unknown' type='optstring_ascii' />
+	</table>
+	<table table_name='battle_misc_effects_tables' table_version='0' guid='06743837-8e03-4a9d-a0c6-b60678cc2a46'>
+		<field name='effect' type='optstring_ascii' />
+		<field name='name' type='string_ascii' />
+	</table>
+	<table table_name='battle_personalities_tables' table_version='3' guid='344764b7-42cc-4736-8efb-60f45ac825b7'>
+		<field name='key' type='string_ascii' />
+		<field name='soldier_model' type='string_ascii' />
+		<field name='man_animations_table' type='string_ascii' />
+		<field name='type' type='string_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='variant' type='string_ascii' />
+	</table>
+	<table table_name='battle_sequences_tables' table_version='0' guid='9611bc9e-dd5d-4673-89a4-cd6aebadd036'>
+		<field fkey='battles_tables.localised_name' name='battle' type='string_ascii' pk='true' />
+		<field name='unlock_order' type='int' />
+	</table>
   <table table_name='battle_siege_vehicle_permissions_tables'
          table_version='0'
          guid='2f4a817a-6cc7-4cfc-98f3-8d4bddabe700'>
