@@ -197,6 +197,18 @@
 		<field name='texture_filename_base' type='string_ascii' />
 		<field name='category' type='string_ascii' />
 	</table>
+	<table table_name='warscape_equipment_items_tables' table_version='2' guid='3f5ed434-e126-4348-adfb-01e2f439c9c2'>
+		<field name='equipment_item' type='string_ascii' />
+		<field name='equipment_key' type='string_ascii' />
+	</table>
+	<table table_name='warscape_equipment_themes_tables' table_version='1' guid='empty2'>
+		<field name='theme' type='string_ascii' />
+		<field name='primary_weapon' type='optstring_ascii' />
+		<field name='secondary_weapon' type='optstring_ascii' />
+		<field name='defensive' type='optstring_ascii' />
+		<field name='ambient' type='optstring_ascii' />
+		<field name='personal' type='optstring_ascii' />
+	</table>
 	<table table_name='warscape_rigid_lod_range_tables' table_version='1' guid='ed0b7304-b951-48e5-8505-b3d9ba068ec7'>
 		<field name='LOD_id' type='string_ascii' pk='true' />
 		<field name='range' type='float' />
