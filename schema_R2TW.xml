@@ -83,8 +83,8 @@
 		<field name='Target_Effects' type='string_ascii' />
 	</table>
 	<table table_name='advice_info_texts_tables' table_version='2' guid='30db796d-1595-4eb0-abf4-774ea1ae6682'>
-		<field name='unknown' type='int' />
-		<field name='unknown' type='string_ascii' />
+		<field name='advice_level_lookup' type='int' />
+		<field name='key' type='string_ascii' />
 		<field name='persistant' type='boolean' />
 		<field name='show_instant' type='boolean' />
 		<field name='show_on_navigate' type='boolean' />
