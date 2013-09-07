@@ -1,5 +1,13 @@
 <schema>
+	<table table_name='_kv_experience_bonuses_tables' table_version='0' guid='966f100d-6b42-4d8d-b3be-e385e50bdcde'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='value' type='float' />
+	</table>
 	<table table_name='_kv_fatigue_tables' table_version='0' guid='d9667e80-0d54-4c20-a70e-9848aad9f0f4'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='value' type='float' />
+	</table>
+	<table table_name='_kv_key_buildings_tables' table_version='0' guid='6a39350f-86e1-4d78-b077-70e4dff7a3b5'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='value' type='float' />
 	</table>
@@ -190,7 +198,6 @@
 		<field name='variant_name' type='string_ascii' />
 	</table>
 	<table table_name='voice_events_tables' table_version='0' guid='86876495-3a94-477e-a99d-e392511dd231'>
-	
 	</table>
 	<table table_name='voice_types_tables' table_version='0' guid='c0adc83a-1762-4cca-8c1b-1105155392ea'>
 		<field name='key' type='string_ascii' />
