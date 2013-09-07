@@ -2553,6 +2553,10 @@
 	<table table_name='regions_continents_tables' table_version='0' guid='347c69b2-4980-4fdf-a3c7-83c3e7c2b835'>
 		<field name='continent' type='string_ascii' />
 	</table>
+	 <table name='region_to_province_junctions_tables'>
+		<field name='province' type='string_ascii' />
+		<field name='region' type='string_ascii' />
+	</table>	
 	<table table_name='regions_tables' table_version='3' guid='8b9c7697-3577-443d-b098-ac10accd6afd'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='r' type='int' />
@@ -2570,23 +2574,19 @@
 		<field fkey='religions_tables.religion_key' name='rel_to' type='string_ascii' />
 		<field name='modifier' type='float' />
 	</table>
-  <table table_name='religions_tables'
-         table_version='0'
-         guid='941459a5-62e5-4fd0-9bc0-a1cab3d9a1e9'>
-    <field name='religion_key' type='string_ascii' />
-    <field name='convertibility' type='int' />
-    <field name='ui_icon_path' type='string_ascii' />
-  </table>
-  <table table_name='resources_tables'
-         table_version='2'
-         guid='717d6b40-5fe1-4b88-a9e7-9c1927b37c7a'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring' />
-    <field fkey='slots_tables.slot' name='Slot Type' type='string' />
-    <field name='trade_value' type='int' />
-    <field name='Icon Path' type='string' />
-    <field name='strategic_value' type='int' version_start='1' />
-  </table>
+	<table table_name='religions_tables' table_version='0' guid='941459a5-62e5-4fd0-9bc0-a1cab3d9a1e9'>
+		<field name='religion_key' type='string_ascii' />
+		<field name='convertibility' type='int' />
+		<field name='ui_icon_path' type='string_ascii' />
+	</table>
+	<table table_name='resources_tables' table_version='2' guid='717d6b40-5fe1-4b88-a9e7-9c1927b37c7a'>
+		<field name='key' type='string' pk='true' />
+		<field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring' />
+		<field fkey='slots_tables.slot' name='Slot Type' type='string' />
+		<field name='trade_value' type='int' />
+		<field name='Icon Path' type='string' />
+		<field name='strategic_value' type='int' version_start='1' />
+	</table>
   <table table_name='sea_climate_details_tables'
          table_version='0'
          guid='00ac9be3-3e24-4ae5-bd79-68ff1c2b3f27'>
@@ -3125,48 +3125,46 @@
     <field fkey='voice_events_tables.name' name='voice_event_key' type='string' />
     <field fkey='sound_events_tables.name' name='sound_event_key' type='string' />
   </table>
-  <table table_name='units_tables'
-         table_version='14'
-         guid='2fb1cfda-baf2-465d-8aa0-cc47d2aaec02'>
-    <field name='key' type='string' pk='true' />
-    <field name='on_screen_name' type='string' />
-    <field fkey='unit_category_tables.key' name='category' type='string' />
-    <field fkey='unit_class_tables.key' name='class' type='string' />
-    <field name='multiplayer_cost' type='int' />
-    <field name='multiplayer_late_cost' type='int' version_start='2' />
-    <field name='create_time' type='int' />
-    <field name='create_cost' type='int' />
-    <field name='upkeep_cost' type='int' />
-    <field name='campaign_action_points' type='int' />
-    <field name='Game Unit Allowed' type='boolean' />
-    <field fkey='unit_voice_categories_tables.key' name='voice' type='string' />
-    <field name='icon_name' type='string' />
-    <field name='info_pic' type='string' />
-    <field fkey='unit_description_texts_tables.key' name='unit_description_text' type='string' />
-    <field name='Region' type='optstring' />
-    <field name='total_cap' type='int' />
-    <field fkey='unit_category_tables.key' name='multiplayer_category' type='string' />
-    <field name='mp_available_early' type='boolean' />
-    <field name='mp_available_middle' type='boolean' />
-    <field name='mp_available_late' type='boolean' />
-    <field name='prestige' type='int' />
-    <field name='armed_citizenry' type='boolean' />
-    <field name='MP_Unit Limit' type='int' version_start='2' />
-    <field name='unit_type_icon' type='optstring' version_start='4' />
-    <field name='use_onscreen_name' type='boolean' version_start='4' />
-    <field fkey='unit_castes_tables.caste' name='unit_caste' type='string' version_start='9' />
-    <field fkey='building_levels_tables.level_name' name='additional_building_level_requirement' type='optstring' version_start='9' />
-    <field fkey='religions_tables.religion_key' name='religion_requirement' type='optstring' version_start='9' />
-    <field fkey='resources_tables.key' name='resource_requirement' type='optstring' version_start='9' />
-    <field name='in_encyclopedia' type='boolean' version_start='9' />
-    <field fkey='movie_event_strings_tables.event' name='unit_recruited_movie' type='optstring' version_start='9' />
-    <field name='unique_index' type='int' version_start='9' />
-    <field name='is_male' type='boolean' version_start='13' />
-    <field name='num_audio_VO_variations' type='int' version_start='13' />
-    <field fkey='audio_languages_tables.key' name='audio_language' type='string' version_start='13' />
-    <field name='VO_actor_numbers' type='string' version_start='13' />
-    <field name='supports_first_person' type='boolean' version_start='13' />
-  </table>
+	 <table table_name='units_tables' table_version='14' guid='2fb1cfda-baf2-465d-8aa0-cc47d2aaec02'>
+		<field name='key' type='string' pk='true' />
+		<field name='on_screen_name' type='string' />
+		<field fkey='unit_category_tables.key' name='category' type='string' />
+		<field fkey='unit_class_tables.key' name='class' type='string' />
+		<field name='multiplayer_cost' type='int' />
+		<field name='multiplayer_late_cost' type='int' version_start='2' />
+		<field name='create_time' type='int' />
+		<field name='create_cost' type='int' />
+		<field name='upkeep_cost' type='int' />
+		<field name='campaign_action_points' type='int' />
+		<field name='Game Unit Allowed' type='boolean' />
+		<field fkey='unit_voice_categories_tables.key' name='voice' type='string' />
+		<field name='icon_name' type='string' />
+		<field name='info_pic' type='string' />
+		<field fkey='unit_description_texts_tables.key' name='unit_description_text' type='string' />
+		<field name='Region' type='optstring' />
+		<field name='total_cap' type='int' />
+		<field fkey='unit_category_tables.key' name='multiplayer_category' type='string' />
+		<field name='mp_available_early' type='boolean' />
+		<field name='mp_available_middle' type='boolean' />
+		<field name='mp_available_late' type='boolean' />
+		<field name='prestige' type='int' />
+		<field name='armed_citizenry' type='boolean' />
+		<field name='MP_Unit Limit' type='int' version_start='2' />
+		<field name='unit_type_icon' type='optstring' version_start='4' />
+		<field name='use_onscreen_name' type='boolean' version_start='4' />
+		<field fkey='unit_castes_tables.caste' name='unit_caste' type='string' version_start='9' />
+		<field fkey='building_levels_tables.level_name' name='additional_building_level_requirement' type='optstring' version_start='9' />
+		<field fkey='religions_tables.religion_key' name='religion_requirement' type='optstring' version_start='9' />
+		<field fkey='resources_tables.key' name='resource_requirement' type='optstring' version_start='9' />
+		<field name='in_encyclopedia' type='boolean' version_start='9' />
+		<field fkey='movie_event_strings_tables.event' name='unit_recruited_movie' type='optstring' version_start='9' />
+		<field name='unique_index' type='int' version_start='9' />
+		<field name='is_male' type='boolean' version_start='13' />
+		<field name='num_audio_VO_variations' type='int' version_start='13' />
+		<field fkey='audio_languages_tables.key' name='audio_language' type='string' version_start='13' />
+		<field name='VO_actor_numbers' type='string' version_start='13' />
+		<field name='supports_first_person' type='boolean' version_start='13' />
+	 </table>
   <table table_name='units_to_exclusive_faction_permissions_tables'
          table_version='0'
          guid='9384fc15-1b29-4905-82fd-978e78c6d9ac'>
