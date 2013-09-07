@@ -3108,14 +3108,19 @@
 		<field fkey='units_tables.key' name='unit_name' type='string' pk='true' />
 		<field fkey='unit_abilities_tables.key' name='ability' type='string' pk='true' />
 	</table>
+	<table table_name='unit_variants_tables' table_version='0' guid='5c270704-0ea3-45d7-81f0-c75af817bded'>
+		<field name='faction' type='optstring_ascii' />
+		<field name='name' type='string_ascii' />
+		<field name='unit' type='string_ascii' />
+		<field name='variant' type='string_ascii' />
+		<field name='height_variation' type='float' />
+		<field name='height_scale' type='float' />
+		<field name='unit_card' type='string_ascii' />
+	</table>
 	<table table_name='unit_voice_categories_tables' table_version='0' guid='c5a07903-26d2-4caf-aa64-1e7020861450'>
 		<field name='key' type='string' pk='true' />
 	</table>
 	<table table_name='unit_voice_events_junctions_tables' table_version='0' guid='93ab0392-61dc-4488-9e9c-09edd77feaa6'>
-		<field fkey='unit_voice_categories_tables.key' name='unit_voice_category_key' type='string' />
-		<field fkey='voice_types_tables.key' name='voice_type_key' type='string' />
-		<field fkey='voice_events_tables.name' name='voice_event_key' type='string' />
-		<field fkey='sound_events_tables.name' name='sound_event_key' type='string' />
 	</table>
 	<table table_name='unit_weights_tables' table_version='0' guid='cc7f238c-0507-4b37-af67-ab6ec54d0a90'>
 		<field name='key' type='string_ascii' />
