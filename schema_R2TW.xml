@@ -453,70 +453,60 @@
 		<field fkey='battles_tables.localised_name' name='battle' type='string_ascii' pk='true' />
 		<field name='unlock_order' type='int' />
 	</table>
-  <table table_name='battle_siege_vehicle_permissions_tables'
-         table_version='0'
-         guid='2f4a817a-6cc7-4cfc-98f3-8d4bddabe700'>
-    <field name='faction' type='string_ascii' />
-    <field name='tortoise' type='string_ascii' />
-  </table>
-  <table table_name='battle_sky_types_tables'
-         table_version='0'
-         guid='bb6e6fed-0710-49d7-89da-a7cf40ada218'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='seasons_tables.season' name='season' type='string' />
-    <field fkey='battle_weather_types_tables.key' name='weather_type' type='string' />
-    <field name='time_of_day' type='string' />
-    <field fkey='climates_tables.climate_type' name='climate' type='optstring' />
-    <field name='sky_file' type='string' />
-    <field name='supports_ambient_fog' type='boolean' />
-    <field name='supports_volumetric_fog' type='boolean' />
-  </table>
-  <table table_name='battle_type_faction_presets_tables'
-         table_version='1'
-         guid='195f7ed6-6f75-4ce1-a6ad-c4f7e2ce425c'>
-    <field fkey='factions_tables.key' name='Faction' type='string' />
-    <field name='Weighting Type' type='int' />
-    <field name='ID' type='int' />
-    <field name='unknown4' type='float' version_start='1' />
-  </table>
-  <table table_name='battle_type_setup_limits_tables'
-         table_version='1'
-         guid='3f251c2e-ae3a-4af9-a224-5644ca46adb4'>
-    <field fkey='battle_types_tables.type' name='Battle Type' type='string_ascii' />
-    <field name='weighting_type' type='string_ascii' />
-    <field name='Unit Size' type='string_ascii' />
-    <field name='Unit Availability' type='string_ascii' />
-    <field name='max_infantry' type='int' />
-    <field name='max_cavalry' type='int' />
-    <field name='max_artillery' type='int' />
-    <field name='max_small_ship' type='float' />
-    <field name='max_frigate' type='float' />
-    <field name='max_line_of_battle' type='float' />
-    <field name='ID' type='int' />
-    <field name='s_Generation' type='float' />
-  </table>
-  <table table_name='battle_types_tables'
-         table_version='2'
-         guid='8b90e4c6-1498-41d4-a87a-fd183c3f5129'>
-    <field name='type' type='string_ascii' />
-    <field name='sort_order' type='int' version_start='1' />
-    <field name='defender_funds_ratio' type='float' />
-    <field name='max_teamsize' type='int' />
-  </table>
-  <table table_name='battle_types_to_victory_conditions_tables'
-         table_version='2'
-         guid='373e5215-c1e3-44cc-be62-24e452821d63'>
-    <field name='unknown' type='string' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-  </table>
-  <table table_name='battle_weather_effects_tables'
-         table_version='1'
-         guid='cc0ae75d-023a-47ab-a73b-4805683f4883'>
-    <field name='stat' type='string_ascii' />
-    <field name='value' type='int' />
-    <field name='weather_type' type='string_ascii' />
-  </table>
+	<table table_name='battle_siege_vehicle_permissions_tables' table_version='0' guid='2f4a817a-6cc7-4cfc-98f3-8d4bddabe700'>
+		<field name='faction' type='string_ascii' />
+		<field name='tortoise' type='string_ascii' />
+	</table>
+	<table table_name='battle_sky_types_tables' table_version='0' guid='bb6e6fed-0710-49d7-89da-a7cf40ada218'>
+		<field name='key' type='string' pk='true' />
+		<field fkey='seasons_tables.season' name='season' type='string' />
+		<field fkey='battle_weather_types_tables.key' name='weather_type' type='string' />
+		<field name='time_of_day' type='string' />
+		<field fkey='climates_tables.climate_type' name='climate' type='optstring' />
+		<field name='sky_file' type='string' />
+		<field name='supports_ambient_fog' type='boolean' />
+		<field name='supports_volumetric_fog' type='boolean' />
+	</table>
+	<table table_name='battle_type_faction_presets_tables' table_version='1' guid='195f7ed6-6f75-4ce1-a6ad-c4f7e2ce425c'>
+		<field fkey='factions_tables.key' name='Faction' type='string_ascii' />
+		<field name='Weighting Type' type='int' />
+		<field name='ID' type='int' />
+		<field name='unknown4' type='float' version_start='1' />
+	</table>
+	<table table_name='battle_type_setup_limits_tables' table_version='1' guid='3f251c2e-ae3a-4af9-a224-5644ca46adb4'>
+		<field fkey='battle_types_tables.type' name='Battle Type' type='string_ascii' />
+		<field name='weighting_type' type='string_ascii' />
+		<field name='Unit Size' type='string_ascii' />
+		<field name='Unit Availability' type='string_ascii' />
+		<field name='max_infantry' type='int' />
+		<field name='max_cavalry' type='int' />
+		<field name='max_artillery' type='int' />
+		<field name='max_small_ship' type='float' />
+		<field name='max_frigate' type='float' />
+		<field name='max_line_of_battle' type='float' />
+		<field name='ID' type='int' />
+		<field name='s_Generation' type='float' />
+	</table>
+	<table table_name='battle_types_tables' table_version='2' guid='8b90e4c6-1498-41d4-a87a-fd183c3f5129'>
+		<field name='type' type='string_ascii' />
+		<field name='sort_order' type='int' version_start='1' />
+		<field name='defender_funds_ratio' type='float' />
+		<field name='max_teamsize' type='int' />
+	</table>
+	<table table_name='battle_types_to_victory_conditions_tables' table_version='2' guid='373e5215-c1e3-44cc-be62-24e452821d63'>
+		<field name='battle_type' type='string' />
+		<field name='attacker_victory_condition' type='optstring_ascii' />
+		<field name='defender_victory_condition' type='optstring_ascii' />
+	</table>
+	<table table_name='battle_unit_permission_junctions_tables' table_version='0' guid='11dd38e9-dfc8-4da7-bb10-806864ce3b70'>
+		<field fkey='main_units_tables.unit' name='unit' type='string' pk='true' />
+		<field fkey='battle_types_tables.type' name='battle_type' type='string' pk='true' />
+	</table>
+	<table table_name='battle_weather_effects_tables' table_version='1' guid='cc0ae75d-023a-47ab-a73b-4805683f4883'>
+		<field name='stat' type='string_ascii' />
+		<field name='value' type='int' />
+		<field name='weather_type' type='string_ascii' />
+	</table>
   <table table_name='battle_weather_types_tables'
          table_version='0'
          guid='411de610-cf34-4e0e-920a-55b5f36b05c3'>
