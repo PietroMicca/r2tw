@@ -108,7 +108,7 @@
 		<field name='faction_key' type='string_ascii' />
 		<field name='political_party_key' type='string_ascii' />
 	</table>
-	<table table_name='pdlc_tables' table_version='0' guid='a4298d77-6438-4033-9736-fad436277ca9'>
+	<table table_name='pdlc_tables' table_version='3' guid='a4298d77-6438-4033-9736-fad436277ca9'>
 		<field name='ID' type='string_ascii' pk='true' />
 		<field name='Steam ID' type='int' />
 		<field name='Description' type='optstring_ascii' />
