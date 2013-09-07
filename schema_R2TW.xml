@@ -190,7 +190,7 @@
 		<field name='variant_name' type='string_ascii' />
 	</table>
 	<table table_name='voice_events_tables' table_version='0' guid='86876495-3a94-477e-a99d-e392511dd231'>
-		<field name='key' type='string_ascii' />
+	
 	</table>
 	<table table_name='voice_types_tables' table_version='0' guid='c0adc83a-1762-4cca-8c1b-1105155392ea'>
 		<field name='key' type='string_ascii' />
