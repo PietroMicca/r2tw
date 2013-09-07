@@ -94,25 +94,25 @@
 	<table table_name='advice_levels_tables' table_version='3' guid='ad347c10-0d05-42ce-b2fc-999fcdf0b573'>
 		<field name='key' type='string_ascii' />
 		<field name='advice_thread' type='string_ascii' />
-		<field name='unknown' type='int' />
-		<field name='unknown' type='int' />
-		<field name='unknown' type='string_ascii' />
-		<field name='unknown' type='string_ascii' />
-		<field name='unknown' type='string_ascii' />
+		<field name='priority_level' type='int' />
+		<field name='points_needed' type='int' />
+		<field name='game_area' type='string_ascii' />
+		<field name='category' type='string_ascii' />
+		<field name='sub_category' type='string_ascii' />
 		<field name='unknown' type='int' />
 		<field name='unknown' type='int' />
 		<field name='unknown' type='int' />
 		<field name='unknown' type='boolean' />
 		<field name='unknown' type='boolean' />
 		<field name='unknown' type='boolean' />
-		<field name='unknown' type='string_ascii' />
-		<field name='unknown' type='boolean' />
-		<field name='unknown' type='boolean' />
-		<field name='unknown' type='boolean' />
-		<field name='unknown' type='int' />
 		<field name='unknown' type='string_ascii' />
 		<field name='unknown' type='boolean' />
-		<field name='unknown' type='optstring_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='int' />
+		<field name='advisor_name' type='string_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='movie_link' type='optstring_ascii' />
 	</table>
 	<table table_name='advice_threads_tables' table_version='0' guid='179142d6-0dc6-4635-84dd-d9a9a1e13443'>
 		<field name='thread' type='string_ascii' pk='true' />
@@ -154,65 +154,53 @@
 		<field name='Culture' type='string_ascii' />
 		<field name='General_Bodyguard' type='optstring_ascii' />
 		<field name='Key' type='int' />
-		<field name='unknown' type='int' />
+		<field name='level' type='int' />
 		<field name='unknown' type='int' />
 		<field name='Gender' type='string_ascii' />
 	</table>
 	<table table_name='agent_localisations_tables' table_version='0' guid='65e6e96f-f6fc-44a2-a308-a1c4144ad06d'>
 		<field name='Key' type='string_ascii' />
 	</table>
-  <table table_name='agent_string_faction_overrides_tables'
-         table_version='1'
-         guid='7dfcb6a2-b1fa-421a-b5a4-48d7aedfa5cf'>
-    <field name='Agent' type='string_ascii' />
-    <field name='Subculture' type='string_ascii' />
-    <field name='Gender' type='string_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-  </table>
-  <table table_name='agent_string_subculture_overrides_tables'
-         table_version='1'
-         guid='5ab18900-fa9c-42f0-bb73-bf07a6cb9339'>
-    <field name='Agent' type='string_ascii' />
-    <field name='Gender' type='string_ascii' />
-    <field name='Subculture' type='string_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-  </table>
-  <table table_name='agent_subculture_gender_overrides_tables'
-         table_version='0'
-         guid='7ddd01c9-02fa-42fa-9d51-3d39472409a1'>
-    <field name='Agent' type='string_ascii' />
-    <field name='Gender' type='string_ascii' />
-    <field name='Subculture' type='string_ascii' />
-  </table>
-  <table table_name='agent_to_agent_abilities_tables'
-         table_version='3'
-         guid='c004ca3e-7dc4-43cc-a88b-15dcbda217bb'>
-    <field name='Agent' type='string_ascii' />
-    <field name='Ability' type='string_ascii' />
-    <field name='Localized_Ability' type='string_ascii' />
-    <field name='Localized_Description' type='string_ascii' />
-  </table>
-  <table table_name='agent_to_agent_attributes_tables'
-         table_version='2'
-         guid='8a60566a-f02b-4185-aba7-a458c98095c1'>
-    <field name='Attribute' type='string_ascii' />
-    <field name='Agent' type='string_ascii' />
-    <field name='Default_Value' type='int' />
-  </table>
-  <table table_name='agent_uniform_colours_tables'
-         table_version='1'
-         guid='1cb35a6e-bb81-48e9-acfc-ffd4439bad60'>
-    <field fkey='agent_uniforms_tables.uniform_name' name='uniform_name' type='string' pk='true' />
-    <field name='primary_colour_b' type='float' />
-    <field name='primary_colour_g' type='float' />
-    <field name='primary_colour_r' type='float' />
-    <field name='secondary_colour_b' type='float' />
-    <field name='secondary_colour_g' type='float' />
-    <field name='secondary_colour_r' type='float' />
-    <field name='tertiary_colour_b' type='float' />
-    <field name='tertiary_colour_g' type='float' />
-    <field name='tertiary_colour_r' type='float' />
-  </table>
+	<table table_name='agent_string_faction_overrides_tables' table_version='1' guid='7dfcb6a2-b1fa-421a-b5a4-48d7aedfa5cf'>
+		<field name='Agent' type='string_ascii' />
+		<field name='Subculture' type='string_ascii' />
+		<field name='Gender' type='string_ascii' />
+		<field name='icon_path' type='optstring_ascii' />
+	</table>
+	<table table_name='agent_string_subculture_overrides_tables' table_version='1' guid='5ab18900-fa9c-42f0-bb73-bf07a6cb9339'>
+		<field name='Agent' type='string_ascii' />
+		<field name='Gender' type='string_ascii' />
+		<field name='Subculture' type='string_ascii' />
+		<field name='icon_path' type='optstring_ascii' />
+	</table>
+	<table table_name='agent_subculture_gender_overrides_tables' table_version='0' guid='7ddd01c9-02fa-42fa-9d51-3d39472409a1'>
+		<field name='Agent' type='string_ascii' />
+		<field name='Gender' type='string_ascii' />
+		<field name='Subculture' type='string_ascii' />
+	</table>
+	<table table_name='agent_to_agent_abilities_tables' table_version='3' guid='c004ca3e-7dc4-43cc-a88b-15dcbda217bb'>
+		<field name='Agent' type='string_ascii' />
+		<field name='Ability' type='string_ascii' />
+		<field name='Localized_Ability' type='string_ascii' />
+		<field name='Localized_Description' type='string_ascii' />
+	</table>
+	<table table_name='agent_to_agent_attributes_tables' table_version='2' guid='8a60566a-f02b-4185-aba7-a458c98095c1'>
+		<field name='Attribute' type='string_ascii' />
+		<field name='Agent' type='string_ascii' />
+		<field name='Default_Value' type='int' />
+	</table>
+	<table table_name='agent_uniform_colours_tables' table_version='1' guid='1cb35a6e-bb81-48e9-acfc-ffd4439bad60'>
+		<field fkey='agent_uniforms_tables.uniform_name' name='uniform_name' type='string' pk='true' />
+		<field name='primary_colour_b' type='int' />
+		<field name='primary_colour_g' type='int' />
+		<field name='primary_colour_r' type='int' />
+		<field name='secondary_colour_b' type='int' />
+		<field name='secondary_colour_g' type='int' />
+		<field name='secondary_colour_r' type='int' />
+		<field name='tertiary_colour_b' type='int' />
+		<field name='tertiary_colour_g' type='int' />
+		<field name='tertiary_colour_r' type='int' />
+	</table>
   <table table_name='agent_uniforms_tables'
          table_version='6'
          guid='726b80e6-8d92-451c-aa09-012c5cf38b2d'>
