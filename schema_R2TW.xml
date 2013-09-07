@@ -34,6 +34,11 @@
 	<table table_name='achievements_tables' table_version='2' guid='ff9f0014-c140-40eb-8b0d-87870eaa8312'>
 		<field name='Achievements' type='string_ascii' pk='true' />
 	</table>
+	<table table_name='action_results_tables' table_version='0' guid='b1e2f470-8b16-431b-b799-056f9f9fc619'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field fkey='effect_bundles_tables.key' name='actor_effect_bundle' type='string_ascii' />
+		<field fkey='effect_bundles_tables.key' name='target_effect_bundle' type='string_ascii' />
+	</table>
 	<table table_name='advice_threads_tables' table_version='0' guid='179142d6-0dc6-4635-84dd-d9a9a1e13443'>
 		<field name='thread' type='string_ascii' pk='true' />
 	</table>
@@ -241,9 +246,7 @@
 		<field name='category' type='string_ascii' />
 	</table>
 	<table table_name='warscape_trees_tables' table_version='0' guid='empty1'>
-		<field fkey='trees_tables.Tree ID' name='Tree' type='string_ascii' pk='true' />
-		<field fkey='seasons_tables.season' name='Season' type='string_ascii' pk='true' />
-		<field name='Model Path' type='string_ascii' />
+		<field name='Tree' type='string_ascii' pk='true' />
 	</table>
 	<table table_name='warscape_underlay_textures_tables' table_version='2' guid='1811b995-74cc-413b-8719-8e3e6c96af8e'>
 		<field name='underlay_key' type='string_ascii' pk='true' />
