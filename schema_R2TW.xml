@@ -2625,36 +2625,32 @@
     <field name='Sky Colour G' type='float' />
     <field name='Sky Colour B' type='float' />
   </table>
-  <table table_name='sea_surfaces_tables'
-         table_version='2'
-         guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
-    <field name='key' type='string' pk='true' />
-    <field name='sea_wind_speed' type='float' />
-    <field name='sea_phillips_constant' type='float' />
-    <field name='sea_choppiness' type='float' />
-    <field name='swell_wind_speed' type='float' />
-    <field name='swell_phillips_constant' type='float' />
-    <field name='foam_enabled' type='boolean' />
-    <field name='foam_decay_rate' type='float' />
-    <field name='foam_fade_in_time' type='float' />
-    <field name='foam_cut_off_value' type='float' />
-    <field name='froth_value' type='float' />
-    <field name='froth_distortion_speed' type='float' />
-    <field name='froth_distortion_amount' type='float' />
-    <field name='spray_cut_off_value' type='float' />
-    <field name='spray_speed' type='float' />
-    <field name='spray_duration' type='float' />
-    <field name='sea_shininess' type='float' />
-    <field name='sea_decay' type='float' />
-    <field name='reflection_flattening_factor' type='float' />
-  </table>
-  <table table_name='seasons_tables'
-         table_version='0'
-         guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
-    <field name='season' type='string' pk='true' />
-    <field name='onscreen' type='string' />
-    <field name='order' type='string' />
-  </table>
+	<table table_name='sea_surfaces_tables' table_version='2' guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
+		<field name='key' type='string_ascii' pk='true' />
+		<field name='sea_wind_speed' type='float' />
+		<field name='sea_phillips_constant' type='float' />
+		<field name='sea_choppiness' type='float' />
+		<field name='swell_wind_speed' type='float' />
+		<field name='swell_phillips_constant' type='float' />
+		<field name='foam_enabled' type='boolean' />
+		<field name='foam_decay_rate' type='float' />
+		<field name='foam_fade_in_time' type='float' />
+		<field name='foam_cut_off_value' type='float' />
+		<field name='froth_value' type='float' />
+		<field name='froth_distortion_speed' type='float' />
+		<field name='froth_distortion_amount' type='float' />
+		<field name='spray_cut_off_value' type='float' />
+		<field name='spray_speed' type='float' />
+		<field name='spray_duration' type='float' />
+		<field name='sea_shininess' type='float' />
+		<field name='sea_decay' type='float' />
+		<field name='reflection_flattening_factor' type='float' />
+	</table>
+	<table table_name='seasons_tables' table_version='0' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
+		<field name='season' type='string_ascii' pk='true' />
+		<field name='onscreen' type='string_ascii' />
+		<field name='order' type='int' />
+	</table>
   <table table_name='ship_names_tables'
          table_version='1'
          guid='95fdee6f-6ce6-46fa-8634-740ea19b818a'>
