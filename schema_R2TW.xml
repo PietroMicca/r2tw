@@ -128,6 +128,64 @@
 		<field name='onscreen' type='string_ascii' />
 		<field name='order' type='int' />
 	</table>
+	<table table_name='slots_tables' table_version='1' guid='453dd2ab-c78b-4457-b5c1-45d7096dc1f5'>
+		<field name='slot' type='string_ascii' pk='true' />
+		<field name='Farm' type='boolean' />
+		<field name='Town' type='boolean' />
+		<field name='Port' type='boolean' />
+		<field name='Resource' type='boolean' />
+		<field name='supports_building_level_conversion' type='boolean' version_start='1' />
+	</table>
+	<table table_name='technologies_tables' table_version='4' guid='5f434686-d655-4522-b404-98c12f9206e9'>
+		<field name='Technology ID' type='string_ascii' pk='true' />
+		<field fkey='building_levels_tables.level_name' name='Building ID' type='string_ascii' />
+		<field name='Position Index' type='int' />
+		<field name='research_points_required' type='int' />
+		<field name='icon_name' type='string_ascii' />
+		<field name='military_prestige' type='int' />
+		<field name='naval_prestige' type='int' />
+		<field name='economic_prestige' type='int' />
+		<field name='enlightenment_prestige' type='int' />
+		<field name='mp_available_early' type='boolean' />
+		<field name='mp_available_late' type='boolean' />
+		<field name='info_pic' type='string_ascii' />
+		<field name='ai_bias' type='int' version_start='1' />
+		<field name='unique_index' type='int' version_start='2' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='boolean' />
+		<field name='is_civil' type='boolean' />
+		<field name='is_engineering' type='boolean' />
+		<field name='is_military' type='boolean' />
+	</table>
+	<table table_name='trait_level_effects_tables' table_version='0' guid='1155cf64-b90a-4a4d-aeda-933023a56b86'>
+		<field fkey='character_trait_levels_tables.key' name='trait_level' type='string_ascii' pk='true' />
+		<field fkey='agent_attributes_tables.key' name='attribute' type='string_ascii' pk='true' />
+		<field fkey='effects_tables.effect' name='effect' type='string_ascii' pk='true' />
+		<field name='effect_value' type='float' />
+	</table>
+	<table table_name='unit_castes_tables' table_version='2'  guid='b27bb08e-e2a9-4d55-947c-9c08518e0507'>
+		<field name='caste' type='string_ascii' />
+		<field name='localised_name' type='optstring_ascii' />
+		<field name='sort_priority' type='int' />
+	</table>
+	<table table_name='unit_class_tables' table_version='3' guid='68bf6d71-9ee5-4f13-b094-ba927d711e17'>
+		<field name='key' type='string_ascii' />
+		<field name='onscreen' type='string_ascii' />
+		<field name='sort_priority' type='int' />
+		<field name='siege' type='string_ascii' />
+		<field name='can_assault_settlment' type='boolean' />
+	</table>
+	<table table_name='victory_conditions_tables' table_version='0' guid='7cfad747-f458-45ff-90b0-a6d5269553be'>
+		<field name='Condition' type='string_ascii' pk='true' />
+	</table>
+	<table table_name='videos_tables' table_version='2' guid='861963f8-af56-47fb-9215-c961493666dd'>
+		<field name='video_name' type='string_ascii' />
+		<field name='video_type' type='string_ascii' />
+		<field name='audio_tracks' type='int' />
+		<field name='script_ref' type='int' />
+	</table>
 	<table table_name='warscape_animated_tables' table_version='2' guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
 		<field name='key' type='string_ascii' pk='true' />
 		<field name='texture_filename_base' type='string_ascii' />
