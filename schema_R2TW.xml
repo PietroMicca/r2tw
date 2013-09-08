@@ -3195,6 +3195,21 @@
          guid='59bf388b-841c-4578-a703-1c3c4af35dcb'>
     <field name='flag_key' type='string_ascii' />
   </table>
+  <table table_name='special_ability_phase_attribute_effects_tables'
+         table_version='0'
+         guid='ad8836c7-7b5b-4321-9482-55bfe7ae27aa'>
+    <field name='attribute' type='string_ascii' />
+    <field name='phase' type='string_ascii' />
+  </table>
+  <table table_name='special_ability_phase_stat_effects_tables'
+         table_version='1'
+         guid='5c4edcfe-bc5e-4b87-a4ea-60f915f01501'>
+    <field name='phase' type='string_ascii' />
+    <field name='value' type='float' />
+    <field name='stat' type='string_ascii' />
+    <field name='how' type='string_ascii' />
+  </table>
+  
   <table table_name='stances_tables'
          table_version='0'
          guid='e994895b-eae0-4560-8e17-afaa606f5f7e'>
