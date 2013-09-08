@@ -3421,12 +3421,25 @@
          guid='92533af3-9681-4be2-a9b8-85f360b48e5e'>
     <field name='event' type='string_ascii' />
   </table>
-  <table table_name='ui_unit_stat_to_classes_tables'
+    <table table_name='ui_effects_tables'
+         table_version='1'
+         guid='ed143b3d-1560-4970-b9d7-40caba2c1fa2'>
+    <field name='key' type='string_ascii' />
+    <field name='banner_fx' type='optstring_ascii' />
+    <field name='ping_fx' type='optstring_ascii' />
+  </table>
+    <table table_name='ui_unit_stat_to_classes_tables'
          table_version='3'
          guid='2cf44b6c-4527-431f-a862-fc7ae559b327'>
-    <field fkey='ui_unit_stats_tables.key' name='stat_key' type='string' pk='true' />
-    <field fkey='unit_class_tables.key' name='unit_class' type='string' pk='true' />
+    <field name='stat_key' type='string_ascii' />
+    <field name='unit_class' type='string_ascii' />
     <field name='list_order' type='int' />
+    <field name='filter' type='string_ascii' />
+  </table>
+    <table table_name='ui_unit_stats_filters_tables'
+         table_version='0'
+         guid='5ad29706-70f4-4104-a2ed-71298f3f6a7a'>
+    <field name='key' type='string_ascii' />
   </table>
   <table table_name='ui_unit_stats_tables'
          table_version='3'
