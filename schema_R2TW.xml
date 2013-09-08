@@ -3241,7 +3241,7 @@
   <table table_name='taxes_classes_tables'
          table_version='0'
          guid='3d108fdf-3ade-4f33-a408-8f83fcc7f890'>
-    <field name='tax' type='string' pk='true' />
+    <field name='tax' type='string_ascii' pk='true' />
   </table>
   <table table_name='taxes_effects_jct_tables'
          table_version='1'
@@ -3267,6 +3267,15 @@
     <field name='tax_level' type='string_ascii' pk='true' />
     <field name='percentage' type='int' />
   </table>
+  <table table_name='team_colours_tables'
+         table_version='0'
+         guid='1a4e8672-01ae-4a00-bbba-89fe5785aeb0'>
+    <field name='alliance' type='int' />
+    <field name='b' type='int' />
+    <field name='g' type='int' />
+    <field name='r' type='int' />
+    <field name='army_index' type='int' />
+  </table>  
   <table table_name='technologies_tables'
          table_version='4'
          guid='d9771929-7472-418d-b67b-c1ae6400153f'>
@@ -3298,6 +3307,20 @@
     <field name='key' type='string_ascii' />
     <field name='position' type='int' />
   </table>
+  <table table_name='technology_category_modules_tables'
+         table_version='0'
+         guid='07885130-06ee-43fa-953a-f4a75e08ce52'>
+    <field name='effect_bundle' type='optstring_ascii' />
+    <field name='max_tier' type='int' />
+    <field name='min_tier' type='int' />
+    <field name='technology_node_set' type='string_ascii' />
+  </table>
+  <table table_name='technology_category_parents_tables'
+         table_version='0'
+         guid='3ed2bd78-db8f-4fcb-876f-8b86d171cd44'>
+    <field name='child_category' type='string_ascii' />
+    <field name='parent_category' type='string_ascii' />
+  </table>  
   <table table_name='technology_effects_junction_tables'
          table_version='0'
          guid='463c0fad-c131-4918-b0b7-7cbf11b55362'>
@@ -3309,8 +3332,6 @@
   <table table_name='technology_faction_junctions_tables'
          table_version='0'
          guid='84cb804c-1a4a-4327-858c-975d1511dc1c'>
-    <field fkey='technologies_tables.key' name='technology_key' type='string' pk='true' />
-    <field fkey='factions_tables.key' name='faction_key' type='string' pk='true' />
   </table>
   <table table_name='technology_node_links_tables'
          table_version='1'
@@ -3343,14 +3364,19 @@
   <table table_name='technology_required_building_levels_junctions_tables'
          table_version='0'
          guid='d5ebd3cd-dcce-4266-935e-500e3fcec470'>
-    <field name='Unused' type='string' />
   </table>
   <table table_name='technology_required_technology_junctions_tables'
          table_version='0'
          guid='7b442ed3-1df9-40bc-b124-82e7da54e587'>
-    <field fkey='technologies_tables.key' name='technology' type='string' pk='true' />
-    <field fkey='technologies_tables.key' name='required_technology' type='string' pk='true' />
   </table>
+  <table table_name='technology_unit_upgrades_tables'
+         table_version='0'
+         guid='9638747d-0f3c-4848-9994-2cf909930b0d'>
+    <field name='cost' type='int' />
+    <field name='target_unit' type='optstring_ascii' />
+    <field name='technology' type='string_ascii' />
+    <field name='unit' type='string_ascii' />
+  </table>  
   <table table_name='terrain_tilesets_tables'
          table_version='0'
          guid='37116183-6c2a-4ae3-86f7-301b18a52754'>
@@ -3369,6 +3395,151 @@
     <field name='key' type='string_ascii' />
     <field name='icon_filepath' type='string_ascii' />
   </table>
+  <table table_name='trade_display_campaign_originating_culture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='583d715b-113e-4607-90ea-5850f971c895'>
+  </table>
+  <table table_name='trade_display_campaign_originating_culture_trade_model_options_tables'
+         table_version='1'
+         guid='ec9688ed-26d0-4050-a7e7-76c07a94f789'>
+    <field name='campaign' type='string_ascii' />
+    <field name='key' type='int' />
+    <field name='unknown' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='originating_culture' type='string_ascii' />
+    <field name='priority' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_campaign_originating_subculture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='d39a1ed4-d5b1-4229-bdbe-a96ba10b00b9'>
+  </table>
+  <table table_name='trade_display_campaign_originating_subculture_trade_model_options_tables'
+         table_version='0'
+         guid='142edf02-e298-4846-bd28-61a6679f27d8'>
+  </table>
+  <table table_name='trade_display_campaign_owning_culture_produced_resource_trade_model_options_tables'
+         table_version='1'
+         guid='18122771-b4ab-4bea-b99b-77d37855e1f9'>
+    <field name='campaign' type='string_ascii' />
+    <field name='key' type='int' />
+    <field name='priority' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='owning_culture' type='string_ascii' />
+    <field name='unknown' type='float' />
+    <field name='produced_resource' type='string_ascii' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_campaign_owning_culture_trade_model_options_tables'
+         table_version='1'
+         guid='0ecfcc15-f571-4352-905d-5c7a47217f70'>
+    <field name='campaign' type='string_ascii' />
+    <field name='key' type='int' />
+    <field name='unknown' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='owning_culture' type='string_ascii' />
+    <field name='priority' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_campaign_owning_faction_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='f2b7988e-8518-4594-98a5-a6d0461e2135'>
+  </table>
+  <table table_name='trade_display_campaign_owning_faction_trade_model_options_tables'
+         table_version='0'
+         guid='138f1f38-d05e-48eb-b308-47778af44e4e'>
+  </table>
+  <table table_name='trade_display_campaign_owning_subculture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='92af06e3-f21f-417b-a851-0447ba4d13c5'>
+  </table>
+  <table table_name='trade_display_campaign_owning_subculture_trade_model_options_tables'
+         table_version='0'
+         guid='d28bfefd-4ed3-44a3-ab60-07208f24a2d1'>
+  </table>
+  <table table_name='trade_display_campaign_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='62e73445-aee2-48f0-a2c3-b309a940ce3d'>
+  </table>
+  <table table_name='trade_display_campaign_trade_model_options_tables'
+         table_version='0'
+         guid='85afcb03-2a5b-49c2-bdeb-0a163be71561'>
+    <field name='campaign' type='string_ascii' />
+    <field name='key' type='int' />
+    <field name='priority' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='relative_frequency' type='float' />
+    <field name='unknown' type='string_ascii' />
+  </table>
+  <table table_name='trade_display_generic_trade_model_options_tables'
+         table_version='0'
+         guid='90ec3f0f-35eb-4dfb-b456-a53c7c4f26bf'>
+    <field name='key' type='int' />
+    <field name='priority' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='unknown' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_originating_culture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='eb5b418a-ec8f-48da-823f-257975dcf9c6'>
+  </table>
+  <table table_name='trade_display_originating_culture_trade_model_options_tables'
+         table_version='1'
+         guid='086c822e-e0e4-4fb5-8b69-be4b8c15fd57'>
+    <field name='key' type='int' />
+    <field name='priority' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='originating_culture' type='string_ascii' />
+    <field name='unknown' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_originating_subculture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='5fd62560-7a3d-46cd-872e-d155bfbb895e'>
+  </table>
+  <table table_name='trade_display_originating_subculture_trade_model_options_tables'
+         table_version='1'
+         guid='5ca1f0fd-6b70-4aa0-a44a-0647a559ab56'>
+    <field name='key' type='int' />
+    <field name='unknown' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='originating_subculture' type='string_ascii' />
+    <field name='priority' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_owning_culture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='58620770-f7f5-4cac-88d3-119552aa2438'>
+  </table>
+  <table table_name='trade_display_owning_culture_trade_model_options_tables'
+         table_version='0'
+         guid='5516d6f4-98cb-4c79-96bc-3e61d4800192'>
+    <field name='key' type='int' />
+    <field name='unknown' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='owning_culture' type='string_ascii' />
+    <field name='priority' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_owning_faction_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='21793da4-78e7-455a-95b0-229f2668b22a'>
+  </table>
+  <table table_name='trade_display_owning_faction_trade_model_options_tables'
+         table_version='1'
+         guid='24dcbb25-629a-4840-94e3-16edfaa34e0b'>
+    <field name='key' type='int' />
+    <field name='unknown' type='float' />
+    <field name='model' type='string_ascii' />
+    <field name='owning_faction' type='string_ascii' />
+    <field name='priority' type='float' />
+    <field name='relative_frequency' type='float' />
+  </table>
+  <table table_name='trade_display_owning_subculture_produced_resource_trade_model_options_tables'
+         table_version='0'
+         guid='b5354a66-8753-47bd-b7b1-63f5f539c442'>
+  </table>  
   <table table_name='trade_display_owning_subculture_trade_model_options_tables'
          table_version='0'
          guid='76850514-5378-4d3c-9b49-c7a9a3f7927a'>
