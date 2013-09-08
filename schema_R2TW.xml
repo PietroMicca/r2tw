@@ -4073,7 +4073,28 @@
     <field name='ui_vfx' type='optstring_ascii' />
     <field name='rally_amount' type='int' />
   </table> 
-  
+  <table table_name='special_ability_to_invalid_usage_flags_tables'
+         table_version='0'
+         guid='f988e27b-f3c7-448b-b727-f2ce3303962e'>
+    <field name='invalid_usage_flag' type='string_ascii' />
+    <field name='special_ability' type='string_ascii' />
+  </table>
+  <table table_name='special_ability_to_special_ability_phase_junctions_tables'
+         table_version='1'
+         guid='cd7f33da-f749-4e49-9232-244e2fc9eb11'>
+    <field name='order' type='int' />
+    <field name='phase' type='string_ascii' />
+    <field name='special_ability' type='string_ascii' />
+  </table>
+  <table table_name='spotting_and_hiding_values_tables'
+         table_version='1'
+         guid='00c7169b-78e6-4e6d-988d-4051face33b3'>
+    <field name='key' type='string_ascii' />
+    <field name='spot_dist_scrub' type='int' />
+    <field name='spot_dist_tree' type='int' />
+    <field name='visibility_max_spot_range' type='int' />
+    <field name='visibility_min_spot_range' type='int' />
+  </table>  
   <table table_name='stances_tables'
          table_version='0'
          guid='e994895b-eae0-4560-8e17-afaa606f5f7e'>
@@ -4083,18 +4104,28 @@
   <table table_name='start_pos_faction_effect_bundles_tables'
          table_version='0'
          guid='864945a3-b9c2-4575-b6a9-c4bf044a091a'>
-    <field name='unknown1' type='string' />
-    <field name='unknown2' type='string' />
-    <field fkey='effect_bundles_tables.key' name='effect_bundle' type='string' />
-    <field fkey='start_pos_factions_tables.campaign' name='start_pos_faction' type='int' />
   </table>
   <table table_name='start_pos_family_relationships_tables'
          table_version='0'
          guid='c33cdd4d-2d71-4ef1-83ba-626b11a97159'>
-    <field fkey='start_pos_characters_tables.Surname' name='character' type='int' />
-    <field fkey='start_pos_characters_tables.Surname' name='related_to' type='int' />
-    <field fkey='family_relationship_types_tables.relationship_type' name='relationship' type='string' />
   </table>
+  <table table_name='start_pos_past_events_tables'
+         table_version='0'
+         guid='2d5e7f83-b907-47d1-ad0c-4c6751cf1ac3'>
+    <field name='event' type='string_ascii' />
+    <field name='source' type='string_ascii' />
+    <field name='target' type='string_ascii' />
+    <field name='turns_ago' type='int' />
+  </table>
+  <table table_name='start_pos_region_slot_templates_tables'
+         table_version='0'
+         guid='efb06e5b-e549-442f-a2df-e1c54c15c27b'>
+    <field name='campaign' type='string_ascii' />
+    <field name='id' type='string_ascii' />
+    <field name='region' type='string_ascii' />
+    <field name='slot_template' type='string_ascii' />
+    <field name='slot_type' type='string_ascii' />
+  </table>  
   <table table_name='state_gift_values_tables'
          table_version='0'
          guid='99cedbd4-eda6-4a32-8579-705235b7de06'>
@@ -4116,6 +4147,18 @@
     <field fkey='random_localisation_strings_tables.key' name='label' type='optstring_ascii' />
     <field name='public' type='boolean' />
     <field name='ladder' type='boolean' />
+  </table>
+  <table table_name='subtitle_timings_tables'
+         table_version='0'
+         guid='00b6ec3c-b4cc-4606-9377-78386727a3c6'>
+    <field name='end' type='int' />
+    <field name='language' type='string_ascii' />
+    <field name='script_id' type='int' />
+    <field name='start' type='int' />
+    <field name='subtitle_field' type='string_ascii' />
+    <field name='text_section' type='int' />
+    <field name='foreign_key' type='string_ascii' />
+    <field name='text_id' type='string_ascii' />
   </table>
   <table table_name='taxes_classes_tables'
          table_version='0'
