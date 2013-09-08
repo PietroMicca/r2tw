@@ -2944,6 +2944,17 @@
 	<field name='strategic_value' type='int' />
 	<field name='in_encyclopedia' type='boolean' />
   </table>
+   <table table_name='scripted_objectives_tables'
+         table_version='1'
+         guid='5d7f2ebb-7e62-408e-9ef9-f7192c768c69'>
+    <field name='key' type='string_ascii' />
+  </table>
+    <table table_name='scripted_subtitles_tables'
+         table_version='2'
+         guid='35b105ff-0e18-4966-bbad-c1a01e272a8b'>
+    <field name='character_for_vo' type='string_ascii' />
+    <field name='key' type='optstring_ascii' />
+  </table>
   <table table_name='sea_climate_details_tables'
          table_version='0'
          guid='00ac9be3-3e24-4ae5-bd79-68ff1c2b3f27'>
@@ -2983,36 +2994,40 @@
 	<field name='onscreen' type='string_ascii' />
 	<field name='order' type='int' />
   </table>
+    <table table_name='ship_dbs_tables'
+         table_version='0'
+         guid='b6f6fa99-77a5-4b64-a164-5c713bcb148a'>
+    <field name='entity' type='string_ascii' />
+    <field name='key' type='string_ascii' />
+    <field name='model' type='string_ascii' />
+    <field name='spacing' type='string_ascii' />
+  </table>
   <table table_name='ship_names_tables'
          table_version='1'
          guid='95fdee6f-6ce6-46fa-8634-740ea19b818a'>
-    <field name='key' type='string' />
-    <field fkey='names_groups_tables.ID' name='name_group' type='string' />
-    <field name='Ship_Name' type='string' />
-    <field fkey='factions_tables.key' name='exclusive_to_faction' type='optstring' />
   </table>
+    <table table_name='slot_template_to_building_superchain_junctions_tables'
+         table_version='0'
+         guid='fa041213-60a3-4ccb-ba9d-fdc2da809dbc'>
+    <field name='building_superchain' type='string_ascii' />
+    <field name='id' type='string_ascii' />
+    <field name='slot_template' type='string_ascii' />
+  </table>
+  <table table_name='slot_templates_tables'
+         table_version='0'
+         guid='593163b5-3c4a-4bc5-9384-5e264fed2671'>
+    <field name='key' type='string_ascii' />
+  </table>
+  <table table_name='slot_types_tables'
+         table_version='0'
+         guid='acd60faf-f95a-45aa-99bf-31f6960a2c36'>
+    <field name='unknown' type='boolean' />
+    <field name='key' type='optstring_ascii' />
+  </table>
+
   <table table_name='slots_art_tables'
          table_version='0'
          guid='2b7c3faf-e0dd-41c2-bd5b-dbf76a141bb5'>
-    <field fkey='slots_tables.slot' name='slot' type='string' pk='true' />
-    <field fkey='cultures_tables.key' name='culture' type='string' pk='true' />
-    <field fkey='warscape_underlay_textures_tables.underlay_key' name='underlay_terrain_texture' type='optstring' />
-    <field name='underlay_differs_with_building' type='boolean' />
-    <field fkey='slots_templates_models_tables.template_name' name='template_model' type='optstring' />
-    <field name='template_differs_at_quality_zero' type='boolean' />
-    <field fkey='slots_templates_models_tables.template_name' name='template_model_art_quality_zero' type='optstring' />
-    <field name='use_minibuildings' type='boolean' />
-    <field name='minibuildings_differ_at_quality' type='boolean' />
-    <field name='unknown10' type='boolean' />
-    <field name='unknown11' type='boolean' />
-    <field name='unknown12' type='boolean' />
-    <field name='unknown13' type='boolean' />
-    <field fkey='warscape_rigid_tables.key' name='empty_building_model' type='optstring' />
-    <field fkey='warscape_animated_tables.key' name='empty_building_model_animated' type='optstring' />
-    <field name='unknown16' type='boolean' />
-    <field name='unknown17' type='boolean' />
-    <field name='unknown18' type='boolean' />
-    <field name='unknown19' type='boolean' />
   </table>
   <table table_name='slots_gdp_values_tables'
          table_version='0'
@@ -3042,13 +3057,28 @@
   <table table_name='small_vegetation_climates_jct_tables'
          table_version='0'
          guid='ddcc452c-fab7-48f3-92a8-3b096fdbf666'>
-    <field fkey='climates_tables.climate_type' name='climate' type='string' pk='true' />
-    <field fkey='warscape_rigid_tables.key' name='rigid_name' type='string' pk='true' />
   </table>
   <table table_name='sound_events_tables'
          table_version='0'
          guid='60cdd654-6a60-400d-9b84-e566aade796e'>
     <field name='name' type='optstring' />
+  </table>
+    <table table_name='special_ability_groups_tables'
+         table_version='0'
+         guid='a9351546-90b8-4530-b700-173a8807e04a'>
+    <field name='ability_group' type='string_ascii' />
+    <field name='icon_path' type='string_ascii' />
+  </table>
+  <table table_name='special_ability_groups_to_unit_abilities_junctions_tables'
+         table_version='1'
+         guid='ef88d458-4d85-43e9-b364-d1c699cc4aa3'>
+    <field name='special_ability_groups' type='string_ascii' />
+    <field name='unit_special_abilities' type='string_ascii' />
+  </table>
+  <table table_name='special_ability_invalid_usage_flags_tables'
+         table_version='0'
+         guid='59bf388b-841c-4578-a703-1c3c4af35dcb'>
+    <field name='flag_key' type='string_ascii' />
   </table>
   <table table_name='stances_tables'
          table_version='0'
@@ -3495,7 +3525,7 @@
   <table table_name='unit_special_abilities_tables'
          table_version='16'
          guid='7ea40f1e-abb7-4a66-99bd-a0077bf57b6f'>
-    <field fkey='unit_special_ability_types_tables.special_ability_type' name='key' type='string' pk='true' />
+    <field fkey='unit_special_ability_types_tables.special_ability_type' name='key' type='string_ascii' pk='true' />
     <field name='active_time' type='float' />
     <field name='recharge_time' type='float' />
     <field name='num_uses' type='int' />
@@ -3503,11 +3533,13 @@
     <field name='affect_self' type='boolean' version_start='5' />
     <field name='num_effected_friendly_units' type='int' version_start='5' />
     <field name='num_effected_enemy_units' type='int' version_start='5' />
-    <field fkey='projectile_shot_type_enum_tables.key' name='shot_type' type='optstring' version_start='5' />
     <field name='update_targets_every_frame' type='boolean' version_start='5' />
     <field name='initial_recharge' type='float' version_start='5' />
-    <field fkey='projectiles_tables.key' name='activated_projectile' type='optstring' version_start='5' />
     <field name='can_autotrigger' type='boolean' version_start='6' />
+  </table>
+    <table table_name='unit_special_ability_effects_tables'
+         table_version='1'
+         guid='79bfe422-1b6a-42c9-844a-af0c34a1395e'>
   </table>
   <table table_name='unit_stat_modifiers_tables'
          table_version='1'
@@ -3608,6 +3640,16 @@
   <table table_name='unit_weights_tables' table_version='0' guid='cc7f238c-0507-4b37-af67-ab6ec54d0a90'>
 	<field name='key' type='string_ascii' />
   </table>
+    <table table_name='units_custom_battle_permissions_tables'
+         table_version='4'
+         guid='178dd306-cb82-454c-a54b-fbded4f74520'>
+    <field name='faction' type='string_ascii' />
+    <field name='general_unit' type='boolean' />
+    <field name='unit' type='string_ascii' />
+    <field name='siege_unit_attacker' type='boolean' />
+    <field name='siege_unit_defender' type='boolean' />
+  </table>
+
   <table table_name='units_tables'
          table_version='14'
          guid='2fb1cfda-baf2-465d-8aa0-cc47d2aaec02'>
