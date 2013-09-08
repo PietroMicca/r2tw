@@ -3235,7 +3235,7 @@
 		<field fkey='warscape_animated_tables.key' name='animated' type='string_ascii' />
 	</table>
 	<table table_name='warscape_animated_tables' table_version='2' guid='26b78291-2e2b-4bfb-a0e1-8268aaa3cb0b'>
-		<field name='key' type='string' pk='true' />
+		<field name='key' type='string_ascii' pk='true' />
 		<field name='texture_filename_base' type='string_ascii' />
 		<field fkey='warscape_categories_tables.key' name='category' type='string_ascii' />
 	</table>
