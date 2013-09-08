@@ -1951,23 +1951,74 @@
     <field name='maximum_value' type='int' />
     <field name='minimum_value' type='int' />
   </table>
-  <table table_name='incidents_tables'
-         table_version='3'
-         guid='52f7ba8b-609b-4f1d-a049-769882604111'>
-    <field name='generate' type='boolean' />
-    <field name='key' type='string_ascii' />
-    <field name='ui_icon' type='string_ascii' />
-    <field name='ui_image' type='string_ascii' />
-    <field name='prioritised' type='boolean' />
-  </table>
-  <table table_name='loyalty_effects_tables'
-         table_version='0'
-         guid='bf84b795-b4a3-431a-8436-abbaa20a5ae9'>
-    <field name='applies_to_ai' type='boolean' />
-    <field name='factor' type='string_ascii' />
-    <field name='key' type='string_ascii' />
-    <field name='value' type='int' />
-  </table>
+	<table table_name='incidents_tables' table_version='3' guid='52f7ba8b-609b-4f1d-a049-769882604111'>
+		<field name='generate' type='boolean' />
+		<field name='key' type='string_ascii' />
+		<field name='ui_icon' type='string_ascii' />
+		<field name='ui_image' type='string_ascii' />
+		<field name='prioritised' type='boolean' />
+	</table>
+	<table table_name='land_units_tables' table_version='26' guid='3da64ea8-f4d4-48f8-9e31-2197383841f1'>
+		<field name='accuracy' type='int' />
+		<field name='ammo' type='int' />
+		<field name='armour type' type='string_ascii' />
+		<field name='campaign_action_points' type='int' />
+		<field name='Category Class' type='string_ascii' />
+		<field name='charge_bonus' type='int' />
+		<field name='attribute_group' type='string_ascii' />
+		<field name='dismounted_charge_bonus' type='int' />
+		<field name='dismounted_melee_attack' type='int' />
+		<field name='dismounted_melee_defence' type='int' />
+		<field name='gameplay_description_text' type='string_ascii' />
+		<field name='historical_description_text' type='string_ascii' />
+		<field name='Key Name' type='string_ascii' />
+		<field name='loose_spacing' type='boolean' />
+		<field name='man_animation' type='string_ascii' />
+		<field name='man_entity' type='string_ascii' />
+		<field name='melee_attack' type='int' />
+		<field name='melee_defence' type='int' />
+		<field name='morale' type='int' />
+		<field name='bonus_hit_points' type='int' />
+		<field name='mount' type='optstring_ascii' />
+		<field name='num_animals' type='int' />
+		<field name='animal' type='optstring_ascii' />
+		<field name='num_mounts' type='int' />
+		<field name='primary_melee_weapon' type='string_ascii' />
+		<field name='primary_missile_weapon' type='optstring_ascii' />
+		<field name='rank_depth' type='int' />
+		<field name='shield' type='string_ascii' />
+		<field name='short_description_text' type='string_ascii' />
+		<field name='spacing' type='string_ascii' />
+		<field name='strengths_weaknesses_text' type='string_ascii' />
+		<field name='supports_first_person' type='boolean' />
+		<field name='training_level' type='string_ascii' />
+		<field name='num_guns' type='int' />
+		<field name='officers' type='string_ascii' />
+		<field name='value' type='boolean' />
+		<field name='engine' type='optstring_ascii' />
+		<field name='value' type='boolean' />
+		<field name='value' type='float' />
+		<field name='value' type='float' />
+		<field name='value' type='int' />
+		<field name='attribute_group' type='optstring_ascii' />
+		<field name='value' type='float' />
+		<field name='value' type='float' />
+		<field name='chariot' type='optstring_ascii' />
+		<field name='num_chariots' type='int' />
+		<field name='reload' type='int' />
+		<field name='value' type='boolean' />
+		<field name='spotting_and_hiding' type='optstring_ascii' />
+		<field name='selection_vo' type='string_ascii' />
+		<field name='selected_vo_secondary' type='string_ascii'/>
+		<field name='selected_vo_tertiary' type='string_ascii'/>
+		<field name='value' type='float' />
+	</table>
+	<table table_name='loyalty_effects_tables' table_version='0' guid='bf84b795-b4a3-431a-8436-abbaa20a5ae9'>
+		<field name='applies_to_ai' type='boolean' />
+		<field name='factor' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='value' type='int' />
+	</table>
   <table table_name='loyalty_factors_tables'
          table_version='0'
          guid='91f88aa0-77b6-4b90-b4d5-706649478265'>
@@ -3034,80 +3085,87 @@
     <field fkey='units_tables.key' name='unit_key' type='string_ascii' />
     <field fkey='technologies_tables.key' name='technology_key' type='string_ascii' />
   </table>
-  <table table_name='unit_special_abilities_tables'
-         table_version='16'
-         guid='7ea40f1e-abb7-4a66-99bd-a0077bf57b6f'>
-    <field fkey='unit_special_ability_types_tables.special_ability_type' name='key' type='string' pk='true' />
-    <field name='active_time' type='float' />
-    <field name='recharge_time' type='float' />
-    <field name='num_uses' type='int' />
-    <field name='effect_range' type='float' version_start='5' />
-    <field name='affect_self' type='boolean' version_start='5' />
-    <field name='num_effected_friendly_units' type='int' version_start='5' />
-    <field name='num_effected_enemy_units' type='int' version_start='5' />
-    <field fkey='projectile_shot_type_enum_tables.key' name='shot_type' type='optstring' version_start='5' />
-    <field name='update_targets_every_frame' type='boolean' version_start='5' />
-    <field name='initial_recharge' type='float' version_start='5' />
-    <field fkey='projectiles_tables.key' name='activated_projectile' type='optstring' version_start='5' />
-    <field name='can_autotrigger' type='boolean' version_start='6' />
-  </table>
-  <table table_name='unit_stat_modifiers_tables'
-         table_version='1'
-         guid='2b7705b1-1f21-4058-94cb-e78645198530'>
-    <field name='how' type='string_ascii' />
-    <field name='key' type='string_ascii' />
-    <field name='stat' type='string_ascii' />
-  </table>
-  <table table_name='unit_stats_land_experience_bonuses_tables'
-         table_version='0'
-         guid='38d4636d-3620-4c0c-a024-ac433ba7bc66'>
-    <field name='xp_level' type='string_ascii' />
-    <field name='melee_attack' type='int' />
-    <field name='melee_defence' type='int' />
-    <field name='core_reloading_skill' type='int' />
-    <field name='morale' type='int' />
-    <field name='core_marksmanship' type='int' />
-    <field name='fatigue' type='int' />
-    <field name='mp_fixed_cost' type='int' />
-    <field name='mp_experience_cost_multiplier' type='float' />
-  </table>
-  <table table_name='unit_stats_naval_crew_tables'
-         table_version='2'
-         guid='4ef6f338-7da8-493e-ad5d-2f7dfe308549'>
-    <field name='unit_type' type='string_ascii' />
-    <field name='Reloading Skill' type='int' />
-    <field name='Markmanship' type='int' />
-    <field name='melee_attack' type='int' />
-    <field name='melee_defence' type='int' />
-    <field name='melee_weapon_type' type='string_ascii' />
-    <field name='pistols' type='boolean' />
-    <field name='Ammo' type='int' />
-    <field name='Infantry Entity' type='string_ascii' />
-    <field name='Soldier Model' type='string_ascii' />
-    <field fkey='battle_animations_table_tables.key' name='man_animations_table' type='string_ascii' />
-    <field fkey='warscape_equipment_themes_tables.theme' name='equipment_theme' type='string_ascii' />
-    <field name='Armour Audio' type='string_ascii' />
-    <field name='Armour' type='int' />
-    <field name='Spacing' type='float' />
-    <field name='Discipline' type='int' />
-    <field fkey='projectiles_tables.key' name='missile_type' type='optstring_ascii' />
-  </table>
-  <table table_name='unit_stats_naval_experience_bonuses_tables'
-         table_version='1'
-         guid='a556b0c5-b5a0-464b-a3c6-bf58288db56e'>
-    <field name='xp_level' type='string_ascii' />
-    <field name='melee_attack' type='int' version_start='1' />
-    <field name='melee_defence' type='int' />
-    <field name='core gunner loading skill' type='int' />
-    <field name='core gunner marksmanship' type='int' />
-    <field name='morale' type='int' />
-    <field name='mp fixed cost' type='int' />
-    <field name='mp experience cost multiplier' type='float' />
-  </table>
-	<table table_name='unit_to_unit_abilities_junctions_tables' table_version='0' guid='b3971696-c0a4-4398-ba7a-02c14a733ab1'>
-		<field fkey='units_tables.key' name='unit_name' type='string' pk='true' />
-		<field fkey='unit_abilities_tables.key' name='ability' type='string' pk='true' />
+	<table table_name='unit_special_abilities_tables' table_version='16' guid='7ea40f1e-abb7-4a66-99bd-a0077bf57b6f'>
+		<field fkey='unit_special_ability_types_tables.special_ability_type' name='key' type='string_ascii' pk='true' />
+		<field name='active_time' type='float' />
+		<field name='recharge_time' type='float' />
+		<field name='num_uses' type='int' />
+		<field name='effect_range' type='float' version_start='5' />
+		<field name='affect_self' type='boolean' version_start='5' />
+		<field name='num_effected_friendly_units' type='int' version_start='5' />
+		<field name='num_effected_enemy_units' type='int' version_start='5' />
+		<field fkey='projectile_shot_type_enum_tables.key' name='shot_type' type='optstring_ascii' version_start='5' />
+		<field name='update_targets_every_frame' type='boolean' version_start='5' />
+		<field name='initial_recharge' type='float' version_start='5' />
+		<field fkey='projectiles_tables.key' name='activated_projectile' type='optstring_ascii' version_start='5' />
+		<field name='can_autotrigger' type='boolean' version_start='6' />
 	</table>
+	<table table_name='unit_special_ability_effects_tables' table_version='0' guid='79bfe422-1b6a-42c9-844a-af0c34a1395e'>
+	</table>
+	<table table_name='unit_stat_modifiers_tables' table_version='1' guid='2b7705b1-1f21-4058-94cb-e78645198530'>
+		<field name='how' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='stat' type='string_ascii' />
+	</table>
+	<table table_name='unit_stats_land_experience_bonuses_tables' table_version='0' guid='38d4636d-3620-4c0c-a024-ac433ba7bc66'>
+		<field name='xp_level' type='string_ascii' />
+		<field name='melee_attack' type='int' />
+		<field name='melee_defence' type='int' />
+		<field name='core_reloading_skill' type='int' />
+		<field name='morale' type='int' />
+		<field name='core_marksmanship' type='int' />
+		<field name='fatigue' type='int' />
+		<field name='mp_fixed_cost' type='int' />
+		<field name='mp_experience_cost_multiplier' type='float' />
+	</table>
+	<table table_name='unit_stats_naval_crew_tables' table_version='2' guid='4ef6f338-7da8-493e-ad5d-2f7dfe308549'>
+		<field name='unit_type' type='string_ascii' />
+		<field name='Reloading Skill' type='int' />
+		<field name='Markmanship' type='int' />
+		<field name='melee_attack' type='int' />
+		<field name='melee_defence' type='int' />
+		<field name='melee_weapon_type' type='string_ascii' />
+		<field name='pistols' type='boolean' />
+		<field name='Ammo' type='int' />
+		<field name='Infantry Entity' type='string_ascii' />
+		<field name='Soldier Model' type='string_ascii' />
+		<field fkey='battle_animations_table_tables.key' name='man_animations_table' type='string_ascii' />
+		<field fkey='warscape_equipment_themes_tables.theme' name='equipment_theme' type='string_ascii' />
+		<field name='Armour Audio' type='string_ascii' />
+		<field name='Armour' type='int' />
+		<field name='Spacing' type='float' />
+		<field name='Discipline' type='int' />
+		<field fkey='projectiles_tables.key' name='missile_type' type='optstring_ascii' />
+	</table>
+	<table table_name='unit_stats_naval_experience_bonuses_tables' table_version='1' guid='a556b0c5-b5a0-464b-a3c6-bf58288db56e'>
+		<field name='xp_level' type='string_ascii' />
+		<field name='melee_attack' type='int' version_start='1' />
+		<field name='melee_defence' type='int' />
+		<field name='core gunner loading skill' type='int' />
+		<field name='core gunner marksmanship' type='int' />
+		<field name='morale' type='int' />
+		<field name='mp fixed cost' type='int' />
+		<field name='mp experience cost multiplier' type='float' />
+	</table>
+	<table table_name='unit_to_unit_abilities_junctions_tables' table_version='0' guid='b3971696-c0a4-4398-ba7a-02c14a733ab1'>
+	</table>
+	<table table_name='unit_type_enums_tables' table_version='0' guid='d9033994-2d6b-43e5-af06-7f78b4150766'>
+		<field name='key' type='string_ascii'/>
+	</table>
+	<table name='unit_variants_colours_tables' table_version='0' guid='2cb5c2c8-5d96-4db7-9bb7-bebecfeb060e'>
+		<field name='faction' type='optstring_ascii' />
+		<field name='primary_colour_b' type='int' />
+		<field name='primary_colour_g' type='int' />
+		<field name='primary_colour_r' type='int' />
+		<field name='secondary_colour_b' type='int' />
+		<field name='secondary_colour_g' type='int' />
+		<field name='secondary_colour_r' type='int' />
+		<field name='soldier_type' type='optstring_ascii' />
+		<field name='tertiary_colour_b' type='int' />
+		<field name='tertiary_colour_g' type='int' />
+		<field name='tertiary_colour_r' type='int' />
+		<field name='unit_variant' type='string_ascii' />
+	</table>	
 	<table table_name='unit_variants_tables' table_version='0' guid='5c270704-0ea3-45d7-81f0-c75af817bded'>
 		<field name='faction' type='optstring_ascii' />
 		<field name='name' type='string_ascii' />
