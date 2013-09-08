@@ -1959,59 +1959,58 @@
 		<field name='prioritised' type='boolean' />
 	</table>
 	<table table_name='land_units_tables' table_version='26' guid='3da64ea8-f4d4-48f8-9e31-2197383841f1'>
-		<field name='accuracy' type='int' />
-		<field name='ammo' type='int' />
-		<field name='armour type' type='string_ascii' />
-		<field name='campaign_action_points' type='int' />
-		<field name='Category Class' type='string_ascii' />
-		<field name='charge_bonus' type='int' />
-		<field name='attribute_group' type='string_ascii' />
-		<field name='dismounted_charge_bonus' type='int' />
-		<field name='dismounted_melee_attack' type='int' />
-		<field name='dismounted_melee_defence' type='int' />
-		<field name='gameplay_description_text' type='string_ascii' />
-		<field name='historical_description_text' type='string_ascii' />
-		<field name='Key Name' type='string_ascii' />
-		<field name='loose_spacing' type='boolean' />
-		<field name='man_animation' type='string_ascii' />
-		<field name='man_entity' type='string_ascii' />
-		<field name='melee_attack' type='int' />
-		<field name='melee_defence' type='int' />
-		<field name='morale' type='int' />
-		<field name='bonus_hit_points' type='int' />
-		<field name='mount' type='optstring_ascii' />
-		<field name='num_animals' type='int' />
-		<field name='animal' type='optstring_ascii' />
-		<field name='num_mounts' type='int' />
-		<field name='primary_melee_weapon' type='string_ascii' />
-		<field name='primary_missile_weapon' type='optstring_ascii' />
-		<field name='rank_depth' type='int' />
-		<field name='shield' type='string_ascii' />
-		<field name='short_description_text' type='string_ascii' />
-		<field name='spacing' type='string_ascii' />
-		<field name='strengths_weaknesses_text' type='string_ascii' />
-		<field name='supports_first_person' type='boolean' />
-		<field name='training_level' type='string_ascii' />
-		<field name='num_guns' type='int' />
-		<field name='officers' type='string_ascii' />
-		<field name='value' type='boolean' />
-		<field name='engine' type='optstring_ascii' />
-		<field name='value' type='boolean' />
-		<field name='value' type='float' />
-		<field name='value' type='float' />
-		<field name='value' type='int' />
-		<field name='attribute_group' type='optstring_ascii' />
-		<field name='value' type='float' />
-		<field name='value' type='float' />
-		<field name='chariot' type='optstring_ascii' />
-		<field name='num_chariots' type='int' />
-		<field name='reload' type='int' />
-		<field name='value' type='boolean' />
-		<field name='spotting_and_hiding' type='optstring_ascii' />
-		<field name='selection_vo' type='string_ascii' />
-		<field name='selected_vo_secondary' type='string_ascii'/>
-		<field name='selected_vo_tertiary' type='string_ascii'/>
-		<field name='value' type='float' />
+		<field name='Accuracy' type='int' />
+		<field name='Ammo' type='int' />
+		<field name='Armour' type='string_ascii' />
+		<field name='Campaign_Action_Points' type='int' />
+		<field name='Category' type='string_ascii' />
+		<field name='Charge_Bonus' type='int' />
+		<field name='Class' type='string_ascii' />
+		<field name='Dismounted_Charge_Bonus' type='int' />
+		<field name='Dismounted_Melee_Attack' type='int' />
+		<field name='Dismounted_Melee_Defense' type='int' />
+		<field name='Gameplay_Description_Text' type='string_ascii' />
+		<field name='Historical_Description_Text' type='string_ascii' />
+		<field name='Key' type='string_ascii' />
+		<field name='Man_Animation' type='optstring_ascii' />
+		<field name='Man_Entity' type='string_ascii' />
+		<field name='Melee_Attack' type='int' />
+		<field name='Melee_Defense' type='int' />
+		<field name='Morale' type='int' />
+		<field name='Bonus_Hit_Points' type='int' />
+		<field name='Mount' type='optstring_ascii' />
+		<field name='Num_Animals' type='int' />
+		<field name='Animal' type='optstring_ascii' />
+		<field name='Num_Mounts' type='int' />
+		<field name='Primary_Melee_Weapon' type='string_ascii' />
+		<field name='Primary_Missile_Weapon' type='optstring_ascii' />
+		<field name='Rank-Depth' type='int' />
+		<field name='Shield' type='string_ascii' />
+		<field name='Short_Description_Text' type='string_ascii' />
+		<field name='Spacing' type='string_ascii' />
+		<field name='Strengths_Weaknesses_Text' type='string_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='Training_Level' type='string_ascii' />
+		<field name='Numb_Guns' type='int' />
+		<field name='Officer' type='string_ascii' />
+		<field name='Articulated_Record' type='optstring_ascii' />
+		<field name='Engine' type='optstring_ascii' />
+		<field name='unknown' type='boolean' />
+		<field name='Visibility_Spotting_Distance_Min' type='float' />
+		<field name='Visibility_Spotting_Distance_Max' type='float' />
+		<field name='Ability_Global_Recharge' type='float' />
+		<field name='Attribute_Group' type='optstring_ascii' />
+		<field name='Spot_Distance_Tree' type='float' />
+		<field name='Spot_Distance_Scrub' type='float' />
+		<field name='Chariot' type='optstring_ascii' />
+		<field name='Num_Chariots' type='int' />
+		<field name='Reload' type='int' />
+		<field name='unknown' type='boolean' />
+		<field name='Spotting_and_Hiding' type='optstring_ascii' />
+		<field name='Selection_VO' type='string_ascii' />
+		<field name='Selectied_VO_Secondary' type='string_ascii' />
+		<field name='Selected_VO_Tertiary' type='string_ascii' />
+		<field name='Hiding_Scalar' type='float' />
 	</table>
 	<table table_name='loyalty_effects_tables' table_version='0' guid='bf84b795-b4a3-431a-8436-abbaa20a5ae9'>
 		<field name='applies_to_ai' type='boolean' />
@@ -2019,27 +2018,35 @@
 		<field name='key' type='string_ascii' />
 		<field name='value' type='int' />
 	</table>
-  <table table_name='loyalty_factors_tables'
-         table_version='0'
-         guid='91f88aa0-77b6-4b90-b4d5-706649478265'>
-    <field name='key' type='string_ascii' />
-    <field name='maximum_value' type='int' />
-    <field name='minimum_value' type='int' />
-  </table>
-  <table table_name='message_event_strings_tables'
-         table_version='2'
-         guid='7572f6f8-4dd3-46b6-a22c-69d62f815e83'>
-    <field name='Event ID' type='string' pk='true' />
-    <field fkey='campaigns_tables.campaign_name' name='optional_campaign_key' type='optstring' version_start='1' />
-    <field fkey='cultures_tables.key' name='Culture' type='string' pk='true' />
-    <field name='Title' type='string' />
-    <field name='Image' type='string' />
-    <field name='Layout' type='string' />
-    <field name='Requires_Response' type='boolean' />
-    <field name='Instant_Open' type='boolean' />
-    <field name='Image9' type='string' />
-    <field name='Image 2' type='string' />
-  </table>
+	<table table_name='loyalty_factors_tables' table_version='0' guid='91f88aa0-77b6-4b90-b4d5-706649478265'>
+		<field name='key' type='string_ascii' />
+		<field name='maximum_value' type='int' />
+		<field name='minimum_value' type='int' />
+	</table>
+	<table table_name='melee_weapons_tables' table_version='0' guid='91f88aa0-77b6-4b90-b4d5-706649478265'>
+		<field name='armour_penetrating' type='boolean' />
+		<field name='armour_piercing' type='boolean' />
+		<field name='bonus_v_cavalry' type='int' />
+		<field name='bonus_v_elephants' type='int' />
+		<field name='bonus_v_infantry' type='int' />
+		<field name='key' type='string_ascii' />
+		<field name='damage' type='int' />
+		<field name='ap_damage' type='int' />
+		<field name='unknown' type='boolean' />
+		<field name='unknown' type='int' />
+		<field name='weapon_length' type='float' />
+		<field name='melee_weapon_type' type='string_ascii' />
+		<field name='audio_material' type='string_ascii' />
+	</table>
+	<table table_name='message_event_strings_tables' table_version='2' guid='7572f6f8-4dd3-46b6-a22c-69d62f815e83'>
+		<field name='event' type='string_ascii' />
+		<field name='optional_campaign_key' type='optstring_ascii' />
+		<field name='culture' type='string_ascii' />
+		<field name='text' type='string_ascii' />
+		<field name='unknown' type='string_ascii' />
+		<field name='image' type='string_ascii' />
+		<field name='sound_event' type='string_ascii' />
+	</table>
   <table table_name='ministerial_effectiveness_modifiers_tables'
          table_version='0'
          guid='11d4f2ad-c840-41d6-9d37-f2abe5550f27'>
@@ -2604,17 +2611,17 @@
 	<table table_name='regions_continents_tables' table_version='0' guid='347c69b2-4980-4fdf-a3c7-83c3e7c2b835'>
 		<field name='continent' type='string_ascii' />
 	</table>
-	 <table name='region_to_province_junctions_tables'>
+	<table name='region_to_province_junctions_tables'>
 		<field name='province' type='string_ascii' />
 		<field name='region' type='string_ascii' />
 	</table>	
 	<table table_name='regions_tables' table_version='3' guid='8b9c7697-3577-443d-b098-ac10accd6afd'>
-		<field name='key' type='string_ascii' pk='true' />
+		<field name='key' type='string_ascii' />
 		<field name='r' type='int' />
 		<field name='g' type='int' />
 		<field name='b' type='int' />
-		<field name='in_encyclopedia' type='boolean' />
 		<field name='is_sea' type='boolean' />
+		<field name='owner_bundle' type='optstring_ascii' />
 	</table>
 	<table table_name='regions_to_region_groups_junctions_tables' table_version='0' guid='ab9c5ab7-ca20-41ec-9c7d-bc9a16b3ca24'>
 		<field fkey='regions_tables.key' name='region' type='string_ascii' />
@@ -2631,30 +2638,18 @@
 		<field name='ui_icon_path' type='string_ascii' />
 	</table>
 	<table table_name='resources_tables' table_version='2' guid='717d6b40-5fe1-4b88-a9e7-9c1927b37c7a'>
-		<field name='key' type='string_ascii' pk='true' />
-		<field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring_ascii' />
-		<field fkey='slots_tables.slot' name='Slot Type' type='string_ascii' />
+		<field name='key' type='string_ascii' />
+		<field name='unit' type='optstring_ascii' />
+		<field name='slot_bed' type='string_ascii' />
 		<field name='trade_value' type='int' />
-		<field name='Icon Path' type='string_ascii' />
-		<field name='strategic_value' type='int' version_start='1' />
+		<field name='icon_filepath' type='string_ascii' />
+		<field name='strategic_value' type='int' />
+		<field name='in_encyclopedia' type='boolean' />
 	</table>
 	<table table_name='sea_climate_details_tables' table_version='0' guid='00ac9be3-3e24-4ae5-bd79-68ff1c2b3f27'>
-		<field fkey='climates_tables.climate_type' name='key' type='string' pk='true' />
-		<field name='Sea Deep Colour R' type='float' />
-		<field name='Sea Deep Colour G' type='float' />
-		<field name='Sea Deep Colour B' type='float' />
-		<field name='Sea Shallow Colour R' type='float' />
-		<field name='Sea Shallow Colour G' type='float' />
-		<field name='Sea Shallow Colour B' type='float' />
-		<field name='Sun Colour R' type='float' />
-		<field name='Sun Colour G' type='float' />
-		<field name='Sun Colour B' type='float' />
-		<field name='Sky Colour R' type='float' />
-		<field name='Sky Colour G' type='float' />
-		<field name='Sky Colour B' type='float' />
 	</table>
 	<table table_name='sea_surfaces_tables' table_version='0' guid='090ab05d-ed48-4d74-8c5a-f9be0a8186c5'>
-		<field name='key' type='string_ascii' pk='true' />
+		<field name='key' type='string_ascii' />
 		<field name='sea_wind_speed' type='float' />
 		<field name='sea_phillips_constant' type='float' />
 		<field name='sea_choppiness' type='float' />
@@ -2673,6 +2668,11 @@
 		<field name='sea_shininess' type='float' />
 		<field name='sea_decay' type='float' />
 		<field name='reflection_flattening_factor' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
+		<field name='unknown' type='float' />
 	</table>
 	<table table_name='seasons_tables' table_version='0' guid='a8fa0c93-611e-4d61-8aa3-c83b94138ab4'>
 		<field name='season' type='string_ascii' pk='true' />
@@ -3182,6 +3182,13 @@
 	</table>
 	<table table_name='unit_weights_tables' table_version='0' guid='cc7f238c-0507-4b37-af67-ab6ec54d0a90'>
 		<field name='key' type='string_ascii' />
+	</table>
+	<table table_name='units_custom_battle_permissions_tables' table_version='0' guid='6597f7fc-6640-45b8-a20a-d90828acfd32'>
+	    <field name='faction' type='string_ascii' />
+		<field name='general_unit' type='boolean' />
+		<field name='unit' type='string_ascii' />
+		<field name='siege_unit_attacker' type='boolean' />
+		<field name='siege_unit_defender' type='boolean' />
 	</table>
 	<table table_name='units_tables' table_version='14' guid='2fb1cfda-baf2-465d-8aa0-cc47d2aaec02'>
 	</table>
