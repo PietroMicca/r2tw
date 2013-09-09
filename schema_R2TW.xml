@@ -3853,6 +3853,12 @@
     <field name='group_key' type='string_ascii' />
     <field name='round' type='int' />
   </table>
+  <table table_name='region_to_province_junctions_tables'
+         table_version='0'
+         guid='3089c0a3-3c18-4e78-a8f9-d954b0e051f2'>
+    <field name='province' type='string_ascii' />
+    <field name='region' type='string_ascii' />
+  </table>  
   <table table_name='region_unit_resources_tables'
          table_version='0'
          guid='528c4b6c-3e7e-4f93-af38-fc2964c7ba11'>
@@ -3894,15 +3900,23 @@
     <field name='convertibility' type='int' />
     <field name='ui_icon_path' type='string_ascii' />
   </table>
+  <table table_name='resource_effects_tables'
+         table_version='0'
+         guid='894c031a-8542-41b0-b93e-e0887fb66366'>
+    <field name='effect_key' type='string_ascii' />
+    <field name='resource_key' type='string_ascii' />
+    <field name='value' type='float' />
+  </table>  
   <table table_name='resources_tables'
          table_version='2'
          guid='717d6b40-5fe1-4b88-a9e7-9c1927b37c7a'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='commodity_unit_names_tables.plural' name='unit' type='optstring' />
-    <field fkey='slots_tables.slot' name='Slot Type' type='string' />
+    <field name='key' type='string_ascii' />
+    <field name='unit' type='optstring_ascii' />
+    <field name='slot_bed' type='string_ascii' />
     <field name='trade_value' type='int' />
-    <field name='Icon Path' type='string' />
-    <field name='strategic_value' type='int' version_start='1' />
+    <field name='icon_filepath' type='string_ascii' />
+    <field name='strategic_value' type='int' />
+    <field name='in_encyclopedia' type='boolean' />
   </table>
   <table table_name='scripted_objectives_tables'
          table_version='1'
