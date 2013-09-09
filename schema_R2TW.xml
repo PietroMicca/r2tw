@@ -3873,12 +3873,12 @@
   <table table_name='regions_tables'
          table_version='3'
          guid='8b9c7697-3577-443d-b098-ac10accd6afd'>
-    <field name='key' type='string_ascii' pk='true' />
-    <field fkey='regions_continents_tables.continent' name='continent' type='string_ascii' />
+    <field name='key' type='string_ascii' />
     <field name='r' type='int' />
     <field name='g' type='int' />
     <field name='b' type='int' />
-    <field name='battle_name' type='string_ascii' version_start='1' />
+    <field name='is_sea' type='boolean' />
+    <field name='owner_bundle' type='optstring_ascii' />
   </table>
   <table table_name='regions_to_region_groups_junctions_tables'
          table_version='0'
