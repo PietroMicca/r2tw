@@ -2773,7 +2773,9 @@
          guid='d05e8f06-e94d-406b-ae98-256f61d3580a'>
     <field name='effect_bundle_key' type='string_ascii' pk='true' />
     <field name='effect_key' type='string_ascii' pk='true' />
+    <field name='effect_scope' type='string_ascii' />
     <field name='value' type='float' />
+    <field name='advancement_stage' type='optstring_ascii' />
   </table>
   <table table_name='effects_tables'
          table_version='1'
@@ -3632,28 +3634,29 @@
     <field name='key' type='string_ascii' />
     <field name='value' type='float' />
   </table>
+  <table table_name='name_order_overrides_tables'
+         table_version='0'
+         guid='96552286-5f8a-4b22-aa76-16abeeb779b6'>
+  </table>
+  <table table_name='name_orders_tables'
+         table_version='0'
+         guid='d1db2ea4-bd61-4d24-96b9-4187589c158e'>
+    <field name='name_group' type='int' />
+    <field name='order' type='int' />
+    <field name='type' type='string_ascii' />
+  </table>  
   <table table_name='names_forts_tables'
          table_version='1'
          guid='243fd421-3a43-4274-a995-9f305d0ea817'>
-    <field fkey='names_groups_tables.ID' name='name_group' type='string' pk='true' />
-    <field name='fort_name' type='string' pk='true' />
-    <field name='id' type='string' />
   </table>
   <table table_name='names_groups_tables'
          table_version='1'
          guid='1af54b5c-5c25-4497-b8c8-85045a71dd90'>
-    <field name='ID' type='string_ascii' pk='true' />
-    <field name='Description' type='string_ascii' />
+	<field name='key' type='int' />
   </table>
   <table table_name='names_royalty_tables'
          table_version='1'
          guid='92a1b073-4eaa-400c-9af4-63fcd252d2a3'>
-    <field fkey='factions_tables.key' name='Faction' type='string' />
-    <field name='Name' type='string' />
-    <field name='Start' type='int' />
-    <field name='Gender' type='string' />
-    <field name='Frequency' type='int' />
-    <field name='ID' type='int' />
   </table>
   <table table_name='names_tables'
          table_version='1'
@@ -3675,9 +3678,9 @@
          table_version='3'
          guid='a553cbf1-ad15-493b-a673-ed875868530b'>
     <field name='ID' type='string_ascii' />
-    <field name='Steam ID' type='int' />
-    <field name='Description' type='optstring_ascii' />
-    <field name='Release Order' type='int' />
+    <field name='SteamID' type='int' />
+    <field name='description' type='optstring_ascii' />
+    <field name='release_order' type='int' />
   </table>
   <table table_name='political_parties_tables'
          table_version='3'
@@ -3700,40 +3703,51 @@
          table_version='1'
          guid='47e1428b-7188-4617-beca-f12563604f2b'>
     <field name='key' type='string_ascii' />
-    <field name='unknown2' type='string_ascii' />
+    <field name='text' type='string_ascii' />
     <field fkey='pre_battle_speech_types_enum_tables.description' name='type' type='int' />
     <field fkey='pre_battle_speech_parameters_enum_tables.key' name='parameter' type='optstring_ascii' />
   </table>
+  <table table_name='projectile_displays_tables'
+         table_version='3'
+         guid='2d5000ab-6822-4cfc-bd7d-62309c68aec0'>
+    <field name='damaged_display_model' type='optstring_ascii' />
+    <field name='display_model' type='optstring_ascii' />
+    <field name='impact' type='optstring_ascii' />
+    <field name='key' type='string_ascii' />
+    <field name='launch_fx' type='optstring_ascii' />
+    <field name='trail_fx' type='optstring_ascii' />
+    <field name='stationary_fx' type='optstring_ascii' />
+    <field name='skeleton' type='optstring_ascii' />
+    <field name='airborne_anim' type='optstring_ascii' />
+    <field name='landing_anim' type='optstring_ascii' />
+  </table>  
   <table table_name='projectile_impacts_tables'
          table_version='5'
          guid='9dd43a01-2fc4-462e-803e-7966bf6c1785'>
-    <field name='key' type='string_ascii' pk='true' />
-    <field fkey='particle_effects_tables.key' name='ship' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='water' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='sails' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='buildings' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='mud' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='grass' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='road' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='rock' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='sand' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='scree' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='snow' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='animal' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='wood' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='foliage' type='optstring_ascii' />
-    <field fkey='particle_effects_tables.key' name='glass' type='optstring_ascii' />
+    <field name='key' type='string_ascii' />
+    <field name='water' type='optstring_ascii' />
+    <field name='sails' type='optstring_ascii' />
+    <field name='mud' type='optstring_ascii' />
+    <field name='grass' type='optstring_ascii' />
+    <field name='road' type='optstring_ascii' />
+    <field name='rock' type='optstring_ascii' />
+    <field name='sand' type='optstring_ascii' />
+    <field name='cloth' type='optstring_ascii' />
+    <field name='snow' type='optstring_ascii' />
+    <field name='leather' type='optstring_ascii' />
+    <field name='wood' type='optstring_ascii' />
+    <field name='foliage' type='optstring_ascii' />
+    <field name='glass' type='optstring_ascii' />
+    <field name='blood' type='optstring_ascii' />
     <field name='size' type='string_ascii' />
+    <field name='metal' type='optstring_ascii' />
   </table>
   <table table_name='projectile_shot_type_enum_tables'
          table_version='3'
          guid='6eafe280-9469-4448-a385-0cc0537c0d80'>
-    <field name='key' type='string_ascii' pk='true' />
+    <field name='key' type='string_ascii' />
     <field name='requires_effect_enabling' type='boolean' />
-    <field name='is_grenade' type='boolean' />
     <field name='supersedes_shot_type' type='optstring_ascii' />
-    <field name='is_smallarms' type='boolean' />
-    <field name='is_artillery' type='boolean' />
   </table>
   <table table_name='projectile_trails_tables'
          table_version='0'
@@ -3754,20 +3768,21 @@
   <table table_name='projectiles_explosions_tables'
          table_version='3'
          guid='6e3f934c-d57f-451a-9e94-e9b46a7f0a1b'>
-    <field name='key' type='string' pk='true' />
-    <field fkey='projectiles_detonator_types_enum_tables.detonator_type' name='detonator_type' type='string' />
-    <field fkey='projectiles_detonation_types_enum_tables.key' name='detonation_type' type='string' />
+    <field name='key' type='string_ascii' />
+    <field name='detonator_type' type='string_ascii' />
+    <field name='detonation_type' type='string_ascii' />
     <field name='detonation_radius' type='float' />
     <field name='detonation_duration' type='float' />
-    <field name='Effect Speed' type='float' />
-    <field name='Detonation Damage' type='float' />
-    <field name='Particle Type' type='optstring' />
-    <field name='Particle Number' type='int' />
-    <field name='Explosion Particle Effect' type='optstring' />
-    <field name='Distance From Target' type='float' />
+    <field name='detonation_speed' type='float' />
+    <field name='detonation_damage' type='float' />
+    <field name='projectile_name' type='optstring_ascii' />
+    <field name='projectile_amount' type='int' />
+    <field name='explosion_particle_effect' type='optstring_ascii' />
+    <field name='distance_from_target' type='int' />
     <field name='error_margin' type='float' />
-    <field name='explosion_particle_effect_on_ground' type='optstring' version_start='1' />
-  </table>
+    <field name='explosion_particle_effect_on_ground' type='optstring_ascii' />
+    <field name='audio_explosion_type' type='string_ascii' />
+  </table>  
   <table table_name='projectiles_missile_type_enum_tables'
          table_version='0'
          guid='59ad03d7-f0eb-457e-a7ba-de8991b1b162'>
@@ -3777,40 +3792,86 @@
          table_version='20'
          guid='b3483a86-fde8-4896-97e3-7b6023953274'>
     <field name='key' type='string_ascii' />
-    <field name='Category' type='string_ascii' />
+    <field name='category' type='string_ascii' />
     <field name='shot_type' type='string_ascii' />
     <field name='explosion_type' type='optstring_ascii' />
-    <field name='unknown' type='string_ascii' />
-    <field name='Number Of Pellets' type='int' />
+    <field name='spin_type' type='string_ascii' />
+    <field name='projectile_number' type='int' />
     <field name='trajectory_sight' type='string_ascii' />
     <field name='effective_range' type='int' />
     <field name='minimum_range' type='int' />
     <field name='max_elevation' type='int' />
     <field name='muzzle_velocity' type='float' />
     <field name='marksmanship_bonus' type='float' />
-    <field name='unknown13' type='float' />
+    <field name='spread' type='float' />
     <field name='damage' type='int' />
     <field name='ap_damage' type='int' />
     <field name='penetration' type='optstring_ascii' />
-    <field name='unknown17' type='optstring_ascii' />
-    <field name='unknown18' type='boolean' />
-    <field name='unknown19' type='boolean' />
+    <field name='incendiary' type='optstring_ascii' />
+    <field name='can_bounce' type='boolean' />
+    <field name='high_air_resistance' type='boolean' />
     <field name='collision_radius' type='float' />
     <field name='base_reload_time' type='float' />
-    <field name='unknown22' type='int' />
+    <field name='below_waterline_damage_modifer' type='float' />
     <field name='calibration_distance' type='float' />
     <field name='calibration_area' type='float' />
-    <field name='unknown25' type='float' />
-    <field name='unknown26' type='float' />
-    <field name='unknown27' type='float' />
+    <field name='bonus_v_infantry' type='int' />
+    <field name='bonus_v_cavalry' type='int' />
+    <field name='bonus_v_elephant' type='int' />
     <field name='projectile_display' type='optstring_ascii' />
-    <field name='unknown29' type='optstring_ascii' />
+    <field name='overhead_stat_effect' type='optstring_ascii' />
     <field name='projectile_audio' type='string_ascii' />
     <field name='shockwave_radius' type='float' />
-    <field name='unknown32' type='boolean' />
+    <field name='can_damage_buildings' type='boolean' />
     <field name='contact_stat_effect' type='optstring_ascii' />
-    <field name='unknown34' type='boolean' />
+    <field name='is_grapple' type='boolean' />
   </table>
+  <table table_name='prologue_loading_screens_tables'
+         table_version='1'
+         guid='f7443624-fc8c-4b6d-890c-26d8142f7f5f'>
+    <field name='background_image' type='string_ascii' />
+    <field name='index' type='int' />
+    <field name='title' type='string_ascii' />
+	<field name='main_text' type='string_ascii' />
+    <field name='inset_image' type='string_ascii' />
+    <field name='pane_on_left' type='boolean' />
+    <field name='campaign' type='optstring_ascii' />
+  </table>  
+  <table table_name='prologue_chapters_tables'
+         table_version='1'
+         guid='bfc4bf3e-f982-413b-b4d8-974b1b61127a'>
+    <field name='battle_key' type='optstring_ascii' />
+    <field name='campaign_key' type='optstring_ascii' />
+    <field name='is_battle' type='boolean' />
+    <field name='number' type='int' />
+    <field name='banner' type='optstring_ascii' />
+  </table>
+  <table table_name='province_to_mercenary_set_junctions_tables'
+         table_version='0'
+         guid='1902dc15-94d2-4182-983b-89a644e9a203'>
+    <field name='mercenary_set' type='string_ascii' />
+    <field name='province' type='string_ascii' />
+  </table>  
+  <table table_name='provinces_tables'
+         table_version='0'
+         guid='19be9701-8e62-4307-9bfd-56ef393a621c'>
+    <field name='key' type='string_ascii' />
+  </table>  
+  <table table_name='provincial_initiative_records_tables'
+         table_version='2'
+         guid='157148df-3dc3-491c-b4eb-0983193dae73'>
+    <field name='key' type='string_ascii' />
+    <field name='effect_bundle' type='string_ascii' />
+    <field name='order' type='int' />
+    <field name='icon_path' type='string_ascii' />
+    <field name='campaign_vfx_id' type='optstring_ascii' />
+  </table>
+  <table table_name='provincial_initiatives_to_subculture_junctions_tables'
+         table_version='0'
+         guid='2f76fdd7-1781-475f-89fd-8d480b3757c2'>
+    <field name='provincial_initiative_key' type='string_ascii' />
+    <field name='subculture' type='optstring_ascii' />
+  </table>  
   <table table_name='public_order_factors_tables'
          table_version='1'
          guid='1541d392-6214-4096-8de2-83786a65e498'>
