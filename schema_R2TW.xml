@@ -3407,68 +3407,68 @@
          guid='67b11898-6596-41e1-9282-ae78c1e931e6'>
     <field name='key' type='string_ascii' />
     <field name='officer_1' type='optstring_ascii' />
-    <field name='unknown' type='optstring_ascii' />
-    <field name='standard_bearer' type='optstring_ascii' />
-    <field name='unknown5' type='optstring_ascii' />
-    <field name='unknown6' type='optstring_ascii' />
-    <field name='unknown7' type='optstring_ascii' />
+    <field name='officer_2' type='optstring_ascii' />
+    <field name='standard_bearer_1' type='optstring_ascii' />
+    <field name='standard_bearer_2' type='optstring_ascii' />
+    <field name='musician_1' type='optstring_ascii' />
+    <field name='musician_2' type='optstring_ascii' />
     <field name='personality_location' type='optstring_ascii' />
   </table>
   <table table_name='land_units_tables'
          table_version='26'
          guid='3e8ad861-4c5a-402b-8b0a-703658fc6203'>
-    <field name='Accuracy' type='int' />
-    <field name='Ammo' type='int' />
-    <field name='Armour' type='string_ascii' />
-    <field name='Campaign_Action_Points' type='int' />
-    <field name='Category' type='string_ascii' />
-    <field name='Charge_Bonus' type='int' />
-    <field name='Class' type='string_ascii' />
-    <field name='Dismounted_Charge_Bonus' type='int' />
-    <field name='Dismounted_Melee_Attack' type='int' />
-    <field name='Dismounted_Melee_Defense' type='int' />
-    <field name='Gameplay_Description_Text' type='string_ascii' />
-    <field name='Historical_Description_Text' type='string_ascii' />
-    <field name='Key' type='string_ascii' />
-    <field name='Man_Animation' type='optstring_ascii' />
-    <field name='Man_Entity' type='string_ascii' />
-    <field name='Melee_Attack' type='int' />
-    <field name='Melee_Defense' type='int' />
-    <field name='Morale' type='int' />
-    <field name='Bonus_Hit_Points' type='int' />
-    <field name='Mount' type='optstring_ascii' />
-    <field name='Num_Animals' type='int' />
-    <field name='Animal' type='optstring_ascii' />
-    <field name='Num_Mounts' type='int' />
-    <field name='Primary_Melee_Weapon' type='string_ascii' />
-    <field name='Primary_Missile_Weapon' type='optstring_ascii' />
-    <field name='Rank-Depth' type='int' />
-    <field name='Shield' type='string_ascii' />
-    <field name='Short_Description_Text' type='string_ascii' />
-    <field name='Spacing' type='string_ascii' />
-    <field name='Strengths_Weaknesses_Text' type='string_ascii' />
-    <field name='unknown' type='boolean' />
-    <field name='Training_Level' type='string_ascii' />
-    <field name='Numb_Guns' type='int' />
-    <field name='Officer' type='string_ascii' />
-    <field name='unknown35' type='optstring_ascii' />
-    <field name='Engine' type='optstring_ascii' />
-    <field name='unknown37' type='boolean' />
-    <field name='Visibility_Spotting_Distance_Min' type='float' />
-    <field name='Visibility_Spotting_Distance_Max' type='float' />
-    <field name='unknown40' type='int' />
-    <field name='Attribute_Group' type='optstring_ascii' />
-    <field name='Spot_Distance_Tree' type='float' />
-    <field name='Spot_Distance_Scrub' type='float' />
-    <field name='Chariot' type='optstring_ascii' />
-    <field name='Num_Chariots' type='int' />
-    <field name='Reload' type='int' />
-    <field name='unknown47' type='boolean' />
-    <field name='Spotting_and_Hiding' type='optstring_ascii' />
-    <field name='Selection_VO' type='string_ascii' />
-    <field name='Selectied_VO_Secondary' type='string_ascii' />
-    <field name='Selected_VO_Tertiary' type='string_ascii' />
-    <field name='Hiding_Scalar' type='float' />
+    <field name='accuracy' type='int' />
+    <field name='ammo' type='int' />
+    <field name='armour' type='string_ascii' />
+    <field name='campaign_action_points' type='int' />
+    <field name='category' type='string_ascii' />
+    <field name='charge_bonus' type='int' />
+    <field name='class' type='string_ascii' />
+    <field name='dismounted_charge_bonus' type='int' />
+    <field name='dismounted_melee_attack' type='int' />
+    <field name='dismounted_melee_defence' type='int' />
+    <field name='gameplay_description_text' type='string_ascii' />
+    <field name='historical_description_text' type='string_ascii' />
+    <field name='key' type='string_ascii' />
+    <field name='man_animation' type='optstring_ascii' />
+    <field name='man_entity' type='string_ascii' />
+    <field name='melee_attack' type='int' />
+    <field name='melee_defence' type='int' />
+    <field name='morale' type='int' />
+    <field name='bonus_hit_points' type='int' />
+    <field name='mount' type='optstring_ascii' />
+    <field name='num_animals' type='int' />
+    <field name='animal' type='optstring_ascii' />
+    <field name='num_mounts' type='int' />
+    <field name='primary_melee_weapon' type='string_ascii' />
+    <field name='primary_missile_weapon' type='optstring_ascii' />
+    <field name='rank_depth' type='int' />
+    <field name='shield' type='string_ascii' />
+    <field name='short_description_text' type='string_ascii' />
+    <field name='spacing' type='string_ascii' />
+    <field name='strengths_weaknesses_text' type='string_ascii' />
+    <field name='supports_first_person' type='boolean' />
+    <field name='training_level' type='string_ascii' />
+    <field name='num_guns' type='int' />
+    <field name='officers' type='string_ascii' />
+    <field name='articulated_record' type='optstring_ascii' />
+    <field name='engine' type='optstring_ascii' />
+    <field name='is_male' type='boolean' />
+    <field name='visibility_spotting_range_min' type='float' />
+    <field name='visibility_spotting_range_max' type='float' />
+    <field name='ability_global_recharge' type='float' />
+    <field name='attribute_group' type='optstring_ascii' />
+    <field name='spot_dist_tree' type='float' />
+    <field name='spot_dist_scrub' type='float' />
+    <field name='chariot' type='optstring_ascii' />
+    <field name='num_chariots' type='int' />
+    <field name='reload' type='int' />
+    <field name='loose_spacing' type='boolean' />
+    <field name='spotting_and_hiding' type='optstring_ascii' />
+    <field name='selection_vo' type='string_ascii' />
+    <field name='selected_vo_secondary' type='string_ascii' />
+    <field name='selected_vo_tertiary' type='string_ascii' />
+    <field name='hiding_scalar' type='float' />
   </table>
   <table table_name='land_units_to_unit_abilites_junctions_tables'
          table_version='0'
@@ -3927,10 +3927,28 @@
     <field name='display_key' type='string_ascii' />
     <field name='weight' type='float' />
   </table>
+ <table table_name='mountable_artillery_units_custom_battles_tables'
+         table_version='1'
+         guid='8e14aa05-b401-497c-ad99-6fab155758b2'>
+    <field name='cap' type='int' />
+    <field name='mountable_artillery' type='string_ascii' />
+    <field name='probability' type='int' />
+    <field name='faction' type='string_ascii' />
+  </table>
+  <table table_name='mountable_artillery_units_tables'
+         table_version='0'
+         guid='131d86c5-aca6-4264-b650-c4b2e3250e07'>
+    <field name='unit_key' type='string_ascii' />
+  </table>    
   <table table_name='mounts_tables'
          table_version='3'
          guid='2badd4bf-2aad-4557-bc41-761fab2bdfa5'>
-    <field name='key' type='string' pk='true' />
+    <field name='key' type='string_ascii' />
+    <field name='animation' type='string_ascii' />
+    <field name='entity' type='string_ascii' />
+    <field name='mount_armour' type='int' />
+    <field name='variant' type='string_ascii' />
+    <field name='audio_armour_type' type='string_ascii' />
   </table>
   <table table_name='movie_event_strings_tables'
          table_version='0'
@@ -3959,23 +3977,22 @@
   <table table_name='mp_force_gen_template_junctions_tables'
          table_version='3'
          guid='3ad13274-5b00-43d2-a9cb-6650323aff5c'>
-    <field fkey='cdir_unit_balance_configs_tables.key' name='balance_key' type='string' pk='true' />
-    <field fkey='mp_budgets_tables.key' name='budget_key' type='string' pk='true' />
+    <field name='budget_key' type='string_ascii' />
     <field name='general_pct' type='float' />
     <field name='priority' type='int' />
-    <field fkey='cdir_unit_quality_configs_tables.key' name='quality_key' type='string' />
-    <field fkey='mp_force_gen_templates_tables.key' name='template_key' type='string' />
+    <field name='template_key' type='string_ascii' />
     <field name='units_pct' type='float' />
     <field name='upgrade_pct' type='float' />
+    <field name='config_key' type='string_ascii' />
+    <field name='is_defender' type='boolean' />
   </table>
   <table table_name='mp_force_gen_upgrade_probabilities_tables'
          table_version='0'
          guid='11535d5c-f33c-4413-8d38-604d665513ab'>
-    <field name='unknown1' type='float' />
+    <field name='armour_upgrade_probability' type='float' />
     <field name='experience_upgrade_probability' type='float' />
     <field fkey='unit_category_tables.key' name='unit_category' type='string_ascii' />
-    <field name='unknown4' type='string_ascii' />
-    <field name='unknown5' type='string_ascii' />
+    <field name='weapon_upgrade_probability' type='float' />
   </table>
   <table table_name='mp_general_command_ratings_tables'
          table_version='0'
