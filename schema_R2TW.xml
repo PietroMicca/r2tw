@@ -3126,59 +3126,60 @@
   <table table_name='factions_tables'
          table_version='13'
          guid='c1ea38aa-2aca-49c4-bede-bde90c7a8674'>
-    <field name='Faction ID' type='string' pk='true' />
+    <field name='key' type='string_ascii' />
     <field name='index' type='int' />
-    <field name='unknown3' type='int' version_start='5' />
-    <field fkey='cultures_subcultures_tables.subculture' name='subculture' type='string' />
-    <field name='Category' type='string' />
-    <field name='On Screen Name' type='string' />
-    <field name='screen_adjective' type='string' />
-    <field name='Name Group' type='string' />
-    <field name='skin' type='string' />
-    <field name='ui_skin' type='optstring' version_start='1' />
+    <field name='unknown1' type='int' />
+    <field name='subculture' type='string_ascii' />
+    <field name='category' type='string_ascii' />
+    <field name='screen_name' type='string_ascii' />
+    <field name='screen_adjective' type='string_ascii' />
+    <field name='name_group' type='int' />
+    <field name='skin' type='string_ascii' />
+    <field name='ui_skin' type='optstring_ascii' />
     <field name='is_rebel' type='boolean' />
-    <field name='Early Availability' type='boolean' />
-    <field name='Late Availability' type='boolean' />
-    <field name='icons_path_units' type='string' />
-    <field name='flags_path' type='string' />
-    <field name='Republic Flag' type='optstring' />
-    <field name='same_gov_type_revolution_flag_path' type='optstring' />
-    <field name='Primary Colour R' type='float' />
-    <field name='Primary Colour G' type='float' />
-    <field name='Primary Colour B' type='float' />
-    <field name='Alt Primary Colour R' type='float' />
-    <field name='Alt Primary Colour G' type='float' />
-    <field name='Alt Primary Colour B' type='float' />
-    <field name='Secondary Colour R' type='float' />
-    <field name='Secondary Colour G' type='float' />
-    <field name='Secondary Colour B' type='float' />
-    <field name='Alt Secondary Colour R' type='float' />
-    <field name='Alt Secondary Colour G' type='float' />
-    <field name='Alt Secondary Colour B' type='float' />
-    <field name='Uniform Colour R' type='float' />
-    <field name='Uniform Colour G' type='float' />
-    <field name='Uniform Colour B' type='float' />
-    <field name='Alt Uniform Colour R' type='float' />
-    <field name='Alt Uniform Colour G' type='float' />
-    <field name='Alt Uniform Colour B' type='float' />
-    <field fkey='groupings_military_tables.military_group' name='military_group' type='string' />
-    <field fkey='factions_tables.key' name='settler_rebellion_faction' type='optstring' />
-    <field name='Rebel Colour R' type='float' />
-    <field name='Rebel Colour G' type='float' />
-    <field name='Rebel Colour B' type='float' />
-    <field fkey='movie_event_strings_tables.culture' name='movie_death_event' type='optstring' />
-    <field name='audio_faction_string' type='string' />
-    <field name='MP Republic Early' type='boolean' />
-    <field name='MP Republic Late' type='boolean' />
-    <field name='Regiment Name Group' type='string' />
-    <field name='Naval Name Group' type='string' />
-    <field name='attack_desc' type='string' version_start='3' />
-    <field name='defend_desc' type='string' version_start='3' />
-    <field name='unknown49' type='boolean' version_start='3' />
-    <field fkey='pre_battle_speech_parameters_enum_tables.key' name='pre_battle_speech_parameter' type='string' version_start='5' />
-    <field name='screen_name_when_imperial' type='optstring' version_start='7' />
-    <field name='clan_summary_name_when_imperial' type='optstring' version_start='7' />
-    <field fkey='audio_languages_tables.key' name='audio_language' type='string' version_start='7' />
+    <field name='mp_use_republic_early' type='boolean' />
+    <field name='mp_use_republic_late' type='boolean' />
+    <field name='icons_path_units' type='string_ascii' />
+    <field name='flags_path' type='string_ascii' />
+    <field name='republican_flag_path' type='optstring_ascii' />
+    <field name='same_gov_type_revolution_flag_path' type='optstring_ascii' />
+    <field name='primary_colour_r' type='float' />
+    <field name='primary_colour_g' type='float' />
+    <field name='primary_colour_b' type='float' />
+    <field name='alt_primary_colour_r' type='float' />
+    <field name='alt_primary_colour_g' type='float' />
+    <field name='alt_primary_colour_b' type='float' />
+    <field name='secondary_colour_r' type='float' />
+    <field name='secondary_colour_g' type='float' />
+    <field name='secondary_colour_b' type='float' />
+    <field name='alt_secondary_colour_r' type='float' />
+    <field name='alt_secondary_colour_g' type='float' />
+    <field name='alt_secondary_colour_b' type='float' />
+    <field name='uniform_colour_r' type='float' />
+    <field name='uniform_colour_g' type='float' />
+    <field name='uniform_colour_b' type='float' />
+    <field name='alt_uniform_colour_r' type='float' />
+    <field name='alt_uniform_colour_g' type='float' />
+    <field name='alt_uniform_colour_b' type='float' />
+    <field name='alt_uniform_colour_b' type='string_ascii' />
+    <field name='settler_rebellion_faction' type='optstring_ascii' />
+    <field name='rebel_colour_r' type='float' />
+    <field name='rebel_colour_g' type='float' />
+    <field name='rebel_colour_b' type='float' />
+    <field name='movie_death_event' type='optstring_ascii' />
+    <field name='screen_name_when_rebels' type='string_ascii' />
+    <field name='unit_regiment_name_group' type='int' />
+    <field name='ship_name_group' type='int' />
+    <field name='attack_desc' type='string_ascii' />
+    <field name='defend_desc' type='string_ascii' />
+    <field name='clan_summary_name' type='optstring_ascii' />
+    <field name='pre_battle_speech_parameter' type='string_ascii' />
+    <field name='can_be_regionless' type='boolean' />
+    <field name='card_colour_r' type='float' />
+    <field name='card_colour_g' type='float' />
+    <field name='card_colour_b' type='float' />
+    <field name='diplomacy_culture' type='string_ascii' />
+    <field name='senator_total' type='int' />
   </table>
   <table table_name='family_relationship_types_tables'
          table_version='0'
@@ -3494,35 +3495,35 @@
          table_version='13'
          guid='dee394be-7843-4291-bc4b-b7c7e37c696f'>
     <field name='unknown' type='optstring_ascii' />
-    <field name='Campaign_Cap' type='int' />
-    <field name='Caste' type='string_ascii' />
-    <field name='Create_Time' type='int' />
-    <field name='Is_Naval' type='boolean' />
-    <field name='Land_Unit' type='string_ascii' />
-    <field name='Num_Men' type='int' />
-    <field name='Multiplayer_Cap' type='int' />
-    <field name='Recruitment_Cost' type='int' />
-    <field name='Naval_Unit' type='optstring_ascii' />
-    <field name='Num_Ships' type='int' />
-    <field name='Min_Men_Per_Ship' type='int' />
-    <field name='Max_Men_Per_Ship' type='int' />
-    <field name='Prestige' type='int' />
-    <field name='Recruitment_Cost15' type='int' />
+    <field name='campaign_cap' type='int' />
+    <field name='caste' type='string_ascii' />
+    <field name='create_time' type='int' />
+    <field name='is_naval' type='boolean' />
+    <field name='land_unit' type='string_ascii' />
+    <field name='num_men' type='int' />
+    <field name='multiplayer_cap' type='int' />
+    <field name='recruitment_cost' type='int' />
+    <field name='naval_unit' type='optstring_ascii' />
+    <field name='num_ships' type='int' />
+    <field name='min_men_per_ship' type='int' />
+    <field name='max_men_per_ship' type='int' />
+    <field name='prestige' type='int' />
+    <field name='multiplayer_cost' type='int' />
     <field name='unknown16' type='optstring_ascii' />
     <field name='unknown17' type='optstring_ascii' />
-    <field name='Unit' type='string_ascii' />
-    <field name='Upkeep_Cost' type='int' />
-    <field name='Weight' type='optstring_ascii' />
-    <field name='Campaign_Total_Cap' type='int' />
+    <field name='unit' type='string_ascii' />
+    <field name='upkeep_cost' type='int' />
+    <field name='weight' type='optstring_ascii' />
+    <field name='campaign_total_cap' type='int' />
     <field name='unknown22' type='boolean' />
     <field name='unknown23' type='boolean' />
     <field name='unknown24' type='boolean' />
-    <field name='Special_Edition_Mask' type='int' />
-    <field name='Unique_Index' type='int' />
+    <field name='special_edition_mask' type='int' />
+    <field name='unique_index' type='int' />
     <field name='unknown27' type='int' />
-    <field name='In_Encyclopedia' type='boolean' />
-    <field name='Region_Unit_Resource_Requirement' type='optstring_ascii' />
-    <field name='Audio_Language' type='string_ascii' />
+    <field name='in_encyclopedia' type='boolean' />
+    <field name='region_unit_resource_requirement' type='optstring_ascii' />
+    <field name='audio_language' type='string_ascii' />
   </table>
   <table table_name='melee_weapons_tables'
          table_version='6'
@@ -3540,7 +3541,44 @@
     <field name='weapon_length' type='float' />
     <field name='melee_weapon_type' type='string_ascii' />
     <field name='audio_material' type='string_ascii' />
-  </table>  
+  </table>
+  <table table_name='mercenary_pool_modifiers_tables'
+         table_version='0'
+         guid='6bbc5225-8e3e-4297-a1b9-bf1cb6e2ad4e'>
+    <field name='cost_modifier' type='float' />
+    <field name='culture_origin_match' type='boolean' />
+    <field name='key' type='string_ascii' />
+    <field name='min_pool_culture_percentage' type='int' />
+    <field name='pool_type' type='string_ascii' />
+    <field name='replenishment_modifier' type='float' />
+  </table>
+  <table table_name='mercenary_pool_to_groups_junctions_tables'
+         table_version='0'
+         guid='c17099a2-36b9-4ec7-b853-95b24c77e0d4'>
+    <field name='group' type='string_ascii' />
+    <field name='initial_unit_count' type='int' />
+    <field name='key' type='int' />
+    <field name='pool' type='string_ascii' />
+  </table>
+  <table table_name='mercenary_pool_type_enums_tables'
+         table_version='0'
+         guid='cecd69e1-a18e-4252-8a34-56fdfad2d7e7'>
+    <field name='pool_type' type='string_ascii' />
+  </table>
+  <table table_name='mercenary_pools_tables'
+         table_version='1'
+         guid='a334192a-c403-4a44-8e9a-d23ab3830416'>
+    <field name='key' type='string_ascii' />
+  </table>
+  <table table_name='mercenary_unit_groups_tables'
+         table_version='0'
+         guid='192c1871-5c8d-4b0b-982d-a17079d08a3d'>
+    <field name='chance_to_replenish' type='float' />
+    <field name='key' type='string_ascii' />
+    <field name='max_count' type='int' />
+    <field name='max_replenish_per_turn' type='int' />
+    <field name='unit_record' type='string_ascii' />
+  </table> 
   <table table_name='message_event_strings_tables'
          table_version='2'
          guid='7572f6f8-4dd3-46b6-a22c-69d62f815e83'>
@@ -3555,6 +3593,32 @@
     <field name='Image9' type='string_ascii' />
     <field name='Image 2' type='string_ascii' />
   </table>
+  <table table_name='message_events_tables'
+         table_version='0'
+         guid='c952c82d-ecdc-4419-a33e-31a76100245c'>
+    <field name='event' type='string_ascii' />
+    <field name='instant_open' type='boolean' />
+    <field name='layout' type='string_ascii' />
+    <field name='requires_response' type='boolean' />
+  </table>
+  <table table_name='military_force_legacy_emblems_tables'
+         table_version='2'
+         guid='19887e27-c10a-4226-8867-e26c29bc5cbf'>
+    <field name='culure_key' type='optstring_ascii' />
+    <field name='subculture_key' type='optstring_ascii' />
+    <field name='is_army' type='boolean' />
+    <field name='key' type='string_ascii' />
+    <field name='faction_key' type='optstring_ascii' />
+    <field name='banner_decorator' type='string_ascii' />
+    <field name='icon' type='string_ascii' />
+  </table>
+  <table table_name='military_force_legacy_names_tables'
+         table_version='1'
+         guid='1a89561d-7466-4e26-b306-327db3da3ed7'>
+    <field name='key' type='string_ascii' />
+    <field name='subculture' type='optstring_ascii' />
+    <field name='for_army' type='boolean' />
+  </table>  
   <table table_name='ministerial_effectiveness_modifiers_tables'
          table_version='0'
          guid='11d4f2ad-c840-41d6-9d37-f2abe5550f27'>
@@ -3617,6 +3681,20 @@
     <field fkey='ministerial_positions_tables.minister_key' name='ministerial_position' type='string' pk='true' />
     <field fkey='governorships_tables.governorship' name='governorship' type='string' />
   </table>
+  <table table_name='missile_weapons_tables'
+         table_version='6'
+         guid='ef081887-bf1d-43b3-a709-b2b91350ea14'>
+    <field name='key' type='string_ascii' />
+    <field name='precursor' type='boolean' />
+    <field name='default_projectile' type='string_ascii' />
+    <field name='can_fire_at_buildings' type='boolean' />
+  </table>
+  <table table_name='missile_weapons_to_projectiles_tables'
+         table_version='0'
+         guid='7db7fceb-a8f8-46a1-8a70-2f02186d3096'>
+    <field name='missile_weapon' type='string_ascii' />
+    <field name='projectile' type='string_ascii' />
+  </table>  
   <table table_name='mission_issuers_tables'
          table_version='0'
          guid='49147fd4-f175-4763-8f08-fbae5a4b0403'>
@@ -3943,13 +4021,11 @@
   <table table_name='names_tables'
          table_version='1'
          guid='23303254-1609-4938-a504-82b07d5c61bc'>
-    <field fkey='names_groups_tables.ID' name='names_group' type='string' pk='true' />
-    <field name='name' type='string' pk='true' />
-    <field fkey='name_types_tables.key' name='type' type='string' />
-    <field fkey='genders_tables.gender' name='gender' type='string' />
+    <field name='names_group' type='int' />
+    <field name='order' type='int' />
+    <field name='gender' type='int' />
     <field name='frequency' type='int' />
-    <field name='nobility' type='boolean' />
-    <field name='id' type='string' />
+    <field name='id' type='string_ascii' />
   </table>
   <table table_name='naval_effects_tables'
          table_version='0'
