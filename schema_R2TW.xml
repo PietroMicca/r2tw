@@ -22,10 +22,6 @@
     <field name='Snow Underlay' type='boolean' />
     <field name='Underlay' type='string' />
   </table>
-  <table name='incident_heading_texts_tables'>
-    <field name='unknown1' type='string' pk='true' />
-    <field name='unknown2' type='string' />
-  </table>
   <table name='unit_stats_naval_crew_to_factions_tables'>
     <field name='Faction' type='string' />
     <field name='Marines' type='string' />
@@ -1909,13 +1905,13 @@
     <field name='radar_file' type='optstring_ascii' />
     <field name='meaningful_id' type='string_ascii' />
     <field name='preview_width' type='int' />
-    <field name='preview_hieght' type='int' />
-    <field name='unknown' type='float' />
-    <field name='unknown10' type='float' />
+    <field name='preview_height' type='int' />
+    <field name='preview_border' type='int' />
+    <field name='minx' type='float' />
     <field name='maxx' type='float' />
-    <field name='unknown12' type='float' />
+    <field name='miny' type='float' />
     <field name='maxy' type='float' />
-    <field name='mapName' type='string_ascii' />
+    <field name='mapname' type='string_ascii' />
     <field name='minimap_lookup_file' type='optstring_ascii' />
   </table>
   <table table_name='campaign_map_regions_tables'
@@ -3393,6 +3389,10 @@
     <field name='maximum_value' type='int' />
     <field name='minimum_value' type='int' />
   </table>
+  <table name='incident_heading_texts_tables'>
+    <field name='key' type='string' pk='true' />
+    <field name='localised_heading_text' type='string' />
+  </table>  
   <table table_name='incidents_tables'
          table_version='3'
          guid='52f7ba8b-609b-4f1d-a049-769882604111'>
