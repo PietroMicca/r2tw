@@ -5560,9 +5560,10 @@
   <table table_name='videos_tables'
          table_version='2'
          guid='dfa3e6a2-dedc-4827-8892-ab3024362b70'>
-    <field name='video_name' type='string' pk='true' />
-    <field fkey='video_types_tables.video_type' name='video_type' type='string' />
+    <field name='video_name' type='string_ascii' pk='true' />
+    <field fkey='video_types_tables.video_type' name='video_type' type='string_ascii' />
     <field name='audio_tracks' type='int' />
+	<field name='script_ref' type='int' />
   </table>
   <table table_name='voice_events_tables'
          table_version='0'
