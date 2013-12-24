@@ -2226,6 +2226,17 @@
     <field fkey='slots_tables.slot' name='slot_type' type='string' />
     <field name='onscreen_name' type='string' />
   </table>
+  <table table_name='campaign_mp_coop_groups_tables'
+         table_version='0'
+         guid='4eb4d775-7201-4340-a9cd-1d76a0a6629d'>
+    <field name='key' type='string_ascii' pk='true' />
+  </table>
+  <table table_name='campaign_mp_coop_groups_to_factions_tables'
+         table_version='0'
+         guid='b9bf6727-6f9e-4f48-b082-c819b37c281a'>
+    <field name='faction' type='string_ascii' pk='true' />
+    <field name='campaign' type='string_ascii' pk='true' />
+  </table>
   <table table_name='campaign_politics_strings_tables'
          table_version='0'
          guid='13104f5b-9668-4972-bd43-b0e6fca02b9d,
